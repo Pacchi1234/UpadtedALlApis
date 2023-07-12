@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="4.615">
+  <properties />
+  
+  
+            <testcase name="createAndUpdateDeliverySystemAttributeValue" time="1.623" classname="com.ripplestreet.AllPutApis.RewardDeliveryControllerPutApi" />
+                <testcase name="UpdateDelveryitemstatus" time="1.432" classname="com.ripplestreet.AllPutApis.RewardDeliveryControllerPutApi" />
+                <testcase name="triggerReadyToDeliverAllocations" time="1.560" classname="com.ripplestreet.AllPutApis.RewardDeliveryControllerPutApi" />
+      
+</testsuite>

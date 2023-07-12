@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test"
+           tests="7"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="10.618">
+  <properties />
+  
+  
+            <testcase name="GetlistofFaqTopicItemsbyFaqTopicId" time="1.451" classname="com.ripplestreet.AllGetApis.FAQcontrollerGetApi" />
+                <testcase name="GetFAQDetailByEventIdforCommunity" time="1.569" classname="com.ripplestreet.AllGetApis.FAQcontrollerGetApi" />
+                <testcase name="getlistofFaqTopicbyFaqId" time="1.516" classname="com.ripplestreet.AllGetApis.FAQcontrollerGetApi" />
+                <testcase name="getFAQbyEventId" time="1.602" classname="com.ripplestreet.AllGetApis.FAQcontrollerGetApi" />
+                <testcase name="FAQTopicByID" time="1.526" classname="com.ripplestreet.AllGetApis.FAQcontrollerGetApi" />
+                <testcase name="getFAQTopicitemsById" time="1.448" classname="com.ripplestreet.AllGetApis.FAQcontrollerGetApi" />
+                <testcase name="getFAQById" time="1.506" classname="com.ripplestreet.AllGetApis.FAQcontrollerGetApi" />
+      
+</testsuite>

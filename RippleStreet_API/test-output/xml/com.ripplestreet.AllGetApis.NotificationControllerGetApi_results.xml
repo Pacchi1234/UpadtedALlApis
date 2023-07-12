@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test"
+           tests="6"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="9.841">
+  <properties />
+  
+  
+            <testcase name="GetCampaignByNotificationId" time="1.463" classname="com.ripplestreet.AllGetApis.NotificationControllerGetApi" />
+                <testcase name="SearchCampaignforNotification" time="1.591" classname="com.ripplestreet.AllGetApis.NotificationControllerGetApi" />
+                <testcase name="GetKPIMatrixByCampaignId" time="2.162" classname="com.ripplestreet.AllGetApis.NotificationControllerGetApi" />
+                <testcase name="isEmailExistInSuppressionList" time="1.532" classname="com.ripplestreet.AllGetApis.NotificationControllerGetApi" />
+                <testcase name="getAllNotification" time="1.572" classname="com.ripplestreet.AllGetApis.NotificationControllerGetApi" />
+                <testcase name="GetStatusByNotificationId" time="1.521" classname="com.ripplestreet.AllGetApis.NotificationControllerGetApi" />
+      
+</testsuite>

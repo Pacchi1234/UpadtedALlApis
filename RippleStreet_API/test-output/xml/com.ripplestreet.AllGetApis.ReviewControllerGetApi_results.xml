@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="4.524">
+  <properties />
+  
+  
+            <testcase name="getReviewsByTaskId" time="1.468" classname="com.ripplestreet.AllGetApis.ReviewControllerGetApi" />
+                <testcase name="getReview" time="1.538" classname="com.ripplestreet.AllGetApis.ReviewControllerGetApi" />
+                <testcase name="getExternalReview" time="1.518" classname="com.ripplestreet.AllGetApis.ReviewControllerGetApi" />
+      
+</testsuite>

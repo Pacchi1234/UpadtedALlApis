@@ -3,25 +3,26 @@ package com.ripplestreet.AllGetApis;
 import org.testng.annotations.Test;
 
 import com.ripplestreet.genricUtilities.amazonAwsUtilities;
+import com.ripplestreet.genricUtilities.genricUtilities;
 
 import io.restassured.RestAssured;
 
-public class CommunityControllerGetApi extends amazonAwsUtilities {
-	@Test
+public class CommunityControllerGetApi extends genricUtilities {
+	@Test(groups="community-service")
 	public void getAllAddressEntriesByPersonId() {
 		response = RestAssured.given().queryParams("pageNo", page, "pageSize", size).when()
 				.get("/community-service/community/getAllAddressEntriesByPersonId/" + pid);
 		Testcase=23;
 	}
 
-	@Test
+	@Test(groups="community-service")
 	public void getAllEventsByUserAndParticipantType() {
 		response = RestAssured.given().when()
 				.get("/community-service/community/getAllEventsByUserAndParticipantType/" + pid + "/Host");
 		Testcase=24;
 	}
 
-	@Test
+	@Test(groups="community-service")
 	public void getAllUsersByEventAndParticipantType() {
 		response = RestAssured.given().queryParams("pageNo", page, "pageSize", size).when()
 				.get("/community-service/community/getAllUsersByEventAndParticipantType/" + eventId + "/Host");
@@ -29,14 +30,14 @@ public class CommunityControllerGetApi extends amazonAwsUtilities {
 
 	}
 
-	@Test
+	@Test(groups="community-service")
 	public void GettingDetailOfHeadHostByPersonId() {
 		response = RestAssured.given().when().get("/community-service/community/getHeadShotByPersonId?personId=" + pid);
 		Testcase=26;
 
 	}
 
-	@Test
+	@Test(groups="community-service")
 	public void getUserEventParticipationBit() {
 		response = RestAssured.given().queryParams( "userId", pid, "eventId", eventId).when()
 				.get("/community-service/community/getUserEventParticipationBit");
@@ -44,13 +45,13 @@ public class CommunityControllerGetApi extends amazonAwsUtilities {
 
 	}
 
-	@Test
+	@Test(groups="community-service")
 	public void getUserListByFilters() {
 		response = RestAssured.given().queryParams("personId",pid, "pageNo", page, "pageSize", size).when()
-				.get("community-service/community/getUserListByFilters?personIds");
+				.get("/community-service/community/getUserListByFilters?personIds");
 		Testcase=28;
 	}
-	@Test
+	@Test(groups="community-service")
 	public void getUserParticipationBits() {
 		response = RestAssured.given().queryParams( "userId", pid, "eventId", eventId).when()
 				.get("/community-service/community/getUserParticipationBits");
@@ -58,14 +59,14 @@ public class CommunityControllerGetApi extends amazonAwsUtilities {
 		
 		
 	}
-	@Test
+	@Test(groups="community-service")
 	public void getUserProfile() {
 		response = RestAssured.given().when()
 				.get("/community-service/community/userProfile/"+pid);
 		Testcase=30;
 		
 	}
-	@Test
+	@Test(groups="community-service")
 	public void getUserDetails() {
 		response = RestAssured.given().when()
 				.get("/community-service/community/users/"+eventId+"?eventInfo=true");

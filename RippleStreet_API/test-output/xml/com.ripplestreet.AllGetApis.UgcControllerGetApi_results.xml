@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test"
+           tests="5"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="8.061">
+  <properties />
+  
+  
+            <testcase name="downloadAssetByURL" time="1.595" classname="com.ripplestreet.AllGetApis.UgcControllerGetApi" />
+                <testcase name="getImageRecognitionResponse" time="1.583" classname="com.ripplestreet.AllGetApis.UgcControllerGetApi" />
+                <testcase name="downloadAsset" time="1.651" classname="com.ripplestreet.AllGetApis.UgcControllerGetApi" />
+                <testcase name="getUgcDetailsByTaskId" time="1.612" classname="com.ripplestreet.AllGetApis.UgcControllerGetApi" />
+                <testcase name="getUgcDetailsById" time="1.620" classname="com.ripplestreet.AllGetApis.UgcControllerGetApi" />
+      
+</testsuite>

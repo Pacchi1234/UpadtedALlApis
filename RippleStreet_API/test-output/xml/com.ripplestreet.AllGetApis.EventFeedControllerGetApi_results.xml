@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test"
+           tests="5"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="18.898">
+  <properties />
+  
+  
+            <testcase name="getFeedInfoById" time="1.405" classname="com.ripplestreet.AllGetApis.EventFeedControllerGetApi" />
+                <testcase name="getAllFeedsForEvent" time="7.156" classname="com.ripplestreet.AllGetApis.EventFeedControllerGetApi" />
+                <testcase name="getReviewFeedByEventId" time="1.523" classname="com.ripplestreet.AllGetApis.EventFeedControllerGetApi" />
+                <testcase name="getPhotoFeedByEventId" time="1.434" classname="com.ripplestreet.AllGetApis.EventFeedControllerGetApi" />
+                <testcase name="getCommentFeedByEventId" time="7.380" classname="com.ripplestreet.AllGetApis.EventFeedControllerGetApi" />
+      
+</testsuite>

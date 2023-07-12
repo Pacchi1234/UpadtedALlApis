@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="1.178">
+  <properties />
+  
+  
+            <testcase name="EnrollmentList" time="0.607" classname="com.ripplestreet.AllGetApis.EnrollmentControllerGetApi" />
+                <testcase name="GetUserEnrollments" time="0.571" classname="com.ripplestreet.AllGetApis.EnrollmentControllerGetApi" />
+      
+</testsuite>

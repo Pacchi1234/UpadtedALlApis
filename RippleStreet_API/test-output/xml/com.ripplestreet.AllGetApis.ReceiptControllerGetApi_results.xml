@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="3.052">
+  <properties />
+  
+  
+            <testcase name="getReceiptList" time="1.587" classname="com.ripplestreet.AllGetApis.ReceiptControllerGetApi" />
+                <testcase name="getReceiptRecordWithData" time="1.465" classname="com.ripplestreet.AllGetApis.ReceiptControllerGetApi" />
+      
+</testsuite>

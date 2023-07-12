@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="2.946">
+  <properties />
+  
+  
+            <testcase name="getGameOptionBySlug" time="1.500" classname="com.ripplestreet.AllGetApis.gameOptionControllerGetApi" />
+                <testcase name="getListOfOptionsByGameId" time="1.446" classname="com.ripplestreet.AllGetApis.gameOptionControllerGetApi" />
+      
+</testsuite>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test"
+           tests="9"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="25.423">
+  <properties />
+  
+  
+            <testcase name="getUserProfile" time="1.519" classname="com.ripplestreet.AllGetApis.CommunityControllerGetApi" />
+                <testcase name="getUserDetails" time="1.442" classname="com.ripplestreet.AllGetApis.CommunityControllerGetApi" />
+                <testcase name="getAllUsersByEventAndParticipantType" time="1.429" classname="com.ripplestreet.AllGetApis.CommunityControllerGetApi" />
+                <testcase name="getAllEventsByUserAndParticipantType" time="1.234" classname="com.ripplestreet.AllGetApis.CommunityControllerGetApi" />
+                <testcase name="GettingDetailOfHeadHostByPersonId" time="1.527" classname="com.ripplestreet.AllGetApis.CommunityControllerGetApi" />
+                <testcase name="getAllAddressEntriesByPersonId" time="1.514" classname="com.ripplestreet.AllGetApis.CommunityControllerGetApi" />
+                <testcase name="getUserParticipationBits" time="1.439" classname="com.ripplestreet.AllGetApis.CommunityControllerGetApi" />
+                <testcase name="getUserListByFilters" time="14.018" classname="com.ripplestreet.AllGetApis.CommunityControllerGetApi" />
+                <testcase name="getUserEventParticipationBit" time="1.301" classname="com.ripplestreet.AllGetApis.CommunityControllerGetApi" />
+      
+</testsuite>

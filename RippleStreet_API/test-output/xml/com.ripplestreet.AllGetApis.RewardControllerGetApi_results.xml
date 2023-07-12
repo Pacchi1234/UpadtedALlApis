@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test"
+           tests="6"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="9.394">
+  <properties />
+  
+  
+            <testcase name="getRewardByName" time="1.495" classname="com.ripplestreet.AllGetApis.RewardControllerGetApi" />
+                <testcase name="getAllReward" time="1.553" classname="com.ripplestreet.AllGetApis.RewardControllerGetApi" />
+                <testcase name="getReward" time="1.394" classname="com.ripplestreet.AllGetApis.RewardControllerGetApi" />
+                <testcase name="getRewardCount" time="1.531" classname="com.ripplestreet.AllGetApis.RewardControllerGetApi" />
+                <testcase name="getRewardSummaryByEventId" time="1.495" classname="com.ripplestreet.AllGetApis.RewardControllerGetApi" />
+                <testcase name="searchItems" time="1.926" classname="com.ripplestreet.AllGetApis.RewardControllerGetApi" />
+      
+</testsuite>
