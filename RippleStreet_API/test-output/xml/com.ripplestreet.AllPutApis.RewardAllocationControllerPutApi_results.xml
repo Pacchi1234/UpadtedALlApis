@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="5.700">
+  <properties />
+  
+  
+            <testcase name="UpdateAllocatedRewardItemStatus" time="1.660" classname="com.ripplestreet.AllPutApis.RewardAllocationControllerPutApi" />
+                <testcase name="updateRewarditemAllocation" time="2.437" classname="com.ripplestreet.AllPutApis.RewardAllocationControllerPutApi" />
+                <testcase name="UpdateAllocatedRewardItemToReadyForDelevery" time="1.603" classname="com.ripplestreet.AllPutApis.RewardAllocationControllerPutApi" />
+      
+</testsuite>

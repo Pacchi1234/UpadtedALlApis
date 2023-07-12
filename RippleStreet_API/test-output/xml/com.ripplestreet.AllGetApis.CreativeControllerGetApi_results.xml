@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test"
+           tests="8"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="11.986">
+  <properties />
+  
+  
+            <testcase name="findHeroPlaylistById" time="1.543" classname="com.ripplestreet.AllGetApis.CreativeControllerGetApi" />
+                <testcase name="getFavorByEventIdAndId" time="1.451" classname="com.ripplestreet.AllGetApis.CreativeControllerGetApi" />
+                <testcase name="FindHeroplaylistitemById" time="1.548" classname="com.ripplestreet.AllGetApis.CreativeControllerGetApi" />
+                <testcase name="findAllHeroPlaylistByModelId" time="1.533" classname="com.ripplestreet.AllGetApis.CreativeControllerGetApi" />
+                <testcase name="findAllHeroPlaylistItemsByPlayListId" time="1.541" classname="com.ripplestreet.AllGetApis.CreativeControllerGetApi" />
+                <testcase name="FinfAllfavousByEventId" time="1.543" classname="com.ripplestreet.AllGetApis.CreativeControllerGetApi" />
+                <testcase name="getBannerByEventIdandId" time="1.312" classname="com.ripplestreet.AllGetApis.CreativeControllerGetApi" />
+                <testcase name="finAllBannerByEventId" time="1.515" classname="com.ripplestreet.AllGetApis.CreativeControllerGetApi" />
+      
+</testsuite>

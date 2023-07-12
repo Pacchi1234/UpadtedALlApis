@@ -6,20 +6,20 @@ import io.restassured.RestAssured;
 
 public class EventFeedControllerGetApi extends genricUtilities {
 
-	@Test(groups = "eventFeedController")
+	@Test(groups = "event")
 	public void getFeedInfoById() {
 		response = RestAssured.given().when().get("/event/events-feed/feed/" + feedItemId);
 		Testcase = 14;
 
 	}
 
-	@Test(groups = "eventFeedController")
+	@Test(groups = "event")
 	public void getCommentFeedByEventId() {
 		response =RestAssured.given().queryParams("pageNo", page, "pageSize", size).when().get("/event/events-feed/"+eventId+"/comments");
 		Testcase = 15;
 	}
 
-	@Test(groups = "eventFeedController")
+	@Test(groups = "event")
 	public void getAllFeedsForEvent() {
 		response = RestAssured.given().queryParams("pageNo", page, "pageSize", size).when()
 				.get("/event/events-feed/" + eventId + "/feeds");
@@ -28,14 +28,14 @@ public class EventFeedControllerGetApi extends genricUtilities {
 
 	}
 
-	@Test(groups = "eventFeedController")
+	@Test(groups = "event")
 	public void getPhotoFeedByEventId() {
 		response = RestAssured.given().queryParams("pageNo", page, "pageSize", size).when()
 				.get("/event/events-feed/" + eventId + "/photos");
 		Testcase = 17;
 	}
 
-	@Test(groups = "eventFeedController")
+	@Test(groups = "event")
 	public void getReviewFeedByEventId() {
 		response = RestAssured.given().queryParams("pageNo", page, "pageSize", size).when()
 				.get("/event/events-feed/" + eventId + "/reviews");

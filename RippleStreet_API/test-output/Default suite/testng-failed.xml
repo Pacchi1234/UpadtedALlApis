@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ripplestreet.AllGetApis.PartyControllerGetApi">
+      <class name="com.ripplestreet.AllGetApis.EventDetailControllerGetApi">
         <methods>
-          <include name="getlistofparties"/>
-          <include name="StatusCode"/>
+          <include name="findAllMilestonesTypeByEventtypes"/>
           <include name="BaseURI"/>
+          <include name="StatusCode"/>
         </methods>
-      </class> <!-- com.ripplestreet.AllGetApis.PartyControllerGetApi -->
+      </class> <!-- com.ripplestreet.AllGetApis.EventDetailControllerGetApi -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
