@@ -4,9 +4,9 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="0.637">
+           time="0.472">
   <properties />
-            <testcase name="StatusCode" time="0.028" classname="com.ripplestreet.AllGetApis.PartyControllerGetApi">
+            <testcase name="StatusCode" time="0.026" classname="com.ripplestreet.AllGetApis.PartyControllerGetApi">
                 <failure type="java.lang.AssertionError"
                   message="1 expectation failed.
 Expected status code &lt;200&gt; but was &lt;400&gt;.
@@ -81,6 +81,6 @@ Expected status code <200> but was <400>.
           </testcase>
   
   
-            <testcase name="getlistofparties" time="0.609" classname="com.ripplestreet.AllGetApis.PartyControllerGetApi" />
+            <testcase name="getlistofparties" time="0.446" classname="com.ripplestreet.AllGetApis.PartyControllerGetApi" />
       
 </testsuite>

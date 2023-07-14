@@ -4,11 +4,11 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="3.030">
+           time="2.349">
   <properties />
   
   
-            <testcase name="getAllStoreCollection" time="1.551" classname="com.ripplestreet.AllGetApis.storesControllerGetApi" />
-                <testcase name="getStoreListByCollectionName" time="1.479" classname="com.ripplestreet.AllGetApis.storesControllerGetApi" />
+            <testcase name="getStoreListByCollectionName" time="1.099" classname="com.ripplestreet.AllGetApis.storesControllerGetApi" />
+                <testcase name="getAllStoreCollection" time="1.250" classname="com.ripplestreet.AllGetApis.storesControllerGetApi" />
       
 </testsuite>

@@ -20,28 +20,28 @@ public class UgcControllerGetApi extends genricUtilities {
 
 	}
 
-	@Test(groups="activityugcreview")
+	@Test(priority=51,groups="activityugcreview")
 	public void downloadAssetByURL() {
 		response = RestAssured.given().when()
 				.get("/activityugcreview/client_api/downloadAssetByURL?assetId=" + assetId);
 		Testcase = 51;
 	}
 
-	@Test(groups="activityugcreview")
+	@Test(priority=52,groups="activityugcreview")
 	public void getImageRecognitionResponse() {
 		response = RestAssured.given().when()
 				.get("/activityugcreview/client_api/getImageRecognition?eventId=" + eventId);
 		Testcase = 52;
 	}
 
-	@Test(groups="activityugcreview")
+	@Test(priority=53,groups="activityugcreview")
 	public void getUgcDetailsById() {
 		response = RestAssured.given().when().get("/activityugcreview/client_api/getUgcDetailsById/" + eventId);
 		Testcase = 53;
 
 	}
 
-	@Test(groups="activityugcreview",enabled=false)
+	@Test(priority=54,groups="activityugcreview",enabled=false)
 	public void getUserAsset() {
 		response = RestAssured.given().when().get("/activityugcreview/client_api/getUserAsset?eventId=" + eventId);
 		Testcase = 54;

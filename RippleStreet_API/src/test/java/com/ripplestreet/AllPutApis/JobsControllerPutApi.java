@@ -2,7 +2,6 @@ package com.ripplestreet.AllPutApis;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -10,23 +9,23 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.Test;
 
-import com.ripplestreet.genricUtilities.putApiUtilities;
+import com.ripplestreet.genricUtilities.genricUtilities;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 
-public class JobsControllerPutApi  extends putApiUtilities{
-	@Test
+public class JobsControllerPutApi  extends genricUtilities{
+	@Test(priority=211)
 	public void updateJob() throws Throwable {
-		Testcase = 21;
+		Testcase = 211;
 		File file = new File(devApiPath);
 		FileInputStream fis = new FileInputStream(file);
 		@SuppressWarnings("resource")
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 
-		XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName2);
+		XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName);
 		XSSFRow row2 = sheet.getRow(Testcase);
-		XSSFCell cell2 = row2.getCell(2);
+		XSSFCell cell2 = row2.getCell(4);
 		PutBody = cell2.getStringCellValue();
 		System.out.println(PutBody);
 

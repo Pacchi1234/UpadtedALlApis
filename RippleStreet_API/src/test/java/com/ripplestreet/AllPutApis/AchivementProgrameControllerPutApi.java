@@ -10,23 +10,23 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.Test;
 
-import com.ripplestreet.genricUtilities.putApiUtilities;
+import com.ripplestreet.genricUtilities.genricUtilities;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 
-public class AchivementProgrameControllerPutApi  extends putApiUtilities{
+public class AchivementProgrameControllerPutApi  extends genricUtilities{
 	
-	@Test(groups="benefits-platform")
+	@Test(priority=203,groups="benefits-platform")
 	public void updateAchivementPrograme() throws IOException {
-		Testcase = 13;
+		Testcase = 203;
 		File file = new File(devApiPath);
 		FileInputStream fis = new FileInputStream(file);
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 
-		XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName2);
+		XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName);
 		XSSFRow row2 = sheet.getRow(Testcase);
-		XSSFCell cell2 = row2.getCell(2);
+		XSSFCell cell2 = row2.getCell(4);
 		PutBody = cell2.getStringCellValue();
 		System.out.println(PutBody);
 

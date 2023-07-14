@@ -1,17 +1,20 @@
 package com.ripplestreet.AllGetApis;
 
+import org.testng.ITestListener;
+import org.testng.ITestResult;
 import org.testng.annotations.Test;
 import com.ripplestreet.genricUtilities.genricUtilities;
 import io.restassured.RestAssured;
 import java.io.*;
 
-public class EventControllerGetApi extends genricUtilities {
+public class EventControllerGetApi extends genricUtilities implements ITestListener {
+	
 
-	@Test(groups = "event")
+	@Test(priority=1,groups = "event")
 	public void getAllCurrentMileStoneByEvent() throws IOException {
-		RestAssured.baseURI=baseURI;
+		RestAssured.baseURI = baseURI;
 		response = RestAssured.given().when().get("/event/events/getAllCurrentMileStonesByEvent/" + eventId);
-		Testcase = 1;
+	//	Testcase = 1;
 	}
 
 	@Test(groups = "event")
@@ -22,13 +25,13 @@ public class EventControllerGetApi extends genricUtilities {
 
 	}
 
-	@Test(groups = "event")
+	@Test(priority=3,groups = "event")
 	public void getAllMileStonesByEvent() {
 		response = RestAssured.given().when().get("/event/events/getAllMilestonesByEvent/" + eventId);
 		Testcase = 3;
 	}
 
-	@Test(groups = "event")
+	@Test(priority=4,groups = "event")
 	public void getAllProductByEvents() {
 		response = RestAssured.given().when().get("/event/events/getAllProductsByEvent/" + eventId);
 		Testcase = 4;
@@ -47,13 +50,13 @@ public class EventControllerGetApi extends genricUtilities {
 
 	}
 
-	@Test(groups = "event")
+	@Test(priority=7,groups = "event")
 	public void getAllSubscriptionsByServiceName() {
 		response = RestAssured.given().when().get("/event/events/getAllSubscriptionsByServiceName/" + activitiesName);
 		Testcase = 7;
 	}
 
-	@Test(groups = "event")
+	@Test(priority=8,groups = "event")
 	public void getEventById() {
 		response = RestAssured.given().when()
 				.get("https://devapi-ecs.ripplestreet.com/event/events/getEventById/" + eventId);
@@ -104,19 +107,19 @@ public class EventControllerGetApi extends genricUtilities {
 
 	}
 
-	@Test
+	@Test(priority=189,groups="event")
 	public void getFilteredEvents() {
 		response = RestAssured.given().queryParams("eventId", eventId, "page", page, "size", size)
 				.get("/event/events/getAllEvents/_search");
 		Testcase = 189;
 	}
 
-	@Test
+	@Test(priority=190,groups="event")
 	public void getEventMileStoneByIdAndDate() {
 
 		response = RestAssured.given().queryParams("eventId", eventId, "created", eventCreatedDate)
 				.get("/event/events/getEventMileStoneByIdAndDate");
-		Testcase=190;
+		Testcase = 190;
 
 	}
 

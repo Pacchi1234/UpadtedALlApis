@@ -4,7 +4,7 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="6.338">
+           time="4.330">
   <properties />
             <testcase name="findAllMilestonesTypeByEventtypes" time="0.002" classname="com.ripplestreet.AllGetApis.EventDetailControllerGetApi">
                 <failure type="java.lang.IllegalArgumentException"
@@ -132,9 +132,9 @@
           </testcase>
   
   
-            <testcase name="getBasicEventDetailByEventID" time="1.515" classname="com.ripplestreet.AllGetApis.EventDetailControllerGetApi" />
-                <testcase name="getListoftargetsByEventId" time="1.622" classname="com.ripplestreet.AllGetApis.EventDetailControllerGetApi" />
-                <testcase name="findAllmileStonesByEvent" time="1.668" classname="com.ripplestreet.AllGetApis.EventDetailControllerGetApi" />
-                <testcase name="findMileStoneById" time="1.531" classname="com.ripplestreet.AllGetApis.EventDetailControllerGetApi" />
+            <testcase name="findAllmileStonesByEvent" time="1.078" classname="com.ripplestreet.AllGetApis.EventDetailControllerGetApi" />
+                <testcase name="getBasicEventDetailByEventID" time="1.100" classname="com.ripplestreet.AllGetApis.EventDetailControllerGetApi" />
+                <testcase name="getListoftargetsByEventId" time="1.063" classname="com.ripplestreet.AllGetApis.EventDetailControllerGetApi" />
+                <testcase name="findMileStoneById" time="1.087" classname="com.ripplestreet.AllGetApis.EventDetailControllerGetApi" />
       
 </testsuite>

@@ -2,12 +2,12 @@ package com.ripplestreet.AllPutApis;
 
 import org.testng.annotations.Test;
 
-import com.ripplestreet.genricUtilities.putApiUtilities;
+import com.ripplestreet.genricUtilities.genricUtilities;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 
-public class ApplicationsControllerPutApi extends putApiUtilities {
+public class ApplicationsControllerPutApi extends genricUtilities {
 	@Test(groups="community-service")
 	public void updateApplications() {
 		

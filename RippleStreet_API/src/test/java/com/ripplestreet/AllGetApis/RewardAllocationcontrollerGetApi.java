@@ -5,7 +5,7 @@ import com.ripplestreet.genricUtilities.genricUtilities;
 import io.restassured.RestAssured;
 
 public class RewardAllocationcontrollerGetApi extends genricUtilities {
-	@Test(groups = "reward-service")
+	@Test(priority=108,groups = "reward-service")
 	public void getRewardAllocation() {
 	RestAssured.baseURI=baseURI;
 		response = RestAssured.given().queryParams("pageNo", page, "pageSize", size)

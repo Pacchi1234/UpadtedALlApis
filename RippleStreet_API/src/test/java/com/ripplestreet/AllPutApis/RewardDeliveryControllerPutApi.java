@@ -2,7 +2,6 @@ package com.ripplestreet.AllPutApis;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -10,23 +9,23 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.Test;
 
-import com.ripplestreet.genricUtilities.putApiUtilities;
+import com.ripplestreet.genricUtilities.genricUtilities;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 
-public class RewardDeliveryControllerPutApi extends putApiUtilities {
-	@Test(groups="reward-service")
+public class RewardDeliveryControllerPutApi extends genricUtilities {
+	@Test(priority=218,groups="reward-service")
 	public void triggerReadyToDeliverAllocations() throws Throwable {
-		Testcase = 28;
+		Testcase = 218;
 		File file = new File(devApiPath);
 		FileInputStream fis = new FileInputStream(file);
 		@SuppressWarnings("resource")
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 
-		XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName2);
+		XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName);
 		XSSFRow row2 = sheet.getRow(Testcase);
-		XSSFCell cell2 = row2.getCell(2);
+		XSSFCell cell2 = row2.getCell(4);
 		PutBody = cell2.getStringCellValue();
 		System.out.println(PutBody);
 
@@ -35,17 +34,17 @@ public class RewardDeliveryControllerPutApi extends putApiUtilities {
 		
 		
 	}
-	@Test(groups="reward-service")
+	@Test(priority=219,groups="reward-service")
 	public void createAndUpdateDeliverySystemAttributeValue() throws Throwable {
-		Testcase = 29;
+		Testcase = 219;
 		File file = new File(devApiPath);
 		FileInputStream fis = new FileInputStream(file);
 		@SuppressWarnings("resource")
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 
-		XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName2);
+		XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName);
 		XSSFRow row2 = sheet.getRow(Testcase);
-		XSSFCell cell2 = row2.getCell(2);
+		XSSFCell cell2 = row2.getCell(4);
 		PutBody = cell2.getStringCellValue();
 		System.out.println(PutBody);
 
@@ -54,17 +53,17 @@ public class RewardDeliveryControllerPutApi extends putApiUtilities {
 		
 		
 	}
-	@Test(groups="reward-service")
+	@Test(priority=220,groups="reward-service")
 	public void UpdateDelveryitemstatus() throws Throwable {
-		Testcase = 30;
+		Testcase = 220;
 		File file = new File(devApiPath);
 		FileInputStream fis = new FileInputStream(file);
 		@SuppressWarnings("resource")
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 
-		XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName2);
+		XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName);
 		XSSFRow row2 = sheet.getRow(Testcase);
-		XSSFCell cell2 = row2.getCell(2);
+		XSSFCell cell2 = row2.getCell(4);
 		PutBody = cell2.getStringCellValue();
 		System.out.println(PutBody);
 

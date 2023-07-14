@@ -7,12 +7,12 @@ import com.ripplestreet.genricUtilities.genricUtilities;
 import io.restassured.RestAssured;
 
 public class TaskControllerGetApi  extends genricUtilities{
-	@Test(groups="activity-hub")
+	@Test(priority=73,groups="activity-hub")
 	public void getListOfTasks() {
 		response=RestAssured.get("/activity-hub/v1/task/list");
 		Testcase=73;
 	}
-	@Test(groups="activity-hub")
+	@Test(priority=74,groups="activity-hub")
 	public void getTask() {
 		response=RestAssured.get("/activity-hub/v1/task/"+taskId);
 		Testcase=74;

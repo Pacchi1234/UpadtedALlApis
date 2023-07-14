@@ -10,22 +10,22 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.Test;
 
-import com.ripplestreet.genricUtilities.putApiUtilities;
+import com.ripplestreet.genricUtilities.genricUtilities;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 
-public class ActivityGroupControllerPutApi extends putApiUtilities {
-	@Test(groups="activity-hub")
+public class ActivityGroupControllerPutApi extends genricUtilities {
+	@Test(priority=199,groups="activity-hub")
 	public void updateActivityGroup() throws Throwable {
-		Testcase = 9;
+		Testcase = 199;
 		File file = new File(devApiPath);
 		FileInputStream fis = new FileInputStream(file);
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 
-		XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName2);
+		XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName);
 		XSSFRow row2 = sheet.getRow(Testcase);
-		XSSFCell cell2 = row2.getCell(2);
+		XSSFCell cell2 = row2.getCell(4);
 		PutBody = cell2.getStringCellValue();
 		System.out.println(PutBody);
 

@@ -3,40 +3,36 @@ package com.ripplestreet.AllPutApis;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.checkerframework.checker.units.qual.K;
 import org.json.simple.parser.ParseException;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.ripplestreet.genricUtilities.putApiUtilities;
+import com.ripplestreet.genricUtilities.genricUtilities;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 
-public class EventFeedControllerPutApi extends putApiUtilities {
+public class EventFeedControllerPutApi extends genricUtilities {
 
-	@Test(groups="event")
+	@Test(priority=194,groups="event")
 	public void likeAfeedById() throws InterruptedException, IOException, ParseException {
 
 		try {
-			Testcase=4;
+			Testcase=194;
 			
 			File file = new File(devApiPath);
 			FileInputStream fis = new FileInputStream(file);
 			XSSFWorkbook workbook = new XSSFWorkbook(fis);
 
-			XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName2);
+			XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName);
 			XSSFRow row2 = sheet.getRow(Testcase);
-			XSSFCell cell2 = row2.getCell(2);
+			XSSFCell cell2 = row2.getCell(4);
 			PutBody = cell2.getStringCellValue();
-			//System.out.println(PutBody);
+			System.out.println(PutBody);
 			
 			
 

@@ -7,7 +7,7 @@ import com.ripplestreet.genricUtilities.genricUtilities;
 import io.restassured.RestAssured;
 
 public class TrackableLinkcontrollerGetApi extends genricUtilities {
-	@Test(groups="event-campaign-manager")
+	@Test(priority=183,groups="event-campaign-manager")
 	public void findAllLinksForAnEvent() {
 		response = RestAssured.given().queryParams("pagNo", page, "pageSize", size)
 				.get("/event-campaign-manager/v1/event/" + eventId + "/link/list");
@@ -15,7 +15,7 @@ public class TrackableLinkcontrollerGetApi extends genricUtilities {
 
 	}
 
-	@Test(groups="event-campaign-manager")
+	@Test(priority=184,groups="event-campaign-manager")
 	public void getLinkById() {
 		response = RestAssured.get("/event-campaign-manager/v1/link/" + linkId);
 		Testcase = 184;

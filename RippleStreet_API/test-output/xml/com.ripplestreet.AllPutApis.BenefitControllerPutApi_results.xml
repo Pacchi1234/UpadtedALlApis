@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="3.725">
+           time="2.905">
   <properties />
   
   
-            <testcase name="updateBenefit" time="3.725" classname="com.ripplestreet.AllPutApis.BenefitControllerPutApi" />
+            <testcase name="updateBenefit" time="2.905" classname="com.ripplestreet.AllPutApis.BenefitControllerPutApi" />
       
 </testsuite>

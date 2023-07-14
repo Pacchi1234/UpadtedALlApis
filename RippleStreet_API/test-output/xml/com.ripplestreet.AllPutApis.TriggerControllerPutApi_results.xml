@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="1.715">
+           time="1.240">
   <properties />
   
   
-            <testcase name="updateTriggerDefinition" time="1.715" classname="com.ripplestreet.AllPutApis.TriggerControllerPutApi" />
+            <testcase name="updateTriggerDefinition" time="1.240" classname="com.ripplestreet.AllPutApis.TriggerControllerPutApi" />
       
 </testsuite>

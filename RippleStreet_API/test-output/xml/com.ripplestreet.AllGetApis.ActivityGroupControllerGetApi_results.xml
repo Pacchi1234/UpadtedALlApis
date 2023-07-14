@@ -4,9 +4,9 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="12.974">
+           time="11.407">
   <properties />
-            <testcase name="StatusCode" time="7.751" classname="com.ripplestreet.AllGetApis.ActivityGroupControllerGetApi">
+            <testcase name="StatusCode" time="7.109" classname="com.ripplestreet.AllGetApis.ActivityGroupControllerGetApi">
                 <failure type="java.lang.IllegalArgumentException"
                   message="The maximum length of cell contents (text) is 32767 characters"
               >
@@ -52,8 +52,8 @@
           </testcase>
   
   
-            <testcase name="GetActivityGroupsByyEventId" time="1.546" classname="com.ripplestreet.AllGetApis.ActivityGroupControllerGetApi" />
-                <testcase name="GetListofActivityGroups" time="2.152" classname="com.ripplestreet.AllGetApis.ActivityGroupControllerGetApi" />
-                <testcase name="GetActivityGroup" time="1.525" classname="com.ripplestreet.AllGetApis.ActivityGroupControllerGetApi" />
+            <testcase name="GetActivityGroup" time="1.136" classname="com.ripplestreet.AllGetApis.ActivityGroupControllerGetApi" />
+                <testcase name="GetActivityGroupsByyEventId" time="1.170" classname="com.ripplestreet.AllGetApis.ActivityGroupControllerGetApi" />
+                <testcase name="GetListofActivityGroups" time="1.992" classname="com.ripplestreet.AllGetApis.ActivityGroupControllerGetApi" />
       
 </testsuite>

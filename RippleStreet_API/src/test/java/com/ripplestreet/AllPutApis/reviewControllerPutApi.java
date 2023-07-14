@@ -10,25 +10,25 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.Test;
 
-import com.ripplestreet.genricUtilities.putApiUtilities;
+import com.ripplestreet.genricUtilities.genricUtilities;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 
-public class reviewControllerPutApi extends putApiUtilities {
+public class reviewControllerPutApi extends genricUtilities {
 
-	@Test(groups="activityugcreview")
+	@Test(priority=195,groups="activityugcreview")
 	public void updateExternalReview() throws IOException {
 
-		Testcase = 5;
+		Testcase = 195;
 
 		File file = new File(devApiPath);
 		FileInputStream fis = new FileInputStream(file);
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 
-		XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName2);
+		XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName);
 		XSSFRow row2 = sheet.getRow(Testcase);
-		XSSFCell cell2 = row2.getCell(2);
+		XSSFCell cell2 = row2.getCell(5);
 		PutBody = cell2.getStringCellValue();
 
 		response = RestAssured.given().contentType(ContentType.JSON).body(PutBody).when()

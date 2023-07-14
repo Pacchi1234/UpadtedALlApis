@@ -4,11 +4,11 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="3.045">
+           time="2.113">
   <properties />
   
   
-            <testcase name="getLlistOfPeopleByRoleID" time="1.515" classname="com.ripplestreet.AllGetApis.RoleControllerGetApi" />
-                <testcase name="getListOfRoles" time="1.530" classname="com.ripplestreet.AllGetApis.RoleControllerGetApi" />
+            <testcase name="getListOfRoles" time="1.055" classname="com.ripplestreet.AllGetApis.RoleControllerGetApi" />
+                <testcase name="getLlistOfPeopleByRoleID" time="1.058" classname="com.ripplestreet.AllGetApis.RoleControllerGetApi" />
       
 </testsuite>

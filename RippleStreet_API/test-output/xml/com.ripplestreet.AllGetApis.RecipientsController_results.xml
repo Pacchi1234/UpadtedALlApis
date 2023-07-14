@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="1.506">
+           time="1.161">
   <properties />
   
   
-            <testcase name="GetAllRecipientForCampaignId" time="1.506" classname="com.ripplestreet.AllGetApis.RecipientsController" />
+            <testcase name="GetAllRecipientForCampaignId" time="1.161" classname="com.ripplestreet.AllGetApis.RecipientsController" />
       
 </testsuite>

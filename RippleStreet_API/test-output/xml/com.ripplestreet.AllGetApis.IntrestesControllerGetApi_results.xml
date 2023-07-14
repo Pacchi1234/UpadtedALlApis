@@ -4,11 +4,11 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="1.270">
+           time="0.969">
   <properties />
   
   
-            <testcase name="getUserInterestByPersonId" time="0.608" classname="com.ripplestreet.AllGetApis.IntrestesControllerGetApi" />
-                <testcase name="Allcategorieslist" time="0.662" classname="com.ripplestreet.AllGetApis.IntrestesControllerGetApi" />
+            <testcase name="getUserInterestByPersonId" time="0.446" classname="com.ripplestreet.AllGetApis.IntrestesControllerGetApi" />
+                <testcase name="Allcategorieslist" time="0.523" classname="com.ripplestreet.AllGetApis.IntrestesControllerGetApi" />
       
 </testsuite>

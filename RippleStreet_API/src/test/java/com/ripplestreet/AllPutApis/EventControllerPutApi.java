@@ -10,22 +10,22 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.Test;
 
-import com.ripplestreet.genricUtilities.putApiUtilities;
+import com.ripplestreet.genricUtilities.genricUtilities;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 
-public class EventControllerPutApi extends putApiUtilities {
-	@Test(groups = "event")
+public class EventControllerPutApi extends genricUtilities {
+	@Test(priority = 191, groups = "event")
 	public void updateComment() throws IOException {
 		RestAssured.baseURI = baseURI;
-		Testcase = 1;
+		Testcase = 191;
 		File file = new File(devApiPath);
 		FileInputStream fis = new FileInputStream(file);
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
-		XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName2);
+		XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName);
 		XSSFRow row2 = sheet.getRow(Testcase);
-		XSSFCell cell2 = row2.getCell(2);
+		XSSFCell cell2 = row2.getCell(4);
 		double PutBody = cell2.getNumericCellValue();
 		System.out.println(PutBody);
 		response = RestAssured.given().contentType(ContentType.JSON).body(PutBody).when()
@@ -33,17 +33,17 @@ public class EventControllerPutApi extends putApiUtilities {
 
 	}
 
-	@Test(groups = "event")
+	@Test(priority = 192, groups = "event")
 	public void updateEventPacksCount() throws IOException {
-		Testcase = 2;
+		Testcase = 192;
 		File file = new File(devApiPath);
 		FileInputStream fis = new FileInputStream(file);
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 
-		XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName2);
+		XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName);
 
 		XSSFRow row2 = sheet.getRow(Testcase);
-		XSSFCell cell2 = row2.getCell(2);
+		XSSFCell cell2 = row2.getCell(4);
 		String PutBody = cell2.getStringCellValue();
 		System.out.println(PutBody);
 
@@ -52,17 +52,17 @@ public class EventControllerPutApi extends putApiUtilities {
 
 	}
 
-	@Test(groups = "event")
+	@Test(priority = 193, groups = "event")
 	public void updateEventSubscriptions() throws IOException {
-		Testcase = 3;
+		Testcase = 193;
 		File file = new File(devApiPath);
 		FileInputStream fis = new FileInputStream(file);
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 
-		XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName2);
+		XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName);
 
 		XSSFRow row2 = sheet.getRow(Testcase);
-		XSSFCell cell2 = row2.getCell(2);
+		XSSFCell cell2 = row2.getCell(4);
 		String PutBody = cell2.getStringCellValue();
 		System.out.println(PutBody);
 

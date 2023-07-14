@@ -4,11 +4,11 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="1.133">
+           time="0.891">
   <properties />
   
   
-            <testcase name="getListOfAllocationTransientRecordByEventId" time="0.593" classname="com.ripplestreet.AllGetApis.OptinInflightActivationControllerGetApi" />
-                <testcase name="getAllocationTransientRecordByEventIdAndPersonId" time="0.540" classname="com.ripplestreet.AllGetApis.OptinInflightActivationControllerGetApi" />
+            <testcase name="getAllocationTransientRecordByEventIdAndPersonId" time="0.447" classname="com.ripplestreet.AllGetApis.OptinInflightActivationControllerGetApi" />
+                <testcase name="getListOfAllocationTransientRecordByEventId" time="0.444" classname="com.ripplestreet.AllGetApis.OptinInflightActivationControllerGetApi" />
       
 </testsuite>

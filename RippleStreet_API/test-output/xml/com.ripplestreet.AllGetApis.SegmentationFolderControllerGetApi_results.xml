@@ -4,9 +4,9 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="3.579">
+           time="2.456">
   <properties />
-            <testcase name="StatusCode" time="0.447" classname="com.ripplestreet.AllGetApis.SegmentationFolderControllerGetApi">
+            <testcase name="StatusCode" time="0.258" classname="com.ripplestreet.AllGetApis.SegmentationFolderControllerGetApi">
                 <failure type="java.lang.IllegalArgumentException"
                   message="The maximum length of cell contents (text) is 32767 characters"
               >
@@ -52,7 +52,7 @@
           </testcase>
   
   
-            <testcase name="getAllSegmentFolder" time="1.538" classname="com.ripplestreet.AllGetApis.SegmentationFolderControllerGetApi" />
-                <testcase name="GetSegmentFolderFromCampaignSegment" time="1.594" classname="com.ripplestreet.AllGetApis.SegmentationFolderControllerGetApi" />
+            <testcase name="GetSegmentFolderFromCampaignSegment" time="1.102" classname="com.ripplestreet.AllGetApis.SegmentationFolderControllerGetApi" />
+                <testcase name="getAllSegmentFolder" time="1.096" classname="com.ripplestreet.AllGetApis.SegmentationFolderControllerGetApi" />
       
 </testsuite>

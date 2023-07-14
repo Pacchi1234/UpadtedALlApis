@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="3.253">
+           time="2.520">
   <properties />
   
   
-            <testcase name="getAllRewardCatalogItems" time="3.253" classname="com.ripplestreet.AllGetApis.RewardCatalogControllerGetAPi" />
+            <testcase name="getAllRewardCatalogItems" time="2.520" classname="com.ripplestreet.AllGetApis.RewardCatalogControllerGetAPi" />
       
 </testsuite>

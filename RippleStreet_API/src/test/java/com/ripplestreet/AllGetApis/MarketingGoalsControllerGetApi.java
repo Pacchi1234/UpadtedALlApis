@@ -7,7 +7,7 @@ import com.ripplestreet.genricUtilities.genricUtilities;
 import io.restassured.RestAssured;
 
 public class MarketingGoalsControllerGetApi extends genricUtilities{
-	@Test(groups="event-campaign-manager")
+	@Test(priority=171,groups="event-campaign-manager")
 	public void getMarketingGoalsForEvent() {
 		response=RestAssured.get("/event-campaign-manager/v1/event/"+eventId+"/marketingGoal/list");
 		Testcase=171;

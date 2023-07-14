@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="2.056">
+           time="1.242">
   <properties />
   
   
-            <testcase name="likeAfeedById" time="2.056" classname="com.ripplestreet.AllPutApis.EventFeedControllerPutApi" />
+            <testcase name="likeAfeedById" time="1.242" classname="com.ripplestreet.AllPutApis.EventFeedControllerPutApi" />
       
 </testsuite>

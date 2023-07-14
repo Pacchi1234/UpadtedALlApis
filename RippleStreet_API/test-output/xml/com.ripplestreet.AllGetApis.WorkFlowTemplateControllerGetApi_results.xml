@@ -4,9 +4,9 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="6.000">
+           time="2.173">
   <properties />
-            <testcase name="getStepFunctionByArn" time="0.040" classname="com.ripplestreet.AllGetApis.WorkFlowTemplateControllerGetApi">
+            <testcase name="getStepFunctionByArn" time="0.011" classname="com.ripplestreet.AllGetApis.WorkFlowTemplateControllerGetApi">
                 <failure type="java.lang.IllegalArgumentException"
                   message="Invalid number of path parameters. Expected 1, was 0. Undefined path parameters are: workflowTemplateId."
               >
@@ -134,7 +134,7 @@
           </testcase>
   
   
-            <testcase name="getListOfWorkFlowTemplates" time="4.533" classname="com.ripplestreet.AllGetApis.WorkFlowTemplateControllerGetApi" />
-                <testcase name="getEventWorkflowTemplateByEventId" time="1.427" classname="com.ripplestreet.AllGetApis.WorkFlowTemplateControllerGetApi" />
+            <testcase name="getEventWorkflowTemplateByEventId" time="1.049" classname="com.ripplestreet.AllGetApis.WorkFlowTemplateControllerGetApi" />
+                <testcase name="getListOfWorkFlowTemplates" time="1.113" classname="com.ripplestreet.AllGetApis.WorkFlowTemplateControllerGetApi" />
       
 </testsuite>

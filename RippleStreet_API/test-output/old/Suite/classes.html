@@ -40,20 +40,15 @@
 <td align='center' colspan='3'>@AfterClass</td>
 </tr>
 <tr>
-<td>com.ripplestreet.AllGetApis.AgencyControllerGetApi</td>
+<td>com.ripplestreet.AllGetApis.CommonServiceFeedControllerGeApi</td>
 <td>&nbsp;</td><td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@Test</td>
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>getAgencyById</td>
-<td>event-campaign-manager </td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>findAllAgencies</td>
-<td>event-campaign-manager </td>
+<td>getAllFeedsForEvents</td>
+<td>common-service </td>
 </tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
@@ -76,15 +71,20 @@
 <td align='center' colspan='3'>@AfterClass</td>
 </tr>
 <tr>
-<td>com.ripplestreet.AllGetApis.CommonServiceFeedControllerGeApi</td>
+<td>com.ripplestreet.AllGetApis.AgencyControllerGetApi</td>
 <td>&nbsp;</td><td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@Test</td>
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>getAllFeedsForEvents</td>
-<td>common-service </td>
+<td>getAgencyById</td>
+<td>event-campaign-manager </td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>findAllAgencies</td>
+<td>event-campaign-manager </td>
 </tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
@@ -361,15 +361,15 @@
 <td align='center' colspan='3'>@AfterClass</td>
 </tr>
 <tr>
-<td>com.ripplestreet.AllGetApis.AssetControllerGetApi</td>
+<td>com.ripplestreet.AllGetApis.RecipientsController</td>
 <td>&nbsp;</td><td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@Test</td>
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>getAssetById</td>
-<td>event-campaign-manager </td>
+<td>GetAllRecipientForCampaignId</td>
+<td>notification </td>
 </tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
@@ -392,15 +392,15 @@
 <td align='center' colspan='3'>@AfterClass</td>
 </tr>
 <tr>
-<td>com.ripplestreet.AllGetApis.RecipientsController</td>
+<td>com.ripplestreet.AllGetApis.AssetControllerGetApi</td>
 <td>&nbsp;</td><td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@Test</td>
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>GetAllRecipientForCampaignId</td>
-<td>notification </td>
+<td>getAssetById</td>
+<td>event-campaign-manager </td>
 </tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
@@ -671,11 +671,11 @@
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>sendPublishUnpublishNotification</td>
+<td>resetNotificationReceipentId</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>resetNotificationReceipentId</td>
+<td>sendPublishUnpublishNotification</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
@@ -949,15 +949,15 @@
 <td align='center' colspan='3'>@AfterClass</td>
 </tr>
 <tr>
-<td>com.ripplestreet.AllGetApis.PreSignedURLControllerGetApi</td>
+<td>com.ripplestreet.AllPutApis.ApplicationsControllerPutApi</td>
 <td>&nbsp;</td><td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@Test</td>
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>getAllFilesBynotificationId</td>
-<td>notification </td>
+<td>updateApplications</td>
+<td>community-service </td>
 </tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
@@ -980,15 +980,15 @@
 <td align='center' colspan='3'>@AfterClass</td>
 </tr>
 <tr>
-<td>com.ripplestreet.AllPutApis.ApplicationsControllerPutApi</td>
+<td>com.ripplestreet.AllGetApis.PreSignedURLControllerGetApi</td>
 <td>&nbsp;</td><td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@Test</td>
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>updateApplications</td>
-<td>community-service </td>
+<td>getAllFilesBynotificationId</td>
+<td>notification </td>
 </tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
@@ -1265,7 +1265,8 @@
 <tr>
 <td>&nbsp;</td>
 <td>getRewardSummaryByEventId</td>
-<td>&nbsp;</td></tr>
+<td>reward-service </td>
+</tr>
 <tr>
 <td>&nbsp;</td>
 <td>getRewardByName</td>
@@ -1375,12 +1376,12 @@
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>finAllBannerByEventId</td>
+<td>findHeroPlaylistById</td>
 <td>event-campaign-manager </td>
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>findHeroPlaylistById</td>
+<td>finAllBannerByEventId</td>
 <td>event-campaign-manager </td>
 </tr>
 <tr>
@@ -2472,6 +2473,11 @@
 </tr>
 <tr>
 <td>&nbsp;</td>
+<td>getImageRecognitionResponse</td>
+<td>activityugcreview </td>
+</tr>
+<tr>
+<td>&nbsp;</td>
 <td>downloadAssetByURL</td>
 <td>activityugcreview </td>
 </tr>
@@ -2479,42 +2485,6 @@
 <td>&nbsp;</td>
 <td>getUserAsset</td>
 <td>activityugcreview </td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>getImageRecognitionResponse</td>
-<td>activityugcreview </td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeClass</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>BaseURI</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>StatusCode</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterClass</td>
-</tr>
-<tr>
-<td>com.ripplestreet.AllGetApis.ConfigurationController</td>
-<td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@Test</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>getAllconfigs</td>
-<td>event-campaign-manager </td>
 </tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
@@ -2556,6 +2526,37 @@
 <td>&nbsp;</td>
 <td>getAllPetsForUser</td>
 <td>community-service </td>
+</tr>
+<tr>
+<td align='center' colspan='3'>@BeforeClass</td>
+</tr>
+<tr>
+<td align='center' colspan='3'>@BeforeMethod</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>BaseURI</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@AfterMethod</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>StatusCode</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@AfterClass</td>
+</tr>
+<tr>
+<td>com.ripplestreet.AllGetApis.ConfigurationController</td>
+<td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@Test</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>getAllconfigs</td>
+<td>event-campaign-manager </td>
 </tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
@@ -3227,12 +3228,12 @@
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>GetStatusByNotificationId</td>
+<td>SearchCampaignforNotification</td>
 <td>notification </td>
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>SearchCampaignforNotification</td>
+<td>GetStatusByNotificationId</td>
 <td>notification </td>
 </tr>
 <tr>
@@ -3498,6 +3499,28 @@
 <td align='center' colspan='3'>@AfterClass</td>
 </tr>
 <tr>
+<td>com.ripplestreet.AllGetApis.NewTest</td>
+<td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@Test</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>f</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@BeforeClass</td>
+</tr>
+<tr>
+<td align='center' colspan='3'>@BeforeMethod</td>
+</tr>
+<tr>
+<td align='center' colspan='3'>@AfterMethod</td>
+</tr>
+<tr>
+<td align='center' colspan='3'>@AfterClass</td>
+</tr>
+<tr>
 <td>com.ripplestreet.AllGetApis.AchievementControllerGetApi</td>
 <td>&nbsp;</td><td>&nbsp;</td></tr>
 <tr>
@@ -3705,6 +3728,11 @@
 </tr>
 <tr>
 <td>&nbsp;</td>
+<td>getAllSubscriptionsByServiceName</td>
+<td>event </td>
+</tr>
+<tr>
+<td>&nbsp;</td>
 <td>getEventDetailBySlug</td>
 <td>event </td>
 </tr>
@@ -3715,13 +3743,9 @@
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>getAllSubscriptionsByServiceName</td>
+<td>getFilteredEvents</td>
 <td>event </td>
 </tr>
-<tr>
-<td>&nbsp;</td>
-<td>getFilteredEvents</td>
-<td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
 <td>getpackAndApplicationCountByEventId</td>
@@ -3765,7 +3789,8 @@
 <tr>
 <td>&nbsp;</td>
 <td>getEventMileStoneByIdAndDate</td>
-<td>&nbsp;</td></tr>
+<td>event </td>
+</tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
 </tr>

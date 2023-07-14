@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="1.521">
+           time="1.089">
   <properties />
   
   
-            <testcase name="GetListofBenefit" time="1.521" classname="com.ripplestreet.AllGetApis.BenefitControllerGetApi" />
+            <testcase name="GetListofBenefit" time="1.089" classname="com.ripplestreet.AllGetApis.BenefitControllerGetApi" />
       
 </testsuite>

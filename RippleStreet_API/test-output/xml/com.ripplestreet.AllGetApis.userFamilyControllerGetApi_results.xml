@@ -4,7 +4,7 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="1.651">
+           time="1.345">
   <properties />
             <testcase name="StatusCode" time="0.001" classname="com.ripplestreet.AllGetApis.userFamilyControllerGetApi">
                 <failure type="java.lang.AssertionError"
@@ -77,8 +77,8 @@ Expected status code <200> but was <302>.
           </testcase>
   
   
-            <testcase name="getAllPetsForUser" time="0.582" classname="com.ripplestreet.AllGetApis.userFamilyControllerGetApi" />
-                <testcase name="getAllPetTypes" time="0.527" classname="com.ripplestreet.AllGetApis.userFamilyControllerGetApi" />
-                <testcase name="getUserChildern" time="0.541" classname="com.ripplestreet.AllGetApis.userFamilyControllerGetApi" />
+            <testcase name="getAllPetTypes" time="0.457" classname="com.ripplestreet.AllGetApis.userFamilyControllerGetApi" />
+                <testcase name="getUserChildern" time="0.445" classname="com.ripplestreet.AllGetApis.userFamilyControllerGetApi" />
+                <testcase name="getAllPetsForUser" time="0.442" classname="com.ripplestreet.AllGetApis.userFamilyControllerGetApi" />
       
 </testsuite>

@@ -4,9 +4,9 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="4.319">
+           time="2.423">
   <properties />
-            <testcase name="StatusCode" time="1.282" classname="com.ripplestreet.AllGetApis.ActivityControllerGetApi">
+            <testcase name="StatusCode" time="0.252" classname="com.ripplestreet.AllGetApis.ActivityControllerGetApi">
                 <failure type="java.lang.IllegalArgumentException"
                   message="The maximum length of cell contents (text) is 32767 characters"
               >
@@ -52,7 +52,7 @@
           </testcase>
   
   
-            <testcase name="getActivity" time="1.519" classname="com.ripplestreet.AllGetApis.ActivityControllerGetApi" />
-                <testcase name="getListOfActivities" time="1.518" classname="com.ripplestreet.AllGetApis.ActivityControllerGetApi" />
+            <testcase name="getActivity" time="1.109" classname="com.ripplestreet.AllGetApis.ActivityControllerGetApi" />
+                <testcase name="getListOfActivities" time="1.062" classname="com.ripplestreet.AllGetApis.ActivityControllerGetApi" />
       
 </testsuite>

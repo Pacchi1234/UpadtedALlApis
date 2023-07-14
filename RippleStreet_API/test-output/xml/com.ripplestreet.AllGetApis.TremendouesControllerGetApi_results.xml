@@ -4,11 +4,11 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="3.903">
+           time="3.060">
   <properties />
   
   
-            <testcase name="getTremendousCampaigns" time="2.064" classname="com.ripplestreet.AllGetApis.TremendouesControllerGetApi" />
-                <testcase name="getTremendousFundingSources" time="1.839" classname="com.ripplestreet.AllGetApis.TremendouesControllerGetApi" />
+            <testcase name="getTremendousCampaigns" time="1.611" classname="com.ripplestreet.AllGetApis.TremendouesControllerGetApi" />
+                <testcase name="getTremendousFundingSources" time="1.449" classname="com.ripplestreet.AllGetApis.TremendouesControllerGetApi" />
       
 </testsuite>

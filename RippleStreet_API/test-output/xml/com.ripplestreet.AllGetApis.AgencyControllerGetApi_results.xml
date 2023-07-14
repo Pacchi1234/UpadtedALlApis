@@ -4,11 +4,11 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="2.980">
+           time="2.178">
   <properties />
   
   
-            <testcase name="findAllAgencies" time="1.462" classname="com.ripplestreet.AllGetApis.AgencyControllerGetApi" />
-                <testcase name="getAgencyById" time="1.518" classname="com.ripplestreet.AllGetApis.AgencyControllerGetApi" />
+            <testcase name="getAgencyById" time="1.034" classname="com.ripplestreet.AllGetApis.AgencyControllerGetApi" />
+                <testcase name="findAllAgencies" time="1.144" classname="com.ripplestreet.AllGetApis.AgencyControllerGetApi" />
       
 </testsuite>

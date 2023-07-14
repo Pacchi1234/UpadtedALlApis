@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.557">
+           time="0.468">
   <properties />
   
   
-            <testcase name="GetUserAndEventDataByEventIdandPersonId" time="0.557" classname="com.ripplestreet.AllGetApis.UserStatusControllerGetApi" />
+            <testcase name="GetUserAndEventDataByEventIdandPersonId" time="0.468" classname="com.ripplestreet.AllGetApis.UserStatusControllerGetApi" />
       
 </testsuite>
