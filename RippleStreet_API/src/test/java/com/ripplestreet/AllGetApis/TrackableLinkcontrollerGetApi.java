@@ -9,6 +9,7 @@ import io.restassured.RestAssured;
 public class TrackableLinkcontrollerGetApi extends genricUtilities {
 	@Test(priority=183,groups="event-campaign-manager")
 	public void findAllLinksForAnEvent() {
+		RestAssured.baseURI=baseURI;
 		response = RestAssured.given().queryParams("pagNo", page, "pageSize", size)
 				.get("/event-campaign-manager/v1/event/" + eventId + "/link/list");
 		Testcase = 183;

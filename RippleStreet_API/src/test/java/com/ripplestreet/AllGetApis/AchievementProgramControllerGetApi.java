@@ -10,6 +10,7 @@ public class AchievementProgramControllerGetApi extends genricUtilities
 {
 	@Test( priority=62,groups="benefits-platform")
 	public void GetListofAchievementPrograms() {
+		RestAssured.baseURI=baseURI;
 		response=RestAssured.get("/benefits-platform/v1/achievementProgram/list");
 	 	Testcase=62;
 		

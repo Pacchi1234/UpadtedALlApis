@@ -9,6 +9,7 @@ import io.restassured.RestAssured;
 public class SponserControllerGetApi extends genricUtilities {
 	@Test(priority=176,groups="event-campaign-manager")
 	public void findSponsorById() {
+		RestAssured.baseURI=baseURI;
 		response=RestAssured.get("/event-campaign-manager/v1/sponsor/"+sponsorId);
 		Testcase=176;
 		

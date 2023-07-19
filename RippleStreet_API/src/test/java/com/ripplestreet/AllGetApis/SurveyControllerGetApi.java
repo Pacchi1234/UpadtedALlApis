@@ -7,8 +7,10 @@ import com.ripplestreet.genricUtilities.genricUtilities;
 import io.restassured.RestAssured;
 
 public class SurveyControllerGetApi extends genricUtilities {
+	//RestAssured.basePath=baseURI;
 	@Test(priority=179,groups="event-campaign-manager")
 	public void getSurveyStatusByEventIdAndPid() {
+		RestAssured.baseURI=baseURI;
 		response = RestAssured.get("/event-campaign-manager/v1/event/" + eventId + "/person/" + pid);
 		Testcase = 179;
 	}

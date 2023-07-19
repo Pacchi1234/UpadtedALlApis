@@ -9,6 +9,7 @@ import io.restassured.RestAssured;
 public class ReviewControllerGetApi extends genricUtilities{
 	@Test(priority=46,groups="activityugcreview")
 	public void getExternalReview() {
+		RestAssured.baseURI=baseURI;
 		response=RestAssured.given().queryParams("page", page, "size",size).when().get("/activityugcreview/review/getExternalReview?eventId="+eventId);
 		Testcase=46;
 		}

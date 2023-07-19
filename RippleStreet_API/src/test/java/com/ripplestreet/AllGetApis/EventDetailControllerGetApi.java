@@ -9,6 +9,7 @@ import io.restassured.RestAssured;
 public class EventDetailControllerGetApi extends genricUtilities {
 	@Test(priority=157,groups="event-campaign-manager")
 	public void getBasicEventDetailByEventID() {
+		RestAssured.baseURI=baseURI;
 		response = RestAssured.get("/event-campaign-manager/v1/basicDetail/" + eventId);
 		Testcase = 157;
 	}

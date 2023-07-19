@@ -4,6 +4,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.xssf.usermodel.XSSFCell;
@@ -11,18 +14,16 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.ITestListener;
-import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import com.ripplestreet.AllGetApis.*;
 
 public class genricUtilities implements ITestListener {
 	public static String baseURI = ConfigFileReader.getInstance().getBaseURI();
 	public static String eventId = ConfigFileReader.getInstance().getEventId();
-	public String page = ConfigFileReader.getInstance().getPage();
+	public static String page = ConfigFileReader.getInstance().getPage();
 	public static String size = ConfigFileReader.getInstance().getSize();
 	public String activitiesName = ConfigFileReader.getInstance().getActivitiesName();
 	public String pid = ConfigFileReader.getInstance().getPid();
@@ -98,10 +99,10 @@ public class genricUtilities implements ITestListener {
 	public String benifitType = ConfigFileReader.getInstance().getbenifitType();
 	public String campaignId = ConfigFileReader.getInstance().getcampaignId();
 	public String directionASC = ConfigFileReader.getInstance().getdirectionASC();
-	public String evnetTypeUpcomingEvents = ConfigFileReader.getInstance().getevnetTypeUpcomingEvents();
-	public String eventTypeOpenEvents = ConfigFileReader.getInstance().geteventTypeOpenEvents();
-	public String eventTypeCurrentEvents = ConfigFileReader.getInstance().geteventTypeCurrentEvents();
-	public String eventTypePastEvents = ConfigFileReader.getInstance().geteventTypePastEvents();
+	public  static String evnetTypeUpcomingEvents = ConfigFileReader.getInstance().getevnetTypeUpcomingEvents();
+	public static  String eventTypeOpenEvents = ConfigFileReader.getInstance().geteventTypeOpenEvents();
+	public static  String eventTypeCurrentEvents = ConfigFileReader.getInstance().geteventTypeCurrentEvents();
+	public static String eventTypePastEvents = ConfigFileReader.getInstance().geteventTypePastEvents();
 	public String amazoneURI = ConfigFileReader.getInstance().getAmazonBaseURL();
 	public String id = ConfigFileReader.getInstance().getdiscussion_id();
 	public String commentId = ConfigFileReader.getInstance().getcommentId();
@@ -139,6 +140,10 @@ public class genricUtilities implements ITestListener {
 
 	public static Response response;
 	public static int Testcase;
+	public List ls = new ArrayList();
+	public HashMap map1 = new HashMap<>();
+	public HashMap map2= new HashMap<>();
+	public HashMap map3=new HashMap<>();
 
 	@BeforeMethod
 	public void BaseURI() throws InterruptedException {

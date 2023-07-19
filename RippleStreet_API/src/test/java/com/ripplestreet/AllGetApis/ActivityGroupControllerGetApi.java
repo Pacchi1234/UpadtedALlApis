@@ -9,6 +9,7 @@ import io.restassured.RestAssured;
 public class ActivityGroupControllerGetApi extends genricUtilities {
 	@Test( priority=70,alwaysRun = true,groups = { "activity-hub" })
 	public void GetListofActivityGroups() {
+		RestAssured.baseURI=baseURI;
 		response=RestAssured.get("/activity-hub/v1/activity/group/list");
 		Testcase=70;
 		

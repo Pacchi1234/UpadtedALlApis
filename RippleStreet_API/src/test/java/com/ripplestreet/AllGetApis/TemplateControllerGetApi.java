@@ -9,6 +9,7 @@ import io.restassured.RestAssured;
 public class TemplateControllerGetApi extends genricUtilities {
 	@Test(priority=133,groups="notification")
 	public void template() {
+		RestAssured.baseURI=baseURI;
 		response = RestAssured.get("/notification/v1/templates/" + templateName);
 		Testcase = 133;
 	}
