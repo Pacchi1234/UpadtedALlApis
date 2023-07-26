@@ -1,27 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-18T17:50:25 IST" name="Default suite" finished-at="2023-07-18T17:51:42 IST" duration-ms="77154">
+  <suite started-at="2023-07-21T11:13:33 IST" name="Default suite" finished-at="2023-07-21T11:13:36 IST" duration-ms="3357">
     <groups>
     </groups>
-    <test started-at="2023-07-18T17:50:25 IST" name="Default test" finished-at="2023-07-18T17:51:42 IST" duration-ms="77154">
-      <class name="com.ripplestreet.FilterApis.EventControllerFiltersGetApi">
-        <test-method is-config="true" signature="BaseURI()[pri:0, instance:com.ripplestreet.FilterApis.EventControllerFiltersGetApi@2b40ff9c]" started-at="2023-07-18T17:50:25 IST" name="BaseURI" finished-at="2023-07-18T17:50:25 IST" duration-ms="366" status="PASS">
+    <test started-at="2023-07-21T11:13:33 IST" name="Default test" finished-at="2023-07-21T11:13:36 IST" duration-ms="3357">
+      <class name="com.ripplestreet.FilterApis.GameControllerFiltersGetApi">
+        <test-method is-config="true" signature="BaseURI()[pri:0, instance:com.ripplestreet.FilterApis.GameControllerFiltersGetApi@221a3fa4]" started-at="2023-07-21T11:13:33 IST" name="BaseURI" finished-at="2023-07-21T11:13:34 IST" duration-ms="359" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BaseURI -->
-        <test-method signature="filter()[pri:0, instance:com.ripplestreet.FilterApis.EventControllerFiltersGetApi@2b40ff9c]" started-at="2023-07-18T17:50:25 IST" name="filter" finished-at="2023-07-18T17:51:42 IST" duration-ms="76689" status="FAIL">
-          <exception class="java.lang.IllegalArgumentException">
+        <test-method signature="getAllgames()[pri:0, instance:com.ripplestreet.FilterApis.GameControllerFiltersGetApi@221a3fa4]" started-at="2023-07-21T11:13:34 IST" name="getAllgames" finished-at="2023-07-21T11:13:36 IST" duration-ms="2941" status="FAIL">
+          <exception class="java.io.IOException">
             <message>
-              <![CDATA[The maximum length of cell contents (text) is 32767 characters]]>
+              <![CDATA[Truncated ZIP file]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: The maximum length of cell contents (text) is 32767 characters
-at org.apache.poi.ss.usermodel.CellBase.checkLength(CellBase.java:292)
-at org.apache.poi.ss.usermodel.CellBase.setCellValue(CellBase.java:273)
-at com.ripplestreet.genricUtilities.genricUtilities.StatusCode(genricUtilities.java:175)
-at com.ripplestreet.FilterApis.EventControllerFiltersGetApi.filter(EventControllerFiltersGetApi.java:90)
+              <![CDATA[java.io.IOException: Truncated ZIP file
+at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readDeflated(ZipArchiveInputStream.java:636)
+at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.read(ZipArchiveInputStream.java:528)
+at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
+at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.read(ZipArchiveThresholdInputStream.java:80)
+at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:240)
+at org.apache.poi.util.IOUtils.toByteArrayWithMaxLength(IOUtils.java:220)
+at org.apache.poi.openxml4j.util.ZipArchiveFakeEntry.<init>(ZipArchiveFakeEntry.java:81)
+at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.<init>(ZipInputStreamZipEntrySource.java:98)
+at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:132)
+at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
+at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:290)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286)
+at com.ripplestreet.genricUtilities.genricUtilities.StatusCode(genricUtilities.java:174)
+at com.ripplestreet.FilterApis.GameControllerFiltersGetApi.getAllgames(GameControllerFiltersGetApi.java:29)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -52,20 +63,31 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+          </exception> <!-- java.io.IOException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- filter -->
-        <test-method is-config="true" signature="StatusCode()[pri:0, instance:com.ripplestreet.FilterApis.EventControllerFiltersGetApi@2b40ff9c]" started-at="2023-07-18T17:51:42 IST" name="StatusCode" finished-at="2023-07-18T17:51:42 IST" duration-ms="38" status="FAIL">
-          <exception class="java.lang.IllegalArgumentException">
+        </test-method> <!-- getAllgames -->
+        <test-method is-config="true" signature="StatusCode()[pri:0, instance:com.ripplestreet.FilterApis.GameControllerFiltersGetApi@221a3fa4]" started-at="2023-07-21T11:13:36 IST" name="StatusCode" finished-at="2023-07-21T11:13:36 IST" duration-ms="5" status="FAIL">
+          <exception class="java.io.IOException">
             <message>
-              <![CDATA[The maximum length of cell contents (text) is 32767 characters]]>
+              <![CDATA[Truncated ZIP file]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: The maximum length of cell contents (text) is 32767 characters
-at org.apache.poi.ss.usermodel.CellBase.checkLength(CellBase.java:292)
-at org.apache.poi.ss.usermodel.CellBase.setCellValue(CellBase.java:273)
-at com.ripplestreet.genricUtilities.genricUtilities.StatusCode(genricUtilities.java:175)
+              <![CDATA[java.io.IOException: Truncated ZIP file
+at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readDeflated(ZipArchiveInputStream.java:636)
+at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.read(ZipArchiveInputStream.java:528)
+at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
+at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.read(ZipArchiveThresholdInputStream.java:80)
+at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:240)
+at org.apache.poi.util.IOUtils.toByteArrayWithMaxLength(IOUtils.java:220)
+at org.apache.poi.openxml4j.util.ZipArchiveFakeEntry.<init>(ZipArchiveFakeEntry.java:81)
+at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.<init>(ZipInputStreamZipEntrySource.java:98)
+at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:132)
+at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
+at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:290)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286)
+at com.ripplestreet.genricUtilities.genricUtilities.StatusCode(genricUtilities.java:174)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -101,11 +123,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+          </exception> <!-- java.io.IOException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StatusCode -->
-      </class> <!-- com.ripplestreet.FilterApis.EventControllerFiltersGetApi -->
+      </class> <!-- com.ripplestreet.FilterApis.GameControllerFiltersGetApi -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

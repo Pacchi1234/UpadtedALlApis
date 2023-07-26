@@ -5,7 +5,9 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 import org.apache.poi.ss.usermodel.CellType;
@@ -13,14 +15,16 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.testng.ITestListener;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 
 import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
-public class genricUtilities implements ITestListener {
+public class genricUtilities {
 	public static String baseURI = ConfigFileReader.getInstance().getBaseURI();
 	public static String eventId = ConfigFileReader.getInstance().getEventId();
 	public static String page = ConfigFileReader.getInstance().getPage();
@@ -99,9 +103,9 @@ public class genricUtilities implements ITestListener {
 	public String benifitType = ConfigFileReader.getInstance().getbenifitType();
 	public String campaignId = ConfigFileReader.getInstance().getcampaignId();
 	public String directionASC = ConfigFileReader.getInstance().getdirectionASC();
-	public  static String evnetTypeUpcomingEvents = ConfigFileReader.getInstance().getevnetTypeUpcomingEvents();
-	public static  String eventTypeOpenEvents = ConfigFileReader.getInstance().geteventTypeOpenEvents();
-	public static  String eventTypeCurrentEvents = ConfigFileReader.getInstance().geteventTypeCurrentEvents();
+	public static String evnetTypeUpcomingEvents = ConfigFileReader.getInstance().getevnetTypeUpcomingEvents();
+	public static String eventTypeOpenEvents = ConfigFileReader.getInstance().geteventTypeOpenEvents();
+	public static String eventTypeCurrentEvents = ConfigFileReader.getInstance().geteventTypeCurrentEvents();
 	public static String eventTypePastEvents = ConfigFileReader.getInstance().geteventTypePastEvents();
 	public String amazoneURI = ConfigFileReader.getInstance().getAmazonBaseURL();
 	public String id = ConfigFileReader.getInstance().getdiscussion_id();
@@ -131,25 +135,53 @@ public class genricUtilities implements ITestListener {
 	public String PutFAQID = ConfigFileReader.getInstance().getPutFAQID();
 	public String goalId = ConfigFileReader.getInstance().getgoalId();
 	public static String ExcelSheetPageName2 = ConfigFileReader.getInstance().getExcelSheetPageName2();
-	public static String path = System.getProperty("user.dir")
-			+ "C:\\Users\\Prashanthchigarer\\Documents\\Workspace\\RippleStreet_API\\RippleStreet_API\\src\\test\\resources\\EventController.xlsx";
-	public static String Package1 = "com.ripplestreet.AllGetApis";
-	public String Package2 = "com.ripplestreet.AllPutApis";
-
-	public static String PutBody;
-
+	public String PutBody;
 	public static Response response;
 	public static int Testcase;
+	@SuppressWarnings("rawtypes")
 	public List ls = new ArrayList();
-	public HashMap map1 = new HashMap<>();
-	public HashMap map2= new HashMap<>();
-	public HashMap map3=new HashMap<>();
+	@SuppressWarnings("rawtypes")
+	public LinkedHashMap map1 = new LinkedHashMap<Object, Object>();
+	@SuppressWarnings("rawtypes")
+	public LinkedHashMap map2 = new LinkedHashMap<Object, Object>();
+	@SuppressWarnings("rawtypes")
+	public HashMap map3 = new HashMap<Object, Object>();
+	public List<String> SourceType = Arrays.asList("STORE_GEO_CODING", "SEGMENT_STORE_GEO_CODING", "REWARD_ALLOCATION",
+			"EXPORT_AUDIENCE", "EXPORT_ACTIVITY_CONFIG", "EXPORT_REWARD_PREFERENCE", "EXPORT_REWARD_ALLOCATION",
+			"EXPORT_REWARD_DELIVERY", "EXPORT_SEGMENT_DATA", "EXPORT_COMMUNITY", "EXPORT_UGC_VIDEO", "EXPORT_UGC_PHOTO",
+			"EXPORT_UGC_DISCUSSION", "EXPORT_UGC_REVIEW", "EXPORT_UGC_EXTERNALREVIEW");
+	public List<String> rewardType = Arrays.asList("PACK", "REIMBURSEMENT", "HYBRID");
+	public List<String> RewardStatus = Arrays.asList("INITIATED", "INPROGRESS", "READY_FOR_DELIVERY", "DELIVERED",
+			"PARTIAL_DELIVERED", "FAILED", "PENDING_APPROVAL", "CANCELLED", "EXPIRED", "REWARDED");
+	public List<String> evenTypes = Arrays.asList("UPCOMINGEVENTS", "OPENEVENTS", "CURRENTEVENTS", "PASTEVENTS");
+	public List<String> booleanValues = Arrays.asList("TRUE", "FALSE");
+	public List<String> FeedTypes = Arrays.asList("Discussion", "SocialAsset", "Review");
+	public List<String> Benefittype = Arrays.asList("ALL", "BADGE", "STATUS");
+	public List<String> participantType = Arrays.asList("All", "Host", "Chatterbox", "Applicant", "Reserved", "Reject",
+			"Finalist");
+	public List<String> segmentStatus = Arrays.asList("DRAFT", "PUBLISH", "UNPUBLISH");
+	public String body = "{\"clientId\":\"2a42a243ee3549fdf08368578be6b0a8dffed0e1\",\"email\":\"lalithac+11@nu10.co\",\"password\":\"L@litha123\"}";
+	public String AccessToken;
+
+	@BeforeSuite
+	public void authToken() {
+		try {
+			response = RestAssured.given().contentType(ContentType.JSON).body(body)
+					.post("https://dev.ripplestreet.com/auth/login");
+			String responseBody = response.asString();
+			JsonPath jsonPath = new JsonPath(responseBody);
+			AccessToken = jsonPath.getString("accessToken");
+			System.out.println("AccsessToken is =" + AccessToken);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
 
 	@BeforeMethod
 	public void BaseURI() throws InterruptedException {
-
 		RestAssured.baseURI = baseURI;
-
 	}
 
 	@SuppressWarnings("unlikely-arg-type")
@@ -179,37 +211,24 @@ public class genricUtilities implements ITestListener {
 		if (cell.getCellType() == CellType.STRING) {
 			String ExpectedOutput = cell.getStringCellValue();
 			if (ExpectedOutput.equals(ActualOutput)) {
-
 				System.err.println("TestCase" + " " + Testcase + " " + "has been passed");
-
 			} else {
-
 				System.err.println("TestCase" + " " + Testcase + " " + "Expected and actual output is Mismatching");
-				// softAssert.assertEquals(ActualOutput, cell);
-
 			}
 		} else if (cell.getCellType() == CellType.NUMERIC) {
 			int ExpectedOutput = (int) cell.getNumericCellValue();
-		/*	int Actual_output = Integer.parseInt(ActualOutput);
+
+			int Actual_output = Integer.parseInt(ActualOutput);
 
 			if (ExpectedOutput == Actual_output) {
-
-				System.err.println("TestCase" + " " + Testcase + " " + "has been passed");
-				// softAssert.assertEquals(ActualOutput, cell);
-
+				System.err.println("TestCase" + " " + Testcase + " " + "has been passed"); //
 			} else {
 				System.err.println("TestCase" + " " + Testcase + " " + "Expected and actual output is Mismatching");
 			}
-			*/
-
 		} else if (cell.getCellType() == CellType.BOOLEAN) {
 			Boolean ExpectedOutput = cell.getBooleanCellValue();
-
 			if (ExpectedOutput.equals(ActualOutput)) {
-
 				System.err.println("TestCase" + " " + Testcase + " " + "has been passed");
-				// softAssert.assertEquals(ActualOutput, cell);
-
 			} else {
 				System.err.println("TestCase" + " " + Testcase + " " + "Expected and actual output is Mismatching");
 			}

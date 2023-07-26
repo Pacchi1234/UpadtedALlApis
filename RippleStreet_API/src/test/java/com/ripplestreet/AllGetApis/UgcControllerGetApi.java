@@ -45,8 +45,7 @@ public class UgcControllerGetApi extends genricUtilities {
 	public void getUserAsset() {
 		response = RestAssured.given().when().get("/activityugcreview/client_api/getUserAsset?eventId=" + eventId);
 		Testcase = 54;
-		// output is 500 internal server error
-
+//intrnal server error
 	}
 
 }

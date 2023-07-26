@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ripplestreet.FilterApis.EventControllerFiltersGetApi">
+      <class name="com.ripplestreet.FilterApis.GameControllerFiltersGetApi">
         <methods>
-          <include name="filter"/>
+          <include name="getAllgames"/>
           <include name="BaseURI"/>
           <include name="StatusCode"/>
         </methods>
-      </class> <!-- com.ripplestreet.FilterApis.EventControllerFiltersGetApi -->
+      </class> <!-- com.ripplestreet.FilterApis.GameControllerFiltersGetApi -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

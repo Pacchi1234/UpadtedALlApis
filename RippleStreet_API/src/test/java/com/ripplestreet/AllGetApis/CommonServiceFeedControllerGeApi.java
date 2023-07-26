@@ -12,6 +12,7 @@ public class CommonServiceFeedControllerGeApi extends genricUtilities {
 		response=RestAssured.given().queryParams("pageNo",page,"size",size).get("/common-service/v1/feeds/"+eventId);
 		Testcase=98;
 		
+		
 	}
 	
 

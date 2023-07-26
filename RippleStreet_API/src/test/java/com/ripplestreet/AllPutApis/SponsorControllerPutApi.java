@@ -31,6 +31,7 @@ public class SponsorControllerPutApi extends genricUtilities{
 
 		response = RestAssured.given().contentType(ContentType.JSON).body(PutBody).when()
 				.put("/event-campaign-manager/v1/sponsor/"+sponsorId);
+		
 	 
  }
 }

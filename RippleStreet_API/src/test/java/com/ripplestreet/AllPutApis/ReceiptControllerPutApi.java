@@ -16,7 +16,7 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 
 public class ReceiptControllerPutApi extends genricUtilities {
-	@Test(priority=212)
+	@Test(priority=212,groups="common-service")
 	public void UpdateAreceiptRecord() throws IOException {
 		Testcase = 212;
 		File file = new File(devApiPath);
@@ -34,7 +34,7 @@ public class ReceiptControllerPutApi extends genricUtilities {
 				.put("/common-service/v1/event/" + eventId + "/receipt/" + receiptId);
 	}
 
-	@Test
+	@Test(groups="common-service")
 	public void UpdateReceiptDatarecorder() throws Throwable {
 		Testcase = 23;
 		File file = new File(devApiPath);

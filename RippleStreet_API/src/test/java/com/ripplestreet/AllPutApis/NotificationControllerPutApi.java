@@ -15,7 +15,7 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 
 public class NotificationControllerPutApi extends genricUtilities {
-	@Test(priority=223)
+	@Test(priority=223,groups="notification")
 	public void deleteFileUploadByCampaignId() throws Exception {
 		Testcase = 223;
 		File file = new File(devApiPath);
@@ -32,7 +32,7 @@ public class NotificationControllerPutApi extends genricUtilities {
 		response = RestAssured.given().contentType(ContentType.JSON).body(PutBody).when()
 				.put("/notification/v1/notifications/deleteByNotificationId?notificationId="+putNotificationId);
 	}
-	@Test(priority=224)
+	@Test(priority=224,groups="notification")
 	public void resetNotificationReceipentId() throws Throwable {
 		Testcase = 224;
 		File file = new File(devApiPath);
@@ -49,7 +49,7 @@ public class NotificationControllerPutApi extends genricUtilities {
 		response = RestAssured.given().contentType(ContentType.JSON).body(PutBody).when()
 				.put("/notification/v1/notifications/resetNotificationStatus/"+notificationId+"/Published");
 		
-	}@Test(priority=225)
+	}@Test(priority=225,groups="notification")
 	public void resetNotificationStatus() throws Throwable {
 		Testcase = 225;
 		File file = new File(devApiPath);
@@ -67,7 +67,7 @@ public class NotificationControllerPutApi extends genricUtilities {
 				.put("/notification/v1/notifications/resetNotificationStatus/"+notificationId+"/Published");
 		
 	}
-	@Test(priority=226)
+	@Test(priority=226,groups="notification")
 public void sendPublishUnpublishNotification() throws Throwable{
 		Testcase = 226;
 		File file = new File(devApiPath);
@@ -85,7 +85,7 @@ public void sendPublishUnpublishNotification() throws Throwable{
 				.put("/notification/v1/notifications/"+putNotificationId+"/"+publishStatus);
 		
 	}
-	@Test(priority=227)
+	@Test(priority=227,groups="notification")
 	public void resetNotificationRecepientData() throws Throwable {
 		Testcase=227;
 		File file = new File(devApiPath);
