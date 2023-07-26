@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="51.051">
+           time="50.286">
   <properties />
   
   
-            <testcase name="getRewradAllocation" time="51.051" classname="com.ripplestreet.FilterApis.RewardAllocationControllerFilterApi" />
+            <testcase name="getRewradAllocation" time="50.286" classname="com.ripplestreet.FilterApis.RewardAllocationControllerFilterApi" />
       
 </testsuite>

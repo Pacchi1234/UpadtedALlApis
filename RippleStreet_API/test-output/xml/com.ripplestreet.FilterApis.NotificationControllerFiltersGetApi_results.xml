@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="3.284">
+           time="3.337">
   <properties />
   
   
-            <testcase name="getAllNotification" time="3.284" classname="com.ripplestreet.FilterApis.NotificationControllerFiltersGetApi" />
+            <testcase name="getAllNotification" time="3.337" classname="com.ripplestreet.FilterApis.NotificationControllerFiltersGetApi" />
       
 </testsuite>

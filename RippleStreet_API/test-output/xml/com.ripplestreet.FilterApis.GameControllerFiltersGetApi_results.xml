@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="8.454">
+           time="8.434">
   <properties />
   
   
-            <testcase name="getAllgames" time="8.454" classname="com.ripplestreet.FilterApis.GameControllerFiltersGetApi" />
+            <testcase name="getAllgames" time="8.434" classname="com.ripplestreet.FilterApis.GameControllerFiltersGetApi" />
       
 </testsuite>

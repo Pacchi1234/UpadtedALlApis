@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="9.912">
+           time="10.038">
   <properties />
   
   
-            <testcase name="getAllSponsors" time="9.912" classname="com.ripplestreet.FilterApis.SponsorControlletFiltersGetApi" />
+            <testcase name="getAllSponsors" time="10.038" classname="com.ripplestreet.FilterApis.SponsorControlletFiltersGetApi" />
       
 </testsuite>

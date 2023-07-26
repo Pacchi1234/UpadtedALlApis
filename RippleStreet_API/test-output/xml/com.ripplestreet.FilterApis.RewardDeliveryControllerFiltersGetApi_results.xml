@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="51.516">
+           time="50.805">
   <properties />
   
   
-            <testcase name="getRewardDeleviries" time="51.516" classname="com.ripplestreet.FilterApis.RewardDeliveryControllerFiltersGetApi" />
+            <testcase name="getRewardDeleviries" time="50.805" classname="com.ripplestreet.FilterApis.RewardDeliveryControllerFiltersGetApi" />
       
 </testsuite>
