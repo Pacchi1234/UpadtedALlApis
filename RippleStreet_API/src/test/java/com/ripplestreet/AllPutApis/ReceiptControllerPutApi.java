@@ -36,7 +36,7 @@ public class ReceiptControllerPutApi extends genricUtilities {
 
 	@Test(groups="common-service")
 	public void UpdateReceiptDatarecorder() throws Throwable {
-		Testcase = 23;
+		Testcase = 213;
 		File file = new File(devApiPath);
 		FileInputStream fis = new FileInputStream(file);
 		@SuppressWarnings("resource")

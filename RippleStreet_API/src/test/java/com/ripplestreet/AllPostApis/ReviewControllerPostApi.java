@@ -15,10 +15,10 @@ import com.ripplestreet.genricUtilities.postApiutilities;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 
-public class AudiencepromationConytrollerPostApi extends postApiutilities {
-	@Test(groups="community-service")
-	public void addAndPromoteAudience() throws IOException {
-		Testcase = 8;
+public class ReviewControllerPostApi extends postApiutilities {
+	@Test(groups = "activityugcreview")
+	public void getReviewListByFilter() throws IOException {
+		Testcase = 24;
 		File file = new File(postApipath);
 		FileInputStream fis = new FileInputStream(file);
 		@SuppressWarnings("resource")
@@ -31,13 +31,13 @@ public class AudiencepromationConytrollerPostApi extends postApiutilities {
 		System.out.println(PutBody);
 
 		response = RestAssured.given().contentType(ContentType.JSON).body(PutBody).when()
-				.post("/community-service/v1/pid/list/" + eventId + "?auidenceType=APPLICANT");
+				.post("/activityugcreview/review/getReviewListByFilters");
 
 	}
 
-	@Test(groups="community-service")
-	public void audienceAddPromoteFileProcess() throws IOException {
-		Testcase = 9;
+	@Test(groups = "activityugcreview")
+	public void create() throws IOException {
+		Testcase = 25;
 		File file = new File(postApipath);
 		FileInputStream fis = new FileInputStream(file);
 		@SuppressWarnings("resource")
@@ -48,10 +48,26 @@ public class AudiencepromationConytrollerPostApi extends postApiutilities {
 		XSSFCell cell2 = row2.getCell(4);
 		PutBody = cell2.getStringCellValue();
 		System.out.println(PutBody);
-
 		response = RestAssured.given().contentType(ContentType.JSON).body(PutBody).when()
-				.post("/community-service/v1/process/file/2128?auidenceType=APPLICANT&fileName=audience 2128.csv");
-
+				.post("/activityugcreview/review/create");
 	}
 
+	@Test(groups = "activityugcreview")
+	public void createExternalReview() throws IOException {
+		Testcase = 26;
+		File file = new File(postApipath);
+		FileInputStream fis = new FileInputStream(file);
+		@SuppressWarnings("resource")
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+		XSSFSheet sheet = workbook.getSheet("postApi");
+		XSSFRow row2 = sheet.getRow(Testcase);
+		XSSFCell cell2 = row2.getCell(4);
+		PutBody = cell2.getStringCellValue();
+		System.out.println(PutBody);
+		response = RestAssured.given().contentType(ContentType.JSON).body(PutBody).when()
+				.post("/activityugcreview/review/createExternalReview");
+
+	}
+	
+	
 }

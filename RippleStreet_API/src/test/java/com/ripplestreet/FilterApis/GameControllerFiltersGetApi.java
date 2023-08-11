@@ -14,6 +14,7 @@ public class GameControllerFiltersGetApi extends genricUtilities {
 	@SuppressWarnings("unchecked")
 	@Test(groups="gamification")
 	public void getAllgames() throws IOException {
+		RestAssured.baseURI=baseURI;
 		Testcase = 370;
 		map1.put("eventId", "2128");
 		map1.put("gameId", "106");

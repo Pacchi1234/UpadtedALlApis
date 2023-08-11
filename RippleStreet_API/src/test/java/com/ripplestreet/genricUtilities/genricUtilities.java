@@ -9,7 +9,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
-
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -18,7 +17,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-
+import org.testng.asserts.SoftAssert;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
@@ -135,6 +134,15 @@ public class genricUtilities {
 	public String PutFAQID = ConfigFileReader.getInstance().getPutFAQID();
 	public String goalId = ConfigFileReader.getInstance().getgoalId();
 	public static String ExcelSheetPageName2 = ConfigFileReader.getInstance().getExcelSheetPageName2();
+	public static String isNotificationSendRequired = ConfigFileReader.getInstance().getisNotificationSendRequired();
+	public static String reserved = ConfigFileReader.getInstance().getReserved();
+	public static String AudiencePromotionJobID = ConfigFileReader.getInstance().getAudiencePromotionJobID();
+	public static String AudiencePromotionColumnName = ConfigFileReader.getInstance().getAudiencePromotionColumnName();
+	public static String AudiencePromotionJobfailedPidsCount = ConfigFileReader.getInstance()
+			.getAudiencePromotionJobfailedPidsCount();
+	public static String AudiencePromotionJobprocessedPidsCount = ConfigFileReader.getInstance()
+			.getAudiencePromotionJobfailedPidsCount();
+
 	public String PutBody;
 	public static Response response;
 	public static int Testcase;
@@ -153,15 +161,17 @@ public class genricUtilities {
 	public List<String> rewardType = Arrays.asList("PACK", "REIMBURSEMENT", "HYBRID");
 	public List<String> RewardStatus = Arrays.asList("INITIATED", "INPROGRESS", "READY_FOR_DELIVERY", "DELIVERED",
 			"PARTIAL_DELIVERED", "FAILED", "PENDING_APPROVAL", "CANCELLED", "EXPIRED", "REWARDED");
+	public List<String> receiptstatus = Arrays.asList("INITIATED", "APPROVED", "PENDING", "REJECTED");
 	public List<String> evenTypes = Arrays.asList("UPCOMINGEVENTS", "OPENEVENTS", "CURRENTEVENTS", "PASTEVENTS");
 	public List<String> booleanValues = Arrays.asList("TRUE", "FALSE");
 	public List<String> FeedTypes = Arrays.asList("Discussion", "SocialAsset", "Review");
-	public List<String> Benefittype = Arrays.asList("ALL", "BADGE", "STATUS");
+	public List<String> BenefitType = Arrays.asList("ALL", "BADGE", "STATUS");
 	public List<String> participantType = Arrays.asList("All", "Host", "Chatterbox", "Applicant", "Reserved", "Reject",
 			"Finalist");
 	public List<String> segmentStatus = Arrays.asList("DRAFT", "PUBLISH", "UNPUBLISH");
 	public String body = "{\"clientId\":\"2a42a243ee3549fdf08368578be6b0a8dffed0e1\",\"email\":\"lalithac+11@nu10.co\",\"password\":\"L@litha123\"}";
-	public String AccessToken;
+	public List<String> mobileEventType = Arrays.asList("APPLY", "APPLIED", "SELECTED", "PAST");
+	public String AccessToken = null;
 
 	@BeforeSuite
 	public void authToken() {
@@ -172,7 +182,6 @@ public class genricUtilities {
 			JsonPath jsonPath = new JsonPath(responseBody);
 			AccessToken = jsonPath.getString("accessToken");
 			System.out.println("AccsessToken is =" + AccessToken);
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -187,11 +196,16 @@ public class genricUtilities {
 	@SuppressWarnings("unlikely-arg-type")
 	@AfterMethod
 	public static void StatusCode() throws IOException, NumberFormatException {
+		int statuscode = response.statusCode();
+		if (statuscode == 200) {
+			SoftAssert softAssert = new SoftAssert();
+			softAssert.assertEquals(statuscode, 200);
+			System.out.println(statuscode);
 
-		/*
-		 * SoftAssert softAssert = new SoftAssert(); int statusCode = 200;
-		 * softAssert.assertEquals(200, statusCode);
-		 */
+		} else {
+			System.err.println("Expected status code is 200 but was " + statuscode);
+
+		}
 		String ActualOutput = response.asString();
 		System.out.println("Actual output is" + ActualOutput);
 		File file = new File(devApiPath);
@@ -217,11 +231,11 @@ public class genricUtilities {
 			}
 		} else if (cell.getCellType() == CellType.NUMERIC) {
 			int ExpectedOutput = (int) cell.getNumericCellValue();
-
 			int Actual_output = Integer.parseInt(ActualOutput);
 
 			if (ExpectedOutput == Actual_output) {
-				System.err.println("TestCase" + " " + Testcase + " " + "has been passed"); //
+				System.err.println("TestCase" + " " + Testcase + " " + "has been passed");
+
 			} else {
 				System.err.println("TestCase" + " " + Testcase + " " + "Expected and actual output is Mismatching");
 			}

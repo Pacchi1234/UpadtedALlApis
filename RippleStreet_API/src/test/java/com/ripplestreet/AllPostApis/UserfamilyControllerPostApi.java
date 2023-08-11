@@ -49,7 +49,6 @@ public class UserfamilyControllerPostApi extends postApiutilities {
 		PutBody = cell2.getStringCellValue();
 		System.out.println(PutBody);
 
-		
 		response = RestAssured.given().contentType(ContentType.JSON).body(PutBody).when()
 				.post("/community-service/v1/userFamily/pets");
 

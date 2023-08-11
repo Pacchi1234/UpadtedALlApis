@@ -18,6 +18,7 @@ import io.restassured.http.ContentType;
 public class CommunityControllerPostApi extends postApiutilities {
 	@Test(groups = "community-service")
 	public void adminupdateuserProfile() throws IOException {
+		RestAssured.baseURI=baseURI;
 		Testcase = 12;
 		File file = new File(postApipath);
 		FileInputStream fis = new FileInputStream(file);
@@ -105,7 +106,7 @@ public class CommunityControllerPostApi extends postApiutilities {
 		PutBody = cell2.getStringCellValue();
 		System.out.println(PutBody);
 
-		response = RestAssured.given().header("Authorization",AccessToken).contentType(ContentType.JSON).body(PutBody).when()
+		response = RestAssured.given().contentType(ContentType.JSON).body(PutBody).when()
 				.post("/community-service/community/userProfile");
 	}
 	@Test(groups="community-service")
@@ -122,7 +123,7 @@ public class CommunityControllerPostApi extends postApiutilities {
 		PutBody = cell2.getStringCellValue();
 		System.out.println(PutBody);
 
-		response = RestAssured.given().header("Authorization",AccessToken).contentType(ContentType.JSON).body(PutBody).when()
+		response = RestAssured.given().contentType(ContentType.JSON).body(PutBody).when()
 				.post("/community-service/v2/community/getAllUsersByIds");
 		
 	}

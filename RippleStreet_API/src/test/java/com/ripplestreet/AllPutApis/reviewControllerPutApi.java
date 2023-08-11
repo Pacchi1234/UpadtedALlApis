@@ -17,9 +17,9 @@ import io.restassured.http.ContentType;
 
 public class reviewControllerPutApi extends genricUtilities {
 
-	@Test(priority=195,groups="activityugcreview")
+	@Test(priority = 195, groups = "activityugcreview")
 	public void updateExternalReview() throws IOException {
-
+		RestAssured.baseURI = baseURI;
 		Testcase = 195;
 
 		File file = new File(devApiPath);

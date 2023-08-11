@@ -3,31 +3,46 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.ripplestreet.AllGetApis.EventControllerGetApi">
+      <class name="com.ripplestreet.AllGetApis.SegmentationFolderControllerGetApi">
         <methods>
-          <include name="getEventDetailForWorkFlow"/>
-          <include name="getEventMileStoneByIdAndDate"/>
           <include name="authToken"/>
-          <include name="getEventDetailBySlug"/>
-          <include name="getCurrentMileStonesByEvent"/>
-          <include name="getFilteredEvents"/>
-          <include name="getpackAndApplicationCountByEventId"/>
-          <include name="getProductDetailEventIdAndProductId"/>
-          <include name="getByEventName"/>
-          <include name="getEventById"/>
+          <include name="GetSegmentFolderFromCampaignSegment"/>
           <include name="BaseURI"/>
           <include name="StatusCode"/>
         </methods>
-      </class> <!-- com.ripplestreet.AllGetApis.EventControllerGetApi -->
-      <class name="com.ripplestreet.AllPostApis.CommunityControllerPostApi">
+      </class> <!-- com.ripplestreet.AllGetApis.SegmentationFolderControllerGetApi -->
+      <class name="com.ripplestreet.AllGetApis.ActivityControllerGetApi">
         <methods>
-          <include name="getAlluserByIds"/>
+          <include name="authToken"/>
+          <include name="getActivity"/>
+          <include name="BaseURI"/>
+          <include name="StatusCode"/>
+        </methods>
+      </class> <!-- com.ripplestreet.AllGetApis.ActivityControllerGetApi -->
+      <class name="com.ripplestreet.FilterApis.EventControllerFiltersGetApi">
+        <methods>
+          <include name="authToken"/>
+          <include name="BaseURI"/>
+          <include name="geFilterdEvent"/>
+          <include name="StatusCode"/>
+        </methods>
+      </class> <!-- com.ripplestreet.FilterApis.EventControllerFiltersGetApi -->
+      <class name="com.ripplestreet.AllPostApis.SegmentStoreControllerPostApi">
+        <methods>
+          <include name="authToken"/>
+          <include name="pushSegmentDataFetcherRequest"/>
+          <include name="BaseURI"/>
+          <include name="StatusCode"/>
+        </methods>
+      </class> <!-- com.ripplestreet.AllPostApis.SegmentStoreControllerPostApi -->
+      <class name="com.ripplestreet.AllPutApis.reviewControllerPutApi">
+        <methods>
+          <include name="updateExternalReview"/>
           <include name="authToken"/>
           <include name="BaseURI"/>
           <include name="StatusCode"/>
-          <include name="saveUserProfile"/>
         </methods>
-      </class> <!-- com.ripplestreet.AllPostApis.CommunityControllerPostApi -->
+      </class> <!-- com.ripplestreet.AllPutApis.reviewControllerPutApi -->
       <class name="com.ripplestreet.AllGetApis.ActivityGroupControllerGetApi">
         <methods>
           <include name="GetActivityGroup"/>
@@ -37,46 +52,14 @@
           <include name="StatusCode"/>
         </methods>
       </class> <!-- com.ripplestreet.AllGetApis.ActivityGroupControllerGetApi -->
-      <class name="com.ripplestreet.AllGetApis.ActivityControllerGetApi">
-        <methods>
-          <include name="authToken"/>
-          <include name="getActivity"/>
-          <include name="BaseURI"/>
-          <include name="StatusCode"/>
-        </methods>
-      </class> <!-- com.ripplestreet.AllGetApis.ActivityControllerGetApi -->
-      <class name="com.ripplestreet.AllPutApis.ApplicationsControllerPutApi">
-        <methods>
-          <include name="updateApplications"/>
-          <include name="authToken"/>
-          <include name="BaseURI"/>
-          <include name="StatusCode"/>
-        </methods>
-      </class> <!-- com.ripplestreet.AllPutApis.ApplicationsControllerPutApi -->
-      <class name="com.ripplestreet.AllPutApis.reviewControllerPutApi">
-        <methods>
-          <include name="updateExternalReview"/>
-          <include name="authToken"/>
-          <include name="BaseURI"/>
-          <include name="StatusCode"/>
-        </methods>
-      </class> <!-- com.ripplestreet.AllPutApis.reviewControllerPutApi -->
-      <class name="com.ripplestreet.AllGetApis.SegmentationFolderControllerGetApi">
-        <methods>
-          <include name="authToken"/>
-          <include name="GetSegmentFolderFromCampaignSegment"/>
-          <include name="BaseURI"/>
-          <include name="StatusCode"/>
-        </methods>
-      </class> <!-- com.ripplestreet.AllGetApis.SegmentationFolderControllerGetApi -->
-      <class name="com.ripplestreet.FilterApis.EventControllerFiltersGetApi">
+      <class name="com.ripplestreet.AllPutApis.ReceiptControllerPutApi">
         <methods>
           <include name="authToken"/>
           <include name="BaseURI"/>
+          <include name="UpdateReceiptDatarecorder"/>
           <include name="StatusCode"/>
-          <include name="geFilterdEvent"/>
         </methods>
-      </class> <!-- com.ripplestreet.FilterApis.EventControllerFiltersGetApi -->
+      </class> <!-- com.ripplestreet.AllPutApis.ReceiptControllerPutApi -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

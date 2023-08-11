@@ -13,7 +13,6 @@ public class OptinInflightActivationControllerGetApi  extends genricUtilities{
 		Testcase=38;
 		
 	}
-	///community-service/v1/reward-allocation-jobs/2128/9593101
 	@Test(priority=39,groups = "community-service")
 	public void getAllocationTransientRecordByEventIdAndPersonId() {
 		response=RestAssured.given().when().get("/community-service/v1/reward-allocation-jobs/"+eventId+"/"+pid);

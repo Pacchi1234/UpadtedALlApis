@@ -9,6 +9,7 @@ import io.restassured.RestAssured;
 public class OptInsControllerGetApi extends genricUtilities {
 	@Test(priority=105,groups = "reward-service")
 	public void GetRewardCountByEventIdAndPreferenceforPerson() {
+		RestAssured.baseURI=baseURI;
 		response = RestAssured.get("/reward-service/v1/optIn/" + eventId + "/" + pid);
 		Testcase = 105;
 

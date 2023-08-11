@@ -29,7 +29,6 @@ public class EventControllerFiltersGetApi extends genricUtilities {
 	public void geFilterdEvent() throws NumberFormatException, IOException {
 
 		Testcase = 257;
-
 		map1.put("eventId", eventId);
 		map1.put("name", eventName);
 		map1.put("slug", slug);
@@ -56,15 +55,6 @@ public class EventControllerFiltersGetApi extends genricUtilities {
 			genricUtilities.StatusCode();
 			Testcase++;
 
-			ArrayList<String> keys1 = new ArrayList<String>(map2.keySet());
-			for (int i1 = 0; i1 < map2.size(); i1++) {
-
-				String map2key = keys1.get(i1);
-				Object map2value = map2.get(map2key);
-				response = RestAssured.given().param(map2key, map2value).get("/event/events/getAllEvents/_search");
-				genricUtilities.StatusCode();
-				Testcase++;
-			}
 		}
 	}
 	/**

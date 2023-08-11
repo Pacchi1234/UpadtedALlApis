@@ -175,7 +175,7 @@ public class postApiutilities {
 			String responseBody = response.asString();
 			JsonPath jsonPath = new JsonPath(responseBody);
 			AccessToken = jsonPath.getString("accessToken");
-			System.out.println(AccessToken);
+			System.out.println("Accesstoken is"+AccessToken);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -191,6 +191,8 @@ public class postApiutilities {
 	@SuppressWarnings("unlikely-arg-type")
 	@AfterMethod
 	public static void StatusCode() throws IOException, NumberFormatException {
+		int statuscode = response.statusCode();
+		System.out.println(statuscode);
 
 		/*
 		 * SoftAssert softAssert = new SoftAssert(); int statusCode = 200;

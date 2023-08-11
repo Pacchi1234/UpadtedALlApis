@@ -18,6 +18,7 @@ import io.restassured.http.ContentType;
 public class EventControllerPostApi extends postApiutilities {
 	@Test(groups="event")
 	public void creatEventSubscription() throws IOException {
+		RestAssured.baseURI=baseURI;
 		Testcase = 1;
 		File file = new File(postApipath);
 		FileInputStream fis = new FileInputStream(file);
