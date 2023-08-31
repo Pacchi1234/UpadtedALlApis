@@ -9,6 +9,7 @@ public class EventFeedControllerGetApi extends genricUtilities {
 	@Test(priority=14,groups = "event")
 	public void getFeedInfoById() {
 		response = RestAssured.given().when().get("/event/events-feed/feed/" + feedItemId);
+		System.out.println(feedItemId);
 		Testcase = 14;
 
 	}

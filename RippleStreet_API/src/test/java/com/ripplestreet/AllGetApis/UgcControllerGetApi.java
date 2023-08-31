@@ -1,51 +1,58 @@
 package com.ripplestreet.AllGetApis;
 
+import java.io.IOException;
 import org.testng.annotations.Test;
 import com.ripplestreet.genricUtilities.genricUtilities;
 import io.restassured.RestAssured;
 
 public class UgcControllerGetApi extends genricUtilities {
-	@Test(groups="activityugcreview")
+	public static boolean flag = false;
+
+	@Test(groups = "activityugcreview")
 	public void getUgcDetailsByTaskId() {
-		response = RestAssured.given().when().get("/activityugcreview/client_api/getUgcDetailsById/" + ugcId);
+		flag = false;
+		response = RestAssured.given().when().get("/activityugcreview/client_api/GetUgcByTaskId/" + ugctaskId);
 		Testcase = 49;
 
 	}
 
-	@Test(groups="activityugcreview")
-	public void downloadAsset() {
+	@Test(groups = "activityugcreview")
+	public void downloadAsset() throws IOException {
+		flag = true;
 		response = RestAssured.given().when().get("/activityugcreview/client_api/downloadAsset?assetId=" + assetId);
 		Testcase = 50;
-		// getting output as image formate
-
 	}
 
-	@Test(priority=51,groups="activityugcreview")
+	@Test(priority = 51, groups = "activityugcreview")
 	public void downloadAssetByURL() {
+		flag = false;
 		response = RestAssured.given().when()
 				.get("/activityugcreview/client_api/downloadAssetByURL?assetId=" + assetId);
 		Testcase = 51;
 	}
 
-	@Test(priority=52,groups="activityugcreview")
+	@Test(priority = 52, groups = "activityugcreview")
 	public void getImageRecognitionResponse() {
+		flag = false;
 		response = RestAssured.given().when()
 				.get("/activityugcreview/client_api/getImageRecognition?eventId=" + eventId);
 		Testcase = 52;
 	}
 
-	@Test(priority=53,groups="activityugcreview")
+	@Test(priority = 53, groups = "activityugcreview")
 	public void getUgcDetailsById() {
-		response = RestAssured.given().when().get("/activityugcreview/client_api/getUgcDetailsById/" + eventId);
+		flag = false;
+		response = RestAssured.given().when().get("/activityugcreview/client_api/getUgcDetailsById/" + ugcId);
 		Testcase = 53;
 
 	}
 
-	@Test(priority=54,groups="activityugcreview")
+	@Test(priority = 54, groups = "activityugcreview")
 	public void getUserAsset() {
+		flag = false;
 		response = RestAssured.given().when().get("/activityugcreview/client_api/getUserAsset?eventId=" + eventId);
+
 		Testcase = 54;
-//intrnal server error
 	}
 
 }

@@ -10,6 +10,7 @@ public class ReceiptControllerGetApi extends genricUtilities{
 	@Test(priority=101,groups = "common-service")
 	public void getReceiptRecordWithData() {
 		response=RestAssured.get("/common-service/v1/event/"+eventId+"/receipt/"+receiptId);
+		System.out.println(receiptId);
 		Testcase=101;
 		
 	}

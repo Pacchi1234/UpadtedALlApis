@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="1.328">
+           time="1.428">
   <properties />
   
   
-            <testcase name="getlistofparties" time="1.328" classname="com.ripplestreet.AllGetApis.PartyControllerGetApi" />
+            <testcase name="getlistofparties" time="1.428" classname="com.ripplestreet.AllGetApis.PartyControllerGetApi" />
       
 </testsuite>

@@ -21,6 +21,7 @@ public class SegmentationDataControllerGetApi extends genricUtilities {
 	@Test(priority=79,groups="segmentation")
 	public void GetSegmentsOfaUser() {
 		response=RestAssured.get("/segmentation/v1/segmentData/segments/"+pid);
+		System.out.println(segmentId);
 		Testcase=79;
 	}
 	@Test(priority=80,groups="segmentation")

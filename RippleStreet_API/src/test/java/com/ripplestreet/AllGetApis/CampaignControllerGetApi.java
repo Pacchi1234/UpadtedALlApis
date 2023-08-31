@@ -11,6 +11,7 @@ public class CampaignControllerGetApi extends genricUtilities {
 	public void findCampaignById() {
 		RestAssured.baseURI = baseURI;
 		response = RestAssured.get("/event-campaign-manager/v1/campaign/" + campaignId);
+		System.out.println(campaignId);
 		Testcase = 144;
 	}
 	@Test(priority=145,groups="event-campaign-manager")

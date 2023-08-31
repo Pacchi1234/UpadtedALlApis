@@ -9,7 +9,6 @@ public class SegmentationJobsControllerGetApi extends genricUtilities  {
 	public void getAllSegmentJobsForSegmentId() {
 		response=RestAssured.given().param("size", size).get("/segmentation/v2/segmentJobs/"+segmentId);
 		Testcase=87;
-		
 	}
 
 }

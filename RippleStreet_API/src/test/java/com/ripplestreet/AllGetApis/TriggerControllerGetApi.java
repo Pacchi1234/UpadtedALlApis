@@ -12,14 +12,12 @@ public class TriggerControllerGetApi extends genricUtilities {
 		response = RestAssured.given().param("size", size).get("/segmentation/v1/trigger/list");
 		Testcase = 88;
 	}
-
 	@Test(priority = 189, groups = "segmentation")
 	public void getTriggerDefinition() {
 		response = RestAssured.get("/segmentation/v1/trigger/" + segmentationtriggerId);
 		Testcase = 89;
 
 	}
-
 	@Test(priority = 90, groups = "segmentation")
 	public void getTriggerInfoByTableNameAndOperation() {
 		response = RestAssured.get("/segmentation/v1/trigger/" + tableName + "/" + operation);

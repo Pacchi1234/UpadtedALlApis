@@ -1,19 +1,20 @@
 package com.ripplestreet.AllGetApis;
 
-import org.testng.ITestListener;
-import org.testng.ITestResult;
 import org.testng.annotations.Test;
 import com.ripplestreet.genricUtilities.genricUtilities;
 import io.restassured.RestAssured;
 import java.io.*;
 
-public class EventControllerGetApi extends genricUtilities implements ITestListener {
+public class EventControllerGetApi extends genricUtilities  {
 
 	@Test(priority = 1, groups = "event")
 	public void getAllCurrentMileStoneByEvent() throws IOException {
+
 		RestAssured.baseURI = baseURI;
+		
 		response = RestAssured.given().when().get("/event/events/getAllCurrentMileStonesByEvent/" + eventId);
 		Testcase = 1;
+
 	}
 
 	@Test(groups = "event")
@@ -27,6 +28,7 @@ public class EventControllerGetApi extends genricUtilities implements ITestListe
 	@Test(priority = 3, groups = "event")
 	public void getAllMileStonesByEvent() {
 		response = RestAssured.given().when().get("/event/events/getAllMilestonesByEvent/" + eventId);
+		System.out.println(eventId);
 		Testcase = 3;
 	}
 
@@ -55,11 +57,9 @@ public class EventControllerGetApi extends genricUtilities implements ITestListe
 		System.out.println(activitiesName);
 		Testcase = 7;
 	}
-
 	@Test(priority = 8, groups = "event")
 	public void getEventById() {
-		response = RestAssured.given().when()
-				.get("https://devapi-ecs.ripplestreet.com/event/events/getEventById/" + eventId);
+		response = RestAssured.given().when().get("/event/events/getEventById/" + eventId);
 		Testcase = 8;
 
 	}
@@ -82,6 +82,7 @@ public class EventControllerGetApi extends genricUtilities implements ITestListe
 	@Test(priority = 11, groups = "event")
 	public void getpackAndApplicationCountByEventId() {
 		response = RestAssured.given().when().get("/event/events/packAndApplicationCountByEventId/" + eventId);
+		System.out.println();
 		Testcase = 11;
 
 	}
@@ -143,6 +144,7 @@ public class EventControllerGetApi extends genricUtilities implements ITestListe
 	public void getStatus() {
 		response = RestAssured.get("/event/v1/getStatus?eventId=" + eventId + "&pid=" + pid);
 		Testcase = 415;
+		// Event Status Controller
 	}
 
 }

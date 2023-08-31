@@ -25,6 +25,7 @@ public class EventFeedControllerPutApi extends genricUtilities {
 			Testcase = 194;
 			File file = new File(devApiPath);
 			FileInputStream fis = new FileInputStream(file);
+			@SuppressWarnings("resource")
 			XSSFWorkbook workbook = new XSSFWorkbook(fis);
 
 			XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName);

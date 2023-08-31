@@ -4,12 +4,12 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="4.597">
+           time="4.768">
   <properties />
   
   
-            <testcase name="getListOptInByEventId" time="1.510" classname="com.ripplestreet.AllGetApis.OptInsControllerGetApi" />
-                <testcase name="getOptInById" time="1.551" classname="com.ripplestreet.AllGetApis.OptInsControllerGetApi" />
-                <testcase name="GetRewardCountByEventIdAndPreferenceforPerson" time="1.536" classname="com.ripplestreet.AllGetApis.OptInsControllerGetApi" />
+            <testcase name="getOptInById" time="1.558" classname="com.ripplestreet.AllGetApis.OptInsControllerGetApi" />
+                <testcase name="GetRewardCountByEventIdAndPreferenceforPerson" time="1.507" classname="com.ripplestreet.AllGetApis.OptInsControllerGetApi" />
+                <testcase name="getListOptInByEventId" time="1.703" classname="com.ripplestreet.AllGetApis.OptInsControllerGetApi" />
       
 </testsuite>

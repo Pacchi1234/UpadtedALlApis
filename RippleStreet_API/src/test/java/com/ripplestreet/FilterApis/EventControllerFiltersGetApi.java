@@ -11,19 +11,17 @@ import io.restassured.RestAssured;
 
 public class EventControllerFiltersGetApi extends genricUtilities {
 
-	@Test(groups = "community-service")
+	@Test(groups = "event")
 	public void DiscoverEventFilters() throws NumberFormatException, IOException {
 		Testcase = 252;
 
 		for (String evenTypes1 : evenTypes) {
 			response = RestAssured.given().queryParams("page", page, "size", size, "eventType", evenTypes1)
 					.get("/event/events/discover/events/list");
-
 			genricUtilities.StatusCode();
 			Testcase++;
 		}
 	}
-
 	@SuppressWarnings("unchecked")
 	@Test(groups = "event")
 	public void geFilterdEvent() throws NumberFormatException, IOException {
@@ -33,12 +31,10 @@ public class EventControllerFiltersGetApi extends genricUtilities {
 		map1.put("name", eventName);
 		map1.put("slug", slug);
 		map1.put("sponsorId", sponsorId);
-
 		map1.put("isActive", true);
 		map1.put("isChatterBox", true);
 		map1.put("isFeatured", true);
 		map1.put("isListed", true);
-
 		map2.put("isActive", false);
 		map2.put("isChatterBox", false);
 		map2.put("isFeatured", false);
@@ -48,7 +44,6 @@ public class EventControllerFiltersGetApi extends genricUtilities {
 		String s = map1.toString();
 		ArrayList<String> keys = new ArrayList<String>(map1.keySet());
 		for (int i = 0; i < map1.size(); i++) {
-
 			String key = keys.get(i);
 			Object value = map1.get(key);
 			response = RestAssured.given().queryParam(key, value).get("/event/events/getAllEvents/_search");

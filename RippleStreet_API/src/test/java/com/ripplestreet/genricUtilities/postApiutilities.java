@@ -18,6 +18,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.asserts.SoftAssert;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -120,7 +121,6 @@ public class postApiutilities {
 	public String description = ConfigFileReader.getInstance().getdescription();
 	public String segmentJobId = ConfigFileReader.getInstance().getsegmentJobId();
 	public String gameoptionId = ConfigFileReader.getInstance().getgameoptionId();
-	public String Authorization = ConfigFileReader.getInstance().getAuthorization();
 	public String rewardAllocationstatus = ConfigFileReader.getInstance().getrewardAllocationstatus();
 	public String rewardAllocationItemId = ConfigFileReader.getInstance().getrewardAllocationItemId();
 	public String deliveryItemId = ConfigFileReader.getInstance().getdeliveryItemId();
@@ -192,12 +192,16 @@ public class postApiutilities {
 	@AfterMethod
 	public static void StatusCode() throws IOException, NumberFormatException {
 		int statuscode = response.statusCode();
-		System.out.println(statuscode);
+		if (statuscode == 200 || statuscode == 201 || statuscode == 302 || statuscode==202) {
+			SoftAssert softAssert = new SoftAssert();
+			softAssert.assertEquals(statuscode, 200);
+			System.out.println("status code is" + statuscode);
 
-		/*
-		 * SoftAssert softAssert = new SoftAssert(); int statusCode = 200;
-		 * softAssert.assertEquals(200, statusCode);
-		 */
+		} else if (statuscode == 400) {
+			System.err.println("status code is 400");
+		} else {
+			System.err.println("status code is 500");
+		}
 		String ActualOutput = response.asString();
 		System.out.println("Actual output is" + ActualOutput);
 		File file = new File(postApipath);

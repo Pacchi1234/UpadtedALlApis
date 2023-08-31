@@ -1,9 +1,7 @@
 package com.ripplestreet.AllGetApis;
 
 import org.testng.annotations.Test;
-
 import com.ripplestreet.genricUtilities.genricUtilities;
-
 import io.restassured.RestAssured;
 
 public class OptInsControllerGetApi extends genricUtilities {
@@ -12,7 +10,6 @@ public class OptInsControllerGetApi extends genricUtilities {
 		RestAssured.baseURI=baseURI;
 		response = RestAssured.get("/reward-service/v1/optIn/" + eventId + "/" + pid);
 		Testcase = 105;
-
 	}
 
 	@Test(priority=106,groups = "reward-service")

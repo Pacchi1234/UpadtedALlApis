@@ -14,6 +14,7 @@ public class FAQcontrollerGetApi extends genricUtilities {
 	@Test(priority = 164, groups = "event-campaign-manager")
 	public void getFAQById() {
 		response = RestAssured.get("/event-campaign-manager/v1/event/faq/" + faqId);
+		System.out.println(faqId);
 		Testcase = 164;
 	}
 
@@ -27,7 +28,7 @@ public class FAQcontrollerGetApi extends genricUtilities {
 
 	@Test(priority = 166, groups = "event-campaign-manager")
 	public void getlistofFaqTopicbyFaqId() {
-		response = RestAssured.get("/event-campaign-manager/v1/faq/" + faqId + "/faqTopic/list");
+		response = RestAssured.get("/event-campaign-manager/v1/faq/faqTopic/"+faqtopicId);
 		Testcase = 166;
 
 	}
@@ -48,7 +49,8 @@ public class FAQcontrollerGetApi extends genricUtilities {
 
 	@Test(priority = 169, groups = "event-campaign-manager")
 	public void getFAQTopicitemsById() {
-		response = RestAssured.get("/event-campaign-manager/v1/faqTopic/faqTopicItem/3824");
+		response = RestAssured.get("/event-campaign-manager/v1/faqTopic/faqTopicItem/"+faqtopicId);
+		System.out.println(faqtopicId);
 		Testcase = 169;
 
 	}

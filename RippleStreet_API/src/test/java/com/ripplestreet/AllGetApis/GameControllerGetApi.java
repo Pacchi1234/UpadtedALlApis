@@ -9,8 +9,9 @@ import io.restassured.RestAssured;
 public class GameControllerGetApi extends genricUtilities {
 	@Test(priority=92,groups = "gamification")
 	public void getAllgames() {
-		response=RestAssured.given().queryParams("columnName",columnName,"direction",directionDESC,"eventI",eventId,"pageNo",page,"pageSize",size).get("/gamification/v1/games/getAllGames");
-		
+		//response=RestAssured.given().queryParams("columnName",columnName,"direction",directionDESC,"eventI",eventId,"pageNo",page,"pageSize",size).get("/gamification/v1/games/getAllGames");
+	response=RestAssured.get("gamification/v1/games/getAllGames?columnName="+columnName+"&direction="+directionDESC+"&eventId="+eventId+"&pageNo="+page+"&pageSize="+size);
+	
 		Testcase = 92;
 
 	}
@@ -24,6 +25,7 @@ public class GameControllerGetApi extends genricUtilities {
 	@Test(priority=94,groups = "gamification")
 	public void GetGameTrackerRedisObjByGameId() {
 		response = RestAssured.get("/gamification/v1/games/getGameTrackerRedisObj/" + gameId);
+		System.out.println(gameId);
 		Testcase = 94;
 	}
 

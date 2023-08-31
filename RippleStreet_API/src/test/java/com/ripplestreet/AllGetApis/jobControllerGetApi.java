@@ -9,7 +9,7 @@ import io.restassured.RestAssured;
 public class jobControllerGetApi extends genricUtilities {
 	@Test(priority=99,groups = "common-service")
 	public void getAllJobByTypeAndId() {
-		response = RestAssured.given().get("/common-service/v1/job/" + sourceType + "/" + jobId);
+		response=RestAssured.get("/common-service/v1/job/"+sourceType+"/"+jobId);
 		Testcase = 99;
 	}
 

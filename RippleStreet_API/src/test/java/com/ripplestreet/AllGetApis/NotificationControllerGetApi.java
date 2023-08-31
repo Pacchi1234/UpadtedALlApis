@@ -32,6 +32,7 @@ public class NotificationControllerGetApi extends genricUtilities {
 	@Test(priority=130,groups="notification")
 	public void SearchCampaignforNotification() {
 		response = RestAssured.get("/notification/v1/notifications/search/" + campaignName + "/");
+		System.out.println(campaignName);
 		Testcase = 130;
 
 	}
@@ -46,6 +47,7 @@ public class NotificationControllerGetApi extends genricUtilities {
 	public void GetKPIMatrixByCampaignId() {
 		response = RestAssured
 				.get("/notification/v1/notifications/getKpiMatrixByCampaignId?notificationId="+matrixNotificationId);
+		System.out.println(matrixNotificationId);
 		Testcase = 132;
 	}
 

@@ -11,6 +11,7 @@ public class CouponControllerGetApi extends genricUtilities {
 	public void getCouponsByActivityId() {
 		RestAssured.baseURI=baseURI;
 		response = RestAssured.get("/gamification/v1/coupons/getCouponsByActivityId/" + gamificationActivityId);
+		System.out.println(gamificationActivityId);
 		Testcase = 91;
 	}
 

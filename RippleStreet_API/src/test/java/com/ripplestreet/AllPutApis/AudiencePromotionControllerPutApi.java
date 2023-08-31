@@ -13,7 +13,6 @@ public class AudiencePromotionControllerPutApi extends genricUtilities {
 		response = RestAssured.put("/community-service/v1/audience-promotion-jobs/updateJob/" + AudiencePromotionJobID
 				+ "?column=" + AudiencePromotionColumnName + "&failedPidsCount=" + AudiencePromotionJobfailedPidsCount
 				+ "&processedPidsCount=" + AudiencePromotionJobprocessedPidsCount);
-
 	}
 
 }

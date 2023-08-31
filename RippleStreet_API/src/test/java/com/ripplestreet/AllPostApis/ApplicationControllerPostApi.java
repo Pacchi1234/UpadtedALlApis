@@ -31,7 +31,7 @@ public class ApplicationControllerPostApi extends postApiutilities{
 		System.out.println(PutBody);
 
 		response = RestAssured.given().contentType(ContentType.JSON).body(PutBody).when()
-				.post("http://ecs-activity-alb-1514376471.us-east-1.elb.amazonaws.com/community-service/v1/event/"+eventId+"/application");
+				.post("/community-service/v1/event/"+eventId+"/application");
 		
 	}
 

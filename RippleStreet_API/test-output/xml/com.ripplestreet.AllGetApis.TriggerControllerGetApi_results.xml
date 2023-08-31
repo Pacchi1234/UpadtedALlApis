@@ -4,12 +4,12 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="4.506">
+           time="4.483">
   <properties />
   
   
-            <testcase name="GetAllTriggers" time="1.521" classname="com.ripplestreet.AllGetApis.TriggerControllerGetApi" />
-                <testcase name="getTriggerInfoByTableNameAndOperation" time="1.510" classname="com.ripplestreet.AllGetApis.TriggerControllerGetApi" />
-                <testcase name="getTriggerDefinition" time="1.475" classname="com.ripplestreet.AllGetApis.TriggerControllerGetApi" />
+            <testcase name="getTriggerDefinition" time="1.542" classname="com.ripplestreet.AllGetApis.TriggerControllerGetApi" />
+                <testcase name="GetAllTriggers" time="1.542" classname="com.ripplestreet.AllGetApis.TriggerControllerGetApi" />
+                <testcase name="getTriggerInfoByTableNameAndOperation" time="1.399" classname="com.ripplestreet.AllGetApis.TriggerControllerGetApi" />
       
 </testsuite>

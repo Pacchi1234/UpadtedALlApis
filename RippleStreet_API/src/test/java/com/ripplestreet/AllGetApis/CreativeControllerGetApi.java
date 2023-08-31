@@ -11,6 +11,7 @@ public class CreativeControllerGetApi extends genricUtilities {
 	public void findHeroPlaylistById() {
 		response = RestAssured
 				.get("/event-campaign-manager/v1/creative/" + eventId + "/Event/heroPlaylist/" + playlistId);
+		System.out.println(playlistId);
 		Testcase = 147;
 	}
 
@@ -18,6 +19,8 @@ public class CreativeControllerGetApi extends genricUtilities {
 	public void findAllHeroPlaylistByModelId() {
 		response = RestAssured
 				.get("/event-campaign-manager/v1/creative/" + eventId + "/Event/listHeroPlaylistsByModelId");
+		System.out.println();
+		
 		Testcase = 148;
 	}
 

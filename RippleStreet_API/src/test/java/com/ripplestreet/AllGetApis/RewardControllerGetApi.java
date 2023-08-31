@@ -17,7 +17,8 @@ import io.restassured.RestAssured;
 
 	@Test(priority=112,groups = "reward-service")
 	public void getReward() {
-		response = RestAssured.get("/reward-service/v1/reward/" + rewardAllocationId);
+		response = RestAssured.get("/reward-service/v1/reward/" + rewardId);
+		
 		Testcase = 112;
 	}
 

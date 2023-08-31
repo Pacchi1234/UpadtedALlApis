@@ -6,7 +6,7 @@
 	<groupId>RestAssuredAutomation</groupId>
 	<artifactId>EventController</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packagingpackaging>jar</packagingpackaging>
+	<packaging>jar</packaging>
 
 	<name>EventController</name>
 	<url>http://maven.apache.org</url>

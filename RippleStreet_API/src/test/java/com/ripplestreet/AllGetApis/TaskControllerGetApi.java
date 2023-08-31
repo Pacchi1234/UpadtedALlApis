@@ -16,6 +16,7 @@ public class TaskControllerGetApi  extends genricUtilities{
 	@Test(priority=74,groups="activity-hub")
 	public void getTask() {
 		response=RestAssured.get("/activity-hub/v1/task/"+taskId);
+		System.out.println(taskId);
 		Testcase=74;
 	}
 

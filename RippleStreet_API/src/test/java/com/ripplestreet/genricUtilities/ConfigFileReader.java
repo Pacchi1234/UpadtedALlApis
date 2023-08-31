@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class ConfigFileReader {
 	private Properties properties;
-	private final String propertyFilePath = "src//test//resources//config//Config.properties";
+	private final String propertyFilePath = "C:\\Users\\Prashanthchigarer\\Documents\\Workspace\\RippleStreet_API\\RippleStreet_API\\src\\test\\resources\\config\\Config.properties";
 	private static ConfigFileReader configFileReader = new ConfigFileReader();
 
 	private ConfigFileReader() {
@@ -128,14 +128,6 @@ public class ConfigFileReader {
 		else
 			throw new RuntimeException("feedIteamId is not specified in the configuration.properties file");
 
-	}
-
-	public String getExcelSheetPageName() {
-		String ExcelSheetPageName = properties.getProperty("ExcelSheetPageName");
-		if (ExcelSheetPageName != null)
-			return ExcelSheetPageName;
-		else
-			throw new RuntimeException("ExcelSheetPageName is not specified in the properties file");
 	}
 
 	public String getfeedType() {
@@ -805,13 +797,7 @@ public class ConfigFileReader {
 			throw new RuntimeException("gameoptionId Is not mentioned in the configuration.properties file");
 	}
 
-	public String getAuthorization() {
-		String Authorization = properties.getProperty("Authorization");
-		if (Authorization != null)
-			return Authorization;
-		else
-			throw new RuntimeException("Authorization Is not mentioned in the configuration.properties file");
-	}
+	
 
 	public String getrewardAllocationstatus() {
 		String rewardAllocationstatus = properties.getProperty("rewardAllocationstatus");
@@ -983,4 +969,37 @@ public class ConfigFileReader {
 		}
 	}
 
+	public String getgameName() {
+		String gameName = properties.getProperty("gameName");
+		if (gameName != null) {
+			return gameName;
+		} else {
+			throw new RuntimeException("gameName in ot mentiioned in configuration.properties file");
+		}
+	}
+	public String getreviwTaskId() {
+		String reviwtaskId = properties.getProperty("reviwtaskId");
+		if (reviwtaskId != null) {
+			return reviwtaskId;
+		} else {
+			throw new RuntimeException("reviwtaskId in ot mentiioned in configuration.properties file");
+		}
+	}
+	public String getgoalCount() {
+		String goalCount = properties.getProperty("goalCount");
+		if (goalCount != null) {
+			return goalCount;
+		} else {
+			throw new RuntimeException("goalCount in ot mentiioned in configuration.properties file");
+		}
+	}
+	public String getExcelSheetPageName() {
+		String ExcelSheetPageName = properties.getProperty("ExcelSheetPageName");
+		if (ExcelSheetPageName != null) {
+			return ExcelSheetPageName;
+		} else {
+			throw new RuntimeException("ExcelSheetPageName in ot mentiioned in configuration.properties file");
+		}
+	}
+	
 }

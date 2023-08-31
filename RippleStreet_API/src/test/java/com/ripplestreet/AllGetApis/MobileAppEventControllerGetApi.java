@@ -7,7 +7,7 @@ import com.ripplestreet.genricUtilities.genricUtilities;
 import io.restassured.RestAssured;
 
 public class MobileAppEventControllerGetApi extends genricUtilities {
-	@Test
+	@Test(groups="event")
 	public void discovermobileEvents() {
 		response = RestAssured.given().get("/event/v1/discover/events/list?page=&size=10&eventType=APPLY");
 		System.out.println(eventType);

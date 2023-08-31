@@ -13,7 +13,7 @@ import io.restassured.RestAssured;
 public class ReceiptControllerFiltersGetApi extends genricUtilities {
 	@Test(groups = "common-serivce")
 	public void getReceiptList() throws NumberFormatException, IOException {
-		Testcase=400;
+		Testcase=293;
 		for (String actions : receiptstatus) {
 			response = RestAssured.get("/common-service/v1/receipt/list?action=" + actions + "&eventId=" + eventId);
 			genricUtilities.StatusCode();

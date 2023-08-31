@@ -4,11 +4,11 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="3.002">
+           time="3.034">
   <properties />
   
   
-            <testcase name="findAllLinksForAnEvent" time="1.479" classname="com.ripplestreet.AllGetApis.TrackableLinkcontrollerGetApi" />
-                <testcase name="getLinkById" time="1.523" classname="com.ripplestreet.AllGetApis.TrackableLinkcontrollerGetApi" />
+            <testcase name="getLinkById" time="1.531" classname="com.ripplestreet.AllGetApis.TrackableLinkcontrollerGetApi" />
+                <testcase name="findAllLinksForAnEvent" time="1.503" classname="com.ripplestreet.AllGetApis.TrackableLinkcontrollerGetApi" />
       
 </testsuite>

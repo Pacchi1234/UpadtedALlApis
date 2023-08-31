@@ -17,7 +17,6 @@ public class RewardAllocationControllerFilterApi extends genricUtilities {
 			for (String statuse : RewardStatus) {
 				response = RestAssured.get("/reward-service/v1/event/" + eventId + "/allocation/list?pageNo=" + page
 						+ "&pageSize=" + size + "&rewardType=" + rewardTypes + "&status=" + statuse);
-			
 				genricUtilities.StatusCode();
 				Testcase++;
 

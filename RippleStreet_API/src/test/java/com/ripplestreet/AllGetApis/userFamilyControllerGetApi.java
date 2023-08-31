@@ -7,7 +7,7 @@ import io.restassured.RestAssured;
 public class userFamilyControllerGetApi extends genricUtilities {
 	@Test(priority=42,groups="community-service")
 	public void getUserChildern() {
-		response=RestAssured.given().when().get("http://ecs-activity-alb-1514376471.us-east-1.elb.amazonaws.com/community-service/v1/userFamily/children/9593101");
+		response=RestAssured.given().when().get("/community-service/v1/userFamily/children/"+pid);
 		Testcase=42;
 	}
 	@Test(priority=43,groups="community-service")

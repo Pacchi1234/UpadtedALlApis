@@ -4,10 +4,9 @@ import org.testng.annotations.Test;
 import com.ripplestreet.genricUtilities.genricUtilities;
 import io.restassured.RestAssured;
 
-public class WorkFlowTemplateControllerGetApi<E> extends genricUtilities {
+public class WorkFlowTemplateControllerGetApi extends genricUtilities {
 	@Test(priority = 185, groups = "event-campaign-manager")
 	public void getEventWorkflowTemplateByEventId() {
-		// RestAssured.baseURI = baseURI;
 		response = RestAssured.get("/event-campaign-manager/v1/event/" + eventId + "/workflowTemplate");
 		Testcase = 185;
 
@@ -22,10 +21,10 @@ public class WorkFlowTemplateControllerGetApi<E> extends genricUtilities {
 
 	@Test(priority = 187, groups = "event-campaign-manager")
 	public void getStepFunctionByArn() {
-
 		response = RestAssured
-				.get("https://devapi-ecs.ripplestreet.com/event-campaign-manager/v1/workflowTemplate/getByTemplateId/"
+				.get("/event-campaign-manager/v1/workflowTemplate/getByTemplateId/"
 						+ templateId + "?templateId=" + templateId);
+		System.out.println(templateId);
 		Testcase = 187;
 
 	}

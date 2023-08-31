@@ -1,9 +1,7 @@
 package com.ripplestreet.AllGetApis;
 
 import org.testng.annotations.Test;
-
 import com.ripplestreet.genricUtilities.genricUtilities;
-
 import io.restassured.RestAssured;
 
 public class ReviewControllerGetApi extends genricUtilities {
@@ -17,14 +15,15 @@ public class ReviewControllerGetApi extends genricUtilities {
 
 	@Test(priority = 47, groups = "activityugcreview")
 	public void getReviewsByTaskId() {
-		response = RestAssured.given().when().get("/activityugcreview/review/getReviewByTaskId/" + taskId);
+		response = RestAssured.given().when().get("/activityugcreview/review/getReviewByTaskId/" + reviwtaskId);
+		System.out.println(reviwtaskId);
 		Testcase = 47;
-
 	}
 
 	@Test(priority = 48, groups = "activityugcreview")
 	public void getReview() {
 		response = RestAssured.given().when().get("/activityugcreview/review/" + reviewId);
+		System.out.println(reviewId);
 		Testcase = 48;
 
 	}

@@ -2,7 +2,6 @@ package com.ripplestreet.AllPutApis;
 
 import java.io.File;
 import java.io.FileInputStream;
-
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -48,7 +47,7 @@ public class RewardDeliveryControllerPutApi extends genricUtilities {
 		PutBody = cell2.getStringCellValue();
 		System.out.println(PutBody);
 
-		response = RestAssured.given().header("Authorization", Authorization, null).contentType(ContentType.JSON).body(PutBody).when()
+		response = RestAssured.given().header("Authorization", AccessToken, null).contentType(ContentType.JSON).body(PutBody).when()
 				.put("/reward-service/v1/attributeValue/"+eventId+"/"+rewardItemId);
 		
 		
@@ -66,7 +65,6 @@ public class RewardDeliveryControllerPutApi extends genricUtilities {
 		XSSFCell cell2 = row2.getCell(4);
 		PutBody = cell2.getStringCellValue();
 		System.out.println(PutBody);
-
 		response = RestAssured.given().contentType(ContentType.JSON).body(PutBody).when()
 				.put("/reward-service/v1/reward/delivery/item/"+deliveryItemId+"/"+rewardAllocationstatus);
 		

@@ -13,15 +13,10 @@ public class TrackableLinkcontrollerGetApi extends genricUtilities {
 		response = RestAssured.given().queryParams("pagNo", page, "pageSize", size)
 				.get("/event-campaign-manager/v1/event/" + eventId + "/link/list");
 		Testcase = 183;
-
 	}
-
 	@Test(priority=184,groups="event-campaign-manager")
 	public void getLinkById() {
 		response = RestAssured.get("/event-campaign-manager/v1/link/" + linkId);
 		Testcase = 184;
-	}
-
-
-	
+	}	
 }

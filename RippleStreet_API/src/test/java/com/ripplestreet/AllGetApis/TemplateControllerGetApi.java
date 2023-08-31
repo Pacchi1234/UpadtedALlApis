@@ -16,7 +16,8 @@ public class TemplateControllerGetApi extends genricUtilities {
 
 	@Test(priority=134,groups="notification")
 	public void AllEmailList() {
-		response = RestAssured.get("/notification/v1/templates/all/" + templateType + "/" + templateTypeEnum + "/");
+		//response = RestAssured.get("/notification/v1/templates/all/" + templateType + "/" + templateTypeEnum + "/");
+		response=RestAssured.get("/notification/v1/templates/all/"+templateType+"/"+templateTypeEnum+"/");
 		Testcase = 134;
 	}
 

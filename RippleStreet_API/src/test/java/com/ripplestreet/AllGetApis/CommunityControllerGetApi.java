@@ -11,6 +11,7 @@ public class CommunityControllerGetApi extends genricUtilities {
 	public void getAllAddressEntriesByPersonId() {
 		response = RestAssured.given().queryParams("pageNo", page, "pageSize", size).when()
 				.get("/community-service/community/getAllAddressEntriesByPersonId/" + pid);
+		System.out.println(eventType);
 		Testcase = 23;
 	}
 
@@ -46,8 +47,9 @@ public class CommunityControllerGetApi extends genricUtilities {
 
 	@Test(priority = 28, groups = "community-service")
 	public void getUserListByFilters() {
-		response = RestAssured.given().queryParams("personId", pid, "pageNo", page, "pageSize", size).when()
-				.get("/community-service/community/getUserListByFilters?personIds");
+	response = RestAssured.given().queryParams("personIds", pid, "page", page, "size", size).when()
+			.get("community-service/community/getUserListByFilters");
+	System.out.println(pid);
 		Testcase = 28;
 	}
 

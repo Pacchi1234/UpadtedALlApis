@@ -30,7 +30,7 @@ public class RewardPreferencePutApi  extends genricUtilities{
 		PutBody = cell2.getStringCellValue();
 		System.out.println(PutBody);
 
-		response = RestAssured.given().header("Authorization", Authorization).contentType(ContentType.JSON).body(PutBody).when()
+		response = RestAssured.given().header("Authorization", AccessToken).contentType(ContentType.JSON).body(PutBody).when()
 				.put("/reward-service/v1/updateRewardPreference");
 		
 	}

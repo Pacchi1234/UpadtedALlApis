@@ -4,15 +4,15 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="9.068">
+           time="8.896">
   <properties />
   
   
-            <testcase name="getAllNotification" time="1.525" classname="com.ripplestreet.AllGetApis.NotificationControllerGetApi" />
-                <testcase name="GetCampaignByNotificationId" time="1.615" classname="com.ripplestreet.AllGetApis.NotificationControllerGetApi" />
-                <testcase name="GetStatusByNotificationId" time="1.508" classname="com.ripplestreet.AllGetApis.NotificationControllerGetApi" />
-                <testcase name="isEmailExistInSuppressionList" time="1.519" classname="com.ripplestreet.AllGetApis.NotificationControllerGetApi" />
-                <testcase name="SearchCampaignforNotification" time="1.408" classname="com.ripplestreet.AllGetApis.NotificationControllerGetApi" />
-                <testcase name="GetKPIMatrixByCampaignId" time="1.493" classname="com.ripplestreet.AllGetApis.NotificationControllerGetApi" />
+            <testcase name="getAllNotification" time="1.551" classname="com.ripplestreet.AllGetApis.NotificationControllerGetApi" />
+                <testcase name="SearchCampaignforNotification" time="1.523" classname="com.ripplestreet.AllGetApis.NotificationControllerGetApi" />
+                <testcase name="isEmailExistInSuppressionList" time="1.472" classname="com.ripplestreet.AllGetApis.NotificationControllerGetApi" />
+                <testcase name="GetStatusByNotificationId" time="1.434" classname="com.ripplestreet.AllGetApis.NotificationControllerGetApi" />
+                <testcase name="GetCampaignByNotificationId" time="1.533" classname="com.ripplestreet.AllGetApis.NotificationControllerGetApi" />
+                <testcase name="GetKPIMatrixByCampaignId" time="1.383" classname="com.ripplestreet.AllGetApis.NotificationControllerGetApi" />
       
 </testsuite>

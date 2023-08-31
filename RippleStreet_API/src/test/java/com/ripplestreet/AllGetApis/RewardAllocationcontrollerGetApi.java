@@ -5,17 +5,18 @@ import com.ripplestreet.genricUtilities.genricUtilities;
 import io.restassured.RestAssured;
 
 public class RewardAllocationcontrollerGetApi extends genricUtilities {
-	@Test(priority=108,groups = "reward-service")
+	@Test(priority = 108, groups = "reward-service")
 	public void getRewardAllocation() {
-	RestAssured.baseURI=baseURI;
-		response = RestAssured.given().queryParams("pageNo", page, "pageSize", size)
-				.get("/reward-service/v1/event/" + eventId + "/allocation/list");
+		RestAssured.baseURI = baseURI;
+		response = RestAssured
+				.get("/reward-service/v1/event/" + eventId + "/allocation/list?pageNo=" + page + "&pageSize=" + size);
 		Testcase = 108;
 	}
-	@Test(groups="reward-service")
+
+	@Test(groups = "reward-service")
 	public void getRewardAllocations() {
-		response=RestAssured.get("/reward-service/v1/reward/"+rewardId+"/allocation/"+rewardAllocationId);
-		Testcase=109;
-		
+		response = RestAssured.get("/reward-service/v1/reward/" + rewardId + "/allocation/" + rewardAllocationId);
+		Testcase = 109;
+
 	}
 }

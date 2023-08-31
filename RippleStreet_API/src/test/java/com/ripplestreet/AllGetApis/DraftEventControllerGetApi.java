@@ -10,6 +10,7 @@ public class DraftEventControllerGetApi extends genricUtilities {
 	@Test(priority=155,groups="event-campaign-manager")
 	public void getListOfEventsBycampaignId() {
 		response=RestAssured.get("/event-campaign-manager/v1/campaign/"+campaignId+"/event/list");
+		System.out.println(campaignId);
 		Testcase=155;
 		
 	}

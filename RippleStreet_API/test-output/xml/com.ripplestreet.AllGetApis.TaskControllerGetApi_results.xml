@@ -4,11 +4,11 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="3.052">
+           time="3.125">
   <properties />
   
   
-            <testcase name="getListOfTasks" time="1.520" classname="com.ripplestreet.AllGetApis.TaskControllerGetApi" />
-                <testcase name="getTask" time="1.532" classname="com.ripplestreet.AllGetApis.TaskControllerGetApi" />
+            <testcase name="getTask" time="1.531" classname="com.ripplestreet.AllGetApis.TaskControllerGetApi" />
+                <testcase name="getListOfTasks" time="1.594" classname="com.ripplestreet.AllGetApis.TaskControllerGetApi" />
       
 </testsuite>
