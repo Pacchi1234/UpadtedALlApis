@@ -330,7 +330,6 @@ public class genricUtilities {
 							XSSFCell cell3 = row1.getCell(6);
 							cell3.setCellValue("Pass");
 							workbook.write(fio);
-
 						} else {
 							System.err.println(
 									"TestCase" + " " + Testcase + " " + "Expected and actual output is Mismatching");
