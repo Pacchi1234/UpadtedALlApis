@@ -12,7 +12,5 @@ public class MobileAppEventControllerGetApi extends genricUtilities {
 		response = RestAssured.given().get("/event/v1/discover/events/list?page=&size=10&eventType=APPLY");
 		System.out.println(eventType);
 		Testcase=405;
-
 	}
-
 }
