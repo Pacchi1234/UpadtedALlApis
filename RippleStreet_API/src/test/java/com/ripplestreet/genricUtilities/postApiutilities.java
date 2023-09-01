@@ -237,7 +237,7 @@ public class postApiutilities {
 
 			if (ExpectedOutput == Actual_output) {
 
-				System.err.println("TestCase" + " " + Testcase + " " + "has been passed"); //
+				System.err.println("TestCase" + " " + Testcase + " " + "has been passed"); 
 
 			} else {
 				System.err.println("TestCase" + " " + Testcase + " " + "Expected and actual output is Mismatching");
