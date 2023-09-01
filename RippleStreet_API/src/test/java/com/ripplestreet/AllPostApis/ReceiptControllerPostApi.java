@@ -2,7 +2,7 @@ package com.ripplestreet.AllPostApis;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
+import java.io.FileNotFoundException;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -15,10 +15,10 @@ import com.ripplestreet.genricUtilities.postApiutilities;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 
-public class UserfamilyControllerPostApi extends postApiutilities {
-	@Test(groups = "community-service")
-	public void saveUserChildren() throws IOException {
-		Testcase = 22;
+public class ReceiptControllerPostApi extends postApiutilities {
+	@Test
+	public void GetReciptlist() throws Exception {
+		Testcase = 42;
 		File file = new File(postApipath);
 		FileInputStream fis = new FileInputStream(file);
 		@SuppressWarnings("resource")
@@ -29,28 +29,9 @@ public class UserfamilyControllerPostApi extends postApiutilities {
 		XSSFCell cell2 = row2.getCell(4);
 		PutBody = cell2.getStringCellValue();
 		System.out.println(PutBody);
-
 		response = RestAssured.given().contentType(ContentType.JSON).body(PutBody).when()
-				.post("/community-service/v1/userFamily/children");
-	}
-
-	@Test(groups = "community-service")
-	public void saveUserPets() throws IOException {
-		Testcase = 23;
-		File file = new File(postApipath);
-		FileInputStream fis = new FileInputStream(file);
-		@SuppressWarnings("resource")
-		XSSFWorkbook workbook = new XSSFWorkbook(fis);
-
-		XSSFSheet sheet = workbook.getSheet("postApi");
-		XSSFRow row2 = sheet.getRow(Testcase);
-		XSSFCell cell2 = row2.getCell(4);
-		PutBody = cell2.getStringCellValue();
-		System.out.println(PutBody);
-
-		response = RestAssured.given().contentType(ContentType.JSON).body(PutBody).when()
-				.post("/community-service/v1/userFamily/pets");
-
+				.post("/common-service/v1/receipt/list");
+		
 	}
 
 }
