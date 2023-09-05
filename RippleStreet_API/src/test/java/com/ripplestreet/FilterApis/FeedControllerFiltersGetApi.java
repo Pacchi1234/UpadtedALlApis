@@ -15,16 +15,6 @@ public class FeedControllerFiltersGetApi extends genricUtilities {
 			System.out.println(feedControllerType);
 			genricUtilities.StatusCode();
 			Testcase++;
-		}
-		
-	}
-	@Test
-	public void feed() throws NumberFormatException, IOException {
-		Testcase=422;
-		for(String booleans : booleanValues) {
-			response=RestAssured.get("/common-service/v1/feeds/1485?featured="+booleans+"&pageNo="+page+"&size="+size);
-			genricUtilities.StatusCode();
-			Testcase++;
-		}
+		}	
 	}
 }

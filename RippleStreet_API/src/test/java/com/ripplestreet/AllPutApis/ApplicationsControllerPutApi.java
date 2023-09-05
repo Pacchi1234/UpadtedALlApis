@@ -12,14 +12,14 @@ public class ApplicationsControllerPutApi extends genricUtilities {
 		Testcase = 411;
 	}
 
-	@Test
+	@Test(groups = "community-service")
 	public void deactivateFinalist() {
 		response = RestAssured.put("/community-service/v1/finalists/deactivate/" + eventId
 				+ "?isNotificationSendRequired=" + isNotificationSendRequired);
 		Testcase = 412;
 	}
 
-	@Test
+	@Test(groups = "community-service")
 	public void MarkApplicationCompleteOrInCompletebyeventIdandpersonId() {
 		response = RestAssured.given().header("Authorization", AccessToken)
 				.put("/community-service/v1/updateApplicationCompletion/" + eventId + "?reserved=" + reserved);

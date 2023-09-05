@@ -2,7 +2,6 @@ package com.ripplestreet.AllPostApis;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -16,7 +15,7 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 
 public class ReceiptControllerPostApi extends postApiutilities {
-	@Test
+	@Test(groups="common-service")
 	public void GetReciptlist() throws Exception {
 		Testcase = 42;
 		File file = new File(postApipath);

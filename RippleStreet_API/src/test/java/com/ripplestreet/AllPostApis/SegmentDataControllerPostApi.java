@@ -3,7 +3,6 @@ package com.ripplestreet.AllPostApis;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -15,8 +14,8 @@ import com.ripplestreet.genricUtilities.postApiutilities;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 
-public class SegmentDataControllerPostApi extends postApiutilities{
-	@Test(groups="segmentation")
+public class SegmentDataControllerPostApi extends postApiutilities {
+	@Test(groups = "segmentation")
 	public void AddandRemoveuserFromSegment() throws IOException {
 		Testcase = 36;
 		File file = new File(postApipath);
@@ -31,9 +30,7 @@ public class SegmentDataControllerPostApi extends postApiutilities{
 		System.out.println(PutBody);
 
 		response = RestAssured.given().contentType(ContentType.JSON).body(PutBody).when()
-				.post("/segmentation/v1/segmentData/users/"+segmentId+"?operationType=ADD");
-		
-		
-	}
+				.post("/segmentation/v1/segmentData/users/" + segmentId + "?operationType=ADD");
 
+	}
 }

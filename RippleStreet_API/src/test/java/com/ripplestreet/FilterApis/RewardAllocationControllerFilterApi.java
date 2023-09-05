@@ -1,11 +1,8 @@
 package com.ripplestreet.FilterApis;
 
 import java.io.IOException;
-
 import org.testng.annotations.Test;
-
 import com.ripplestreet.genricUtilities.genricUtilities;
-
 import io.restassured.RestAssured;
 
 public class RewardAllocationControllerFilterApi extends genricUtilities {
@@ -19,7 +16,6 @@ public class RewardAllocationControllerFilterApi extends genricUtilities {
 						+ "&pageSize=" + size + "&rewardType=" + rewardTypes + "&status=" + statuse);
 				genricUtilities.StatusCode();
 				Testcase++;
-
 			}
 		}
 	}

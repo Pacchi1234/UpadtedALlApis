@@ -9,13 +9,11 @@ public class TremendouesControllerGetApi  extends genricUtilities{
 	public void getTremendousCampaigns() {
 		response=RestAssured.get("/reward-service/v1/campaigns/list");
 		Testcase=125;
-		
 	}
 	@Test(priority=126,groups = "reward-service")
 	public void getTremendousFundingSources() {
 		response=RestAssured.get("/reward-service/v1/fundingSources/list");
 		Testcase=126;
-		
 	}
 
 

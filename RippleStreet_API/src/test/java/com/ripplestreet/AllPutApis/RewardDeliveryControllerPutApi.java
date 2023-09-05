@@ -47,7 +47,7 @@ public class RewardDeliveryControllerPutApi extends genricUtilities {
 		PutBody = cell2.getStringCellValue();
 		System.out.println(PutBody);
 
-		response = RestAssured.given().header("Authorization", AccessToken, null).contentType(ContentType.JSON).body(PutBody).when()
+		response = RestAssured.given().header("Authorization", AccessToken).contentType(ContentType.JSON).body(PutBody).when()
 				.put("/reward-service/v1/attributeValue/"+eventId+"/"+rewardItemId);
 		
 		

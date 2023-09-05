@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ripplestreet.AllGetApis.ActivityControllerGetApi">
+      <class name="com.ripplestreet.AllPutApis.EventControllerPutApi">
         <methods>
           <include name="authToken"/>
-          <include name="getListOfActivities"/>
+          <include name="updateEventPacksCount"/>
           <include name="BaseURI"/>
           <include name="StatusCode"/>
         </methods>
-      </class> <!-- com.ripplestreet.AllGetApis.ActivityControllerGetApi -->
+      </class> <!-- com.ripplestreet.AllPutApis.EventControllerPutApi -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
