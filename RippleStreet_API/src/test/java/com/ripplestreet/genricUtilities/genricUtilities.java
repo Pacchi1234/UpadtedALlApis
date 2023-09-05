@@ -148,7 +148,7 @@ public class genricUtilities {
 	public static String reviwtaskId = ConfigFileReader.getInstance().getreviwTaskId();
 	public static String goalCount = ConfigFileReader.getInstance().getgoalCount();
 
-	public String PutBody;
+	public String PutBody=null;
 	public static Response response;
 	public static int Testcase;
 	@SuppressWarnings("rawtypes")
