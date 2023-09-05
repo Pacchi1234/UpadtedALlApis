@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Prashanthchigarer\AppData\Local\Temp\testng-eclipse-526831402\testng-customsuite.xml</span>
+                    <span>C:\Users\Prashanthchigarer\AppData\Local\Temp\testng-eclipse-1277382916\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.ripplestreet.AllPostApis.SegmentDataControllerPostApi" class="method navigator-link" hash-for-method="AddandRemoveuserFromSegment">AddandRemoveuserFromSegment</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.ripplestreet.AllGetApis.SocialShareControllerGetApi" class="method navigator-link" hash-for-method="getAllReviews">getAllReviews</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -121,14 +121,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.ripplestreet.AllPostApis.SegmentDataControllerPostApi</span>
+              <span class="class-name">com.ripplestreet.AllGetApis.SocialShareControllerGetApi</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="AddandRemoveuserFromSegment">
-                  </a> <!-- AddandRemoveuserFromSegment -->
-                  <span class="method-name">AddandRemoveuserFromSegment</span>
+                  <a name="getAllReviews">
+                  </a> <!-- getAllReviews -->
+                  <span class="method-name">getAllReviews</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -136,7 +136,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Prashanthchigarer\AppData\Local\Temp\testng-eclipse-526831402\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Prashanthchigarer\AppData\Local\Temp\testng-eclipse-1277382916\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -145,11 +145,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.ripplestreet.AllPostApis.SegmentDataControllerPostApi&quot;&gt;
+      &lt;class name=&quot;com.ripplestreet.AllGetApis.SocialShareControllerGetApi&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;AddandRemoveuserFromSegment&quot;/&gt;
+          &lt;include name=&quot;getAllReviews&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.ripplestreet.AllPostApis.SegmentDataControllerPostApi --&gt;
+      &lt;/class&gt; &lt;!-- com.ripplestreet.AllGetApis.SocialShareControllerGetApi --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -174,10 +174,10 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">segmentation</span>
+              <span class="test-group-name">activityugcreview</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">AddandRemoveuserFromSegment</span>
+                <span class="method-in-group-name">getAllReviews</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -199,9 +199,9 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'AddandRemoveuserFromSegment')
-data.setCell(0, 2, 'com.ripplestreet.AllPostApis.SegmentDataControllerPostApi')
-data.setCell(0, 3, 1794);
+data.setCell(0, 1, 'getAllReviews')
+data.setCell(0, 2, 'com.ripplestreet.AllGetApis.SocialShareControllerGetApi')
+data.setCell(0, 3, 1157);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -221,9 +221,16 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.ripplestreet.AllGetApis.SocialShareControllerGetApi</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">getReview</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -232,22 +239,22 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.ripplestreet.AllPostApis.SegmentDataControllerPostApi</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.ripplestreet.AllGetApis.SocialShareControllerGetApi</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">authToken</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">BaseURI</span>
-                <span class="method-start">2715 ms</span>
+                <span class="method-start">3195 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">AddandRemoveuserFromSegment</span>
-                <span class="method-start">2716 ms</span>
+                <span class="method-name">getAllReviews</span>
+                <span class="method-start">3196 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">StatusCode</span>
-                <span class="method-start">4513 ms</span>
+                <span class="method-start">4356 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
