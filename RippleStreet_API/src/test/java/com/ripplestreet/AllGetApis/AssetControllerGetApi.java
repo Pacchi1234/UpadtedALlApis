@@ -11,5 +11,4 @@ public class AssetControllerGetApi extends genricUtilities{
 		System.out.println(assetId);
 		Testcase=143;
 	}
-
 }
