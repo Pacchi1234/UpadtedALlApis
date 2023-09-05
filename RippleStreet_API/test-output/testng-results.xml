@@ -2,31 +2,31 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-05T12:06:58 IST" name="Default suite" finished-at="2023-09-05T12:07:00 IST" duration-ms="2162">
+  <suite started-at="2023-09-05T12:16:10 IST" name="Default suite" finished-at="2023-09-05T12:16:12 IST" duration-ms="2416">
     <groups>
-      <group name="activityugcreview">
-        <method signature="SocialShareControllerGetApi.getAllReviews()[pri:58, instance:com.ripplestreet.AllGetApis.SocialShareControllerGetApi@4d1bf319]" name="getAllReviews" class="com.ripplestreet.AllGetApis.SocialShareControllerGetApi"/>
-      </group> <!-- activityugcreview -->
+      <group name="common-service">
+        <method signature="PreSignedUrlControllerPostApi.getPreSignedUrl()[pri:0, instance:com.ripplestreet.AllPostApis.PreSignedUrlControllerPostApi@6b695b06]" name="getPreSignedUrl" class="com.ripplestreet.AllPostApis.PreSignedUrlControllerPostApi"/>
+      </group> <!-- common-service -->
     </groups>
-    <test started-at="2023-09-05T12:06:58 IST" name="Default test" finished-at="2023-09-05T12:07:00 IST" duration-ms="2162">
-      <class name="com.ripplestreet.AllGetApis.SocialShareControllerGetApi">
-        <test-method is-config="true" signature="authToken()[pri:0, instance:com.ripplestreet.AllGetApis.SocialShareControllerGetApi@4d1bf319]" started-at="2023-09-05T12:06:55 IST" name="authToken" finished-at="2023-09-05T12:06:58 IST" duration-ms="3164" status="PASS">
+    <test started-at="2023-09-05T12:16:10 IST" name="Default test" finished-at="2023-09-05T12:16:12 IST" duration-ms="2416">
+      <class name="com.ripplestreet.AllPostApis.PreSignedUrlControllerPostApi">
+        <test-method is-config="true" signature="authToken()[pri:0, instance:com.ripplestreet.AllPostApis.PreSignedUrlControllerPostApi@6b695b06]" started-at="2023-09-05T12:16:07 IST" name="authToken" finished-at="2023-09-05T12:16:10 IST" duration-ms="2603" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- authToken -->
-        <test-method is-config="true" signature="BaseURI()[pri:0, instance:com.ripplestreet.AllGetApis.SocialShareControllerGetApi@4d1bf319]" started-at="2023-09-05T12:06:58 IST" name="BaseURI" finished-at="2023-09-05T12:06:58 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="BaseURI()[pri:0, instance:com.ripplestreet.AllPostApis.PreSignedUrlControllerPostApi@6b695b06]" started-at="2023-09-05T12:16:10 IST" name="BaseURI" finished-at="2023-09-05T12:16:10 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BaseURI -->
-        <test-method signature="getAllReviews()[pri:58, instance:com.ripplestreet.AllGetApis.SocialShareControllerGetApi@4d1bf319]" started-at="2023-09-05T12:06:58 IST" name="getAllReviews" finished-at="2023-09-05T12:06:59 IST" duration-ms="1157" status="PASS">
+        <test-method signature="getPreSignedUrl()[pri:0, instance:com.ripplestreet.AllPostApis.PreSignedUrlControllerPostApi@6b695b06]" started-at="2023-09-05T12:16:10 IST" name="getPreSignedUrl" finished-at="2023-09-05T12:16:12 IST" duration-ms="2038" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getAllReviews -->
-        <test-method is-config="true" signature="StatusCode()[pri:0, instance:com.ripplestreet.AllGetApis.SocialShareControllerGetApi@4d1bf319]" started-at="2023-09-05T12:06:59 IST" name="StatusCode" finished-at="2023-09-05T12:07:00 IST" duration-ms="968" status="PASS">
+        </test-method> <!-- getPreSignedUrl -->
+        <test-method is-config="true" signature="StatusCode()[pri:0, instance:com.ripplestreet.AllPostApis.PreSignedUrlControllerPostApi@6b695b06]" started-at="2023-09-05T12:16:12 IST" name="StatusCode" finished-at="2023-09-05T12:16:12 IST" duration-ms="337" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StatusCode -->
-      </class> <!-- com.ripplestreet.AllGetApis.SocialShareControllerGetApi -->
+      </class> <!-- com.ripplestreet.AllPostApis.PreSignedUrlControllerPostApi -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
