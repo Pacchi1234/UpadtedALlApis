@@ -10,7 +10,6 @@ public class AssetControllerGetApi extends genricUtilities{
 		response=RestAssured.get("/event-campaign-manager/v1/asset/"+assetId);
 		System.out.println(assetId);
 		Testcase=143;
-		
 	}
 
 }
