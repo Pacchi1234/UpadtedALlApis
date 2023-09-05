@@ -30,7 +30,7 @@ public class EventControllerPutApi extends genricUtilities {
 		System.out.println(PutBody);
 		response = RestAssured.given().contentType(ContentType.JSON).body(PutBody).when()
 				.put("/event/event/" + eventId + "/updateComment?body=" + updateCommentbody);
-	//	System.out.println(serviceName);
+		// System.out.println(serviceName);
 
 	}
 
@@ -70,7 +70,8 @@ public class EventControllerPutApi extends genricUtilities {
 
 		response = RestAssured.given().contentType(ContentType.JSON).accept(ContentType.JSON).body(PutBody).when()
 				.put("/event/events/updateEventSubscriptions");
-}
+	}
+
 	@Test
 	public void likeUnlikEvent() throws IOException {
 		Testcase = 398;
@@ -87,8 +88,24 @@ public class EventControllerPutApi extends genricUtilities {
 
 		response = RestAssured.given().contentType(ContentType.JSON).accept(ContentType.JSON).body(PutBody).when()
 				.put("/event/events/likeUnlikeEvent");
-		
 	}
-	
+
+	@Test
+	public void BookmarkOrRemoveBookmark() throws IOException {
+		Testcase = 422;
+		File file = new File(devApiPath);
+		FileInputStream fis = new FileInputStream(file);
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+
+		XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName);
+
+		XSSFRow row2 = sheet.getRow(Testcase);
+		XSSFCell cell2 = row2.getCell(4);
+		String PutBody = cell2.getStringCellValue();
+		System.out.println(PutBody);
+
+		response = RestAssured.given().header("Authorization",AccessToken).when()
+				.put("/event/events/bookmark/" + eventId);
+	}
 
 }

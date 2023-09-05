@@ -116,19 +116,7 @@
 			<version>7.8.0</version>
 			<scope>test</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-		<dependency>
-			<groupId>com.aventstack</groupId>
-			<artifactId>extentreports</artifactId>
-			<version>5.0.9</version>
-		</dependency>
-		<!--
-		https://mvnrepository.com/artifact/io.qameta.allure/allure-rest-assured -->
-		<dependency>
-			<groupId>io.qameta.allure</groupId>
-			<artifactId>allure-rest-assured</artifactId>
-			<version>2.20.1</version>
-		</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/org.uncommons/reportng -->
 		<dependency>
 			<groupId>org.uncommons</groupId>
@@ -156,7 +144,12 @@
 			<artifactId>selenium-java</artifactId>
 			<version>4.10.0</version>
 		</dependency>
-
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/openxml4j -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>openxml4j</artifactId>
+    <version>1.0-beta</version>
+</dependency>
 
 	</dependencies>
 	<build>

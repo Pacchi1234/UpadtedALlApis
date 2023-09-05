@@ -2,28 +2,31 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-01T12:21:46 IST" name="Default suite" finished-at="2023-09-01T12:22:04 IST" duration-ms="18098">
+  <suite started-at="2023-09-05T12:01:25 IST" name="Default suite" finished-at="2023-09-05T12:01:27 IST" duration-ms="2092">
     <groups>
+      <group name="segmentation">
+        <method signature="SegmentDataControllerPostApi.AddandRemoveuserFromSegment()[pri:0, instance:com.ripplestreet.AllPostApis.SegmentDataControllerPostApi@6b695b06]" name="AddandRemoveuserFromSegment" class="com.ripplestreet.AllPostApis.SegmentDataControllerPostApi"/>
+      </group> <!-- segmentation -->
     </groups>
-    <test started-at="2023-09-01T12:21:46 IST" name="Default test" finished-at="2023-09-01T12:22:04 IST" duration-ms="18098">
-      <class name="com.ripplestreet.AllPostApis.ReceiptControllerPostApi">
-        <test-method is-config="true" signature="authToken()[pri:0, instance:com.ripplestreet.AllPostApis.ReceiptControllerPostApi@5965d37]" started-at="2023-09-01T12:21:33 IST" name="authToken" finished-at="2023-09-01T12:21:46 IST" duration-ms="12155" status="PASS">
+    <test started-at="2023-09-05T12:01:25 IST" name="Default test" finished-at="2023-09-05T12:01:27 IST" duration-ms="2092">
+      <class name="com.ripplestreet.AllPostApis.SegmentDataControllerPostApi">
+        <test-method is-config="true" signature="authToken()[pri:0, instance:com.ripplestreet.AllPostApis.SegmentDataControllerPostApi@6b695b06]" started-at="2023-09-05T12:01:22 IST" name="authToken" finished-at="2023-09-05T12:01:25 IST" duration-ms="2681" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- authToken -->
-        <test-method is-config="true" signature="BaseURI()[pri:0, instance:com.ripplestreet.AllPostApis.ReceiptControllerPostApi@5965d37]" started-at="2023-09-01T12:21:46 IST" name="BaseURI" finished-at="2023-09-01T12:21:46 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="BaseURI()[pri:0, instance:com.ripplestreet.AllPostApis.SegmentDataControllerPostApi@6b695b06]" started-at="2023-09-05T12:01:25 IST" name="BaseURI" finished-at="2023-09-05T12:01:25 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BaseURI -->
-        <test-method signature="GetReciptlist()[pri:0, instance:com.ripplestreet.AllPostApis.ReceiptControllerPostApi@5965d37]" started-at="2023-09-01T12:21:46 IST" name="GetReciptlist" finished-at="2023-09-01T12:22:00 IST" duration-ms="13889" status="PASS">
+        <test-method signature="AddandRemoveuserFromSegment()[pri:0, instance:com.ripplestreet.AllPostApis.SegmentDataControllerPostApi@6b695b06]" started-at="2023-09-05T12:01:25 IST" name="AddandRemoveuserFromSegment" finished-at="2023-09-05T12:01:27 IST" duration-ms="1794" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- GetReciptlist -->
-        <test-method is-config="true" signature="StatusCode()[pri:0, instance:com.ripplestreet.AllPostApis.ReceiptControllerPostApi@5965d37]" started-at="2023-09-01T12:22:00 IST" name="StatusCode" finished-at="2023-09-01T12:22:04 IST" duration-ms="4156" status="PASS">
+        </test-method> <!-- AddandRemoveuserFromSegment -->
+        <test-method is-config="true" signature="StatusCode()[pri:0, instance:com.ripplestreet.AllPostApis.SegmentDataControllerPostApi@6b695b06]" started-at="2023-09-05T12:01:27 IST" name="StatusCode" finished-at="2023-09-05T12:01:27 IST" duration-ms="256" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StatusCode -->
-      </class> <!-- com.ripplestreet.AllPostApis.ReceiptControllerPostApi -->
+      </class> <!-- com.ripplestreet.AllPostApis.SegmentDataControllerPostApi -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

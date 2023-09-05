@@ -11,7 +11,7 @@ public class FeedControllerGetApi extends genricUtilities {
 	public void getAllFeedsForEvent() {
 		response=RestAssured.get("/common-service/v1/feeds/"+eventId+"?pageNo="+page+"&size="+size);
 		System.out.println(eventId);
-		Testcase=421;
+		Testcase=419;
 		
 	}
 

@@ -176,6 +176,8 @@ public class genricUtilities {
 	public List<String> segmentStatus = Arrays.asList("DRAFT", "PUBLISH", "UNPUBLISH");
 	public String body = "{\"clientId\":\"2a42a243ee3549fdf08368578be6b0a8dffed0e1\",\"email\":\"lalithac@nu10.co\",\"password\":\"L@litha123\"}";
 	public List<String> mobileEventType = Arrays.asList("APPLY", "APPLIED", "SELECTED", "PAST");
+	public List<String> entityName = Arrays.asList("CAMPAIGN", "SPONSOR", "DISCUSSION", "EXTERNAL_REVIEW",
+			"REWARD_PREFERENCE", "SEGMENT", "RECEIPT", "AUDIENCE", "PARTY");
 	public String AccessToken = null;
 
 	@BeforeSuite
@@ -190,7 +192,6 @@ public class genricUtilities {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	@BeforeMethod
@@ -250,11 +251,8 @@ public class genricUtilities {
 						System.err.println(
 								"TestCase" + " " + Testcase + " " + "Expected and actual output is Mismatching");
 					}
-
 				}
-
 			}
-
 		} else {
 			File file = new File(devApiPath);
 			if (!file.exists()) {
@@ -268,12 +266,10 @@ public class genricUtilities {
 			} else {
 				System.err.println("status code is 500");
 			}
-
 			String ActualOutput = response.asString();
 			int contentLength = ActualOutput.length();
 			if (contentLength > 32767) {
 				System.out.println("Cannot invoke more than 32767 Charecters in the Cell");
-
 			} else {
 				try {
 					FileInputStream fis = new FileInputStream(file);
@@ -283,61 +279,63 @@ public class genricUtilities {
 					XSSFCell cell = row.getCell(2);
 					System.out.println("Actual output is" + ActualOutput);
 					System.out.println("Expected Output is " + cell);
-					FileOutputStream fio = new FileOutputStream(file);
-					XSSFSheet sheet1 = workbook.getSheet(ExcelSheetPageName);
-					XSSFRow row1 = sheet1.getRow(Testcase);
-					XSSFCell cell1 = row1.getCell(3);
-					cell1.setCellValue(ActualOutput);
-					XSSFCell cell2 = row1.getCell(5);
-					cell2.setCellValue(statuscode);
-					if (cell.getCellType() == CellType.STRING) {
-						String ExpectedOutput = cell.getStringCellValue();
-						if (ExpectedOutput.equals(ActualOutput)) {
-							System.err.println("TestCase" + " " + Testcase + " " + "has been passed");
-							XSSFCell cell3 = row1.getCell(6);
-							cell3.setCellValue("Pass");
-							workbook.write(fio);
-
-						} else {
-							System.err.println(
-									"TestCase" + " " + Testcase + " " + "Expected and actual output is Mismatching");
-							XSSFCell cell3 = row1.getCell(6);
-							cell3.setCellValue("Fail");
-							workbook.write(fio);
-						}
-					} else if (cell.getCellType() == CellType.NUMERIC) {
-						int ExpectedOutput = (int) cell.getNumericCellValue();
-						int Actual_output = Integer.parseInt(ActualOutput);
-
-						if (ExpectedOutput == Actual_output) {
-							System.err.println("TestCase" + " " + Testcase + " " + "has been passed");
-							XSSFCell cell3 = row1.getCell(6);
-							cell3.setCellValue("Pass");
-							workbook.write(fio);
-
-						} else {
-							System.err.println(
-									"TestCase" + " " + Testcase + " " + "Expected and actual output is Mismatching");
-							XSSFCell cell3 = row1.getCell(6);
-							cell3.setCellValue("Fail");
-							workbook.write(fio);
-						}
-					} else if (cell.getCellType() == CellType.BOOLEAN) {
-						Boolean ExpectedOutput = cell.getBooleanCellValue();
-						if (ExpectedOutput.equals(ActualOutput)) {
-							System.err.println("TestCase" + " " + Testcase + " " + "has been passed");
-							XSSFCell cell3 = row1.getCell(6);
-							cell3.setCellValue("Pass");
-							workbook.write(fio);
-						} else {
-							System.err.println(
-									"TestCase" + " " + Testcase + " " + "Expected and actual output is Mismatching");
-							XSSFCell cell3 = row1.getCell(6);
-							cell3.setCellValue("Fail");
-							workbook.write(fio);
-							workbook.close();
+					if (cell != null) {
+						FileOutputStream fio = new FileOutputStream(file);
+						XSSFSheet sheet1 = workbook.getSheet(ExcelSheetPageName);
+						XSSFRow row1 = sheet1.getRow(Testcase);
+						XSSFCell cell1 = row1.getCell(3);
+						cell1.setCellValue(ActualOutput);
+						XSSFCell cell2 = row1.getCell(5);
+						cell2.setCellValue(statuscode);
+						if (cell.getCellType() == CellType.STRING) {
+							String ExpectedOutput = cell.getStringCellValue();
+							if (ExpectedOutput.equals(ActualOutput)) {
+								System.err.println("TestCase" + " " + Testcase + " " + "has been passed");
+								XSSFCell cell3 = row1.getCell(6);
+								cell3.setCellValue("Pass");
+								workbook.write(fio);
+							} else {
+								System.err.println("TestCase" + " " + Testcase + " "
+										+ "Expected and actual output is Mismatching");
+								XSSFCell cell3 = row1.getCell(6);
+								cell3.setCellValue("Fail");
+								workbook.write(fio);
+							}
+						} else if (cell.getCellType() == CellType.NUMERIC) {
+							int ExpectedOutput = (int) cell.getNumericCellValue();
+							int Actual_output = Integer.parseInt(ActualOutput);
+							if (ExpectedOutput == Actual_output) {
+								System.err.println("TestCase" + " " + Testcase + " " + "has been passed");
+								XSSFCell cell3 = row1.getCell(6);
+								cell3.setCellValue("Pass");
+								workbook.write(fio);
+							} else {
+								System.err.println("TestCase" + " " + Testcase + " "
+										+ "Expected and actual output is Mismatching");
+								XSSFCell cell3 = row1.getCell(6);
+								cell3.setCellValue("Fail");
+								workbook.write(fio);
+							}
+						} else if (cell.getCellType() == CellType.BOOLEAN) {
+							Boolean ExpectedOutput = cell.getBooleanCellValue();
+							if (ExpectedOutput.equals(ActualOutput)) {
+								System.err.println("TestCase" + " " + Testcase + " " + "has been passed");
+								XSSFCell cell3 = row1.getCell(6);
+								cell3.setCellValue("Pass");
+								workbook.write(fio);
+							} else {
+								System.err.println("TestCase" + " " + Testcase + " "
+										+ "Expected and actual output is Mismatching");
+								XSSFCell cell3 = row1.getCell(6);
+								cell3.setCellValue("Fail");
+								workbook.write(fio);
+								fio.close();
+								fis.close();
+								workbook.close();
+							}
 						}
 					}
+
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
