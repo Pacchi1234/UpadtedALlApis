@@ -8,7 +8,6 @@ import io.restassured.RestAssured;
 
 public class AgencyControllerGetApi extends genricUtilities {
 	@Test(priority = 141, groups = "event-campaign-manager")
-
 	public void findAllAgencies() {
 		RestAssured.baseURI = baseURI;
 		response = RestAssured.get("/event-campaign-manager/v1/agency/list");

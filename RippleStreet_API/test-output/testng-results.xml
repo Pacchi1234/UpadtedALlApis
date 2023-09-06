@@ -2,31 +2,31 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-06T11:17:49 IST" name="Default suite" finished-at="2023-09-06T11:18:05 IST" duration-ms="15371">
+  <suite started-at="2023-09-06T14:27:36 IST" name="Default suite" finished-at="2023-09-06T14:27:38 IST" duration-ms="2644">
     <groups>
-      <group name="common-service">
-        <method signature="SearchControllerFiltersGetApi.getSearchByEntity()[pri:0, instance:com.ripplestreet.FilterApis.SearchControllerFiltersGetApi@6b695b06]" name="getSearchByEntity" class="com.ripplestreet.FilterApis.SearchControllerFiltersGetApi"/>
-      </group> <!-- common-service -->
+      <group name="event-campaign-manager">
+        <method signature="LegalControllerGetApi.getLegalDesclaimer()[pri:170, instance:com.ripplestreet.AllGetApis.LegalControllerGetApi@6b695b06]" name="getLegalDesclaimer" class="com.ripplestreet.AllGetApis.LegalControllerGetApi"/>
+      </group> <!-- event-campaign-manager -->
     </groups>
-    <test started-at="2023-09-06T11:17:49 IST" name="Default test" finished-at="2023-09-06T11:18:05 IST" duration-ms="15371">
-      <class name="com.ripplestreet.FilterApis.SearchControllerFiltersGetApi">
-        <test-method is-config="true" signature="authToken()[pri:0, instance:com.ripplestreet.FilterApis.SearchControllerFiltersGetApi@6b695b06]" started-at="2023-09-06T11:17:45 IST" name="authToken" finished-at="2023-09-06T11:17:49 IST" duration-ms="3888" status="PASS">
+    <test started-at="2023-09-06T14:27:36 IST" name="Default test" finished-at="2023-09-06T14:27:38 IST" duration-ms="2644">
+      <class name="com.ripplestreet.AllGetApis.LegalControllerGetApi">
+        <test-method is-config="true" signature="authToken()[pri:0, instance:com.ripplestreet.AllGetApis.LegalControllerGetApi@6b695b06]" started-at="2023-09-06T14:27:32 IST" name="authToken" finished-at="2023-09-06T14:27:36 IST" duration-ms="3772" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- authToken -->
-        <test-method is-config="true" signature="BaseURI()[pri:0, instance:com.ripplestreet.FilterApis.SearchControllerFiltersGetApi@6b695b06]" started-at="2023-09-06T11:17:49 IST" name="BaseURI" finished-at="2023-09-06T11:17:49 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="BaseURI()[pri:0, instance:com.ripplestreet.AllGetApis.LegalControllerGetApi@6b695b06]" started-at="2023-09-06T14:27:36 IST" name="BaseURI" finished-at="2023-09-06T14:27:36 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BaseURI -->
-        <test-method signature="getSearchByEntity()[pri:0, instance:com.ripplestreet.FilterApis.SearchControllerFiltersGetApi@6b695b06]" started-at="2023-09-06T11:17:49 IST" name="getSearchByEntity" finished-at="2023-09-06T11:18:05 IST" duration-ms="15133" status="PASS">
+        <test-method signature="getLegalDesclaimer()[pri:170, instance:com.ripplestreet.AllGetApis.LegalControllerGetApi@6b695b06]" started-at="2023-09-06T14:27:36 IST" name="getLegalDesclaimer" finished-at="2023-09-06T14:27:37 IST" duration-ms="1259" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getSearchByEntity -->
-        <test-method is-config="true" signature="StatusCode()[pri:0, instance:com.ripplestreet.FilterApis.SearchControllerFiltersGetApi@6b695b06]" started-at="2023-09-06T11:18:05 IST" name="StatusCode" finished-at="2023-09-06T11:18:05 IST" duration-ms="191" status="PASS">
+        </test-method> <!-- getLegalDesclaimer -->
+        <test-method is-config="true" signature="StatusCode()[pri:0, instance:com.ripplestreet.AllGetApis.LegalControllerGetApi@6b695b06]" started-at="2023-09-06T14:27:37 IST" name="StatusCode" finished-at="2023-09-06T14:27:38 IST" duration-ms="1339" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StatusCode -->
-      </class> <!-- com.ripplestreet.FilterApis.SearchControllerFiltersGetApi -->
+      </class> <!-- com.ripplestreet.AllGetApis.LegalControllerGetApi -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
