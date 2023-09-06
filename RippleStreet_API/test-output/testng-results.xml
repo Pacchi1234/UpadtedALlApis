@@ -2,31 +2,31 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-05T12:01:25 IST" name="Default suite" finished-at="2023-09-05T12:01:27 IST" duration-ms="2092">
+  <suite started-at="2023-09-06T11:17:49 IST" name="Default suite" finished-at="2023-09-06T11:18:05 IST" duration-ms="15371">
     <groups>
-      <group name="segmentation">
-        <method signature="SegmentDataControllerPostApi.AddandRemoveuserFromSegment()[pri:0, instance:com.ripplestreet.AllPostApis.SegmentDataControllerPostApi@6b695b06]" name="AddandRemoveuserFromSegment" class="com.ripplestreet.AllPostApis.SegmentDataControllerPostApi"/>
-      </group> <!-- segmentation -->
+      <group name="common-service">
+        <method signature="SearchControllerFiltersGetApi.getSearchByEntity()[pri:0, instance:com.ripplestreet.FilterApis.SearchControllerFiltersGetApi@6b695b06]" name="getSearchByEntity" class="com.ripplestreet.FilterApis.SearchControllerFiltersGetApi"/>
+      </group> <!-- common-service -->
     </groups>
-    <test started-at="2023-09-05T12:01:25 IST" name="Default test" finished-at="2023-09-05T12:01:27 IST" duration-ms="2092">
-      <class name="com.ripplestreet.AllPostApis.SegmentDataControllerPostApi">
-        <test-method is-config="true" signature="authToken()[pri:0, instance:com.ripplestreet.AllPostApis.SegmentDataControllerPostApi@6b695b06]" started-at="2023-09-05T12:01:22 IST" name="authToken" finished-at="2023-09-05T12:01:25 IST" duration-ms="2681" status="PASS">
+    <test started-at="2023-09-06T11:17:49 IST" name="Default test" finished-at="2023-09-06T11:18:05 IST" duration-ms="15371">
+      <class name="com.ripplestreet.FilterApis.SearchControllerFiltersGetApi">
+        <test-method is-config="true" signature="authToken()[pri:0, instance:com.ripplestreet.FilterApis.SearchControllerFiltersGetApi@6b695b06]" started-at="2023-09-06T11:17:45 IST" name="authToken" finished-at="2023-09-06T11:17:49 IST" duration-ms="3888" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- authToken -->
-        <test-method is-config="true" signature="BaseURI()[pri:0, instance:com.ripplestreet.AllPostApis.SegmentDataControllerPostApi@6b695b06]" started-at="2023-09-05T12:01:25 IST" name="BaseURI" finished-at="2023-09-05T12:01:25 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="BaseURI()[pri:0, instance:com.ripplestreet.FilterApis.SearchControllerFiltersGetApi@6b695b06]" started-at="2023-09-06T11:17:49 IST" name="BaseURI" finished-at="2023-09-06T11:17:49 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BaseURI -->
-        <test-method signature="AddandRemoveuserFromSegment()[pri:0, instance:com.ripplestreet.AllPostApis.SegmentDataControllerPostApi@6b695b06]" started-at="2023-09-05T12:01:25 IST" name="AddandRemoveuserFromSegment" finished-at="2023-09-05T12:01:27 IST" duration-ms="1794" status="PASS">
+        <test-method signature="getSearchByEntity()[pri:0, instance:com.ripplestreet.FilterApis.SearchControllerFiltersGetApi@6b695b06]" started-at="2023-09-06T11:17:49 IST" name="getSearchByEntity" finished-at="2023-09-06T11:18:05 IST" duration-ms="15133" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AddandRemoveuserFromSegment -->
-        <test-method is-config="true" signature="StatusCode()[pri:0, instance:com.ripplestreet.AllPostApis.SegmentDataControllerPostApi@6b695b06]" started-at="2023-09-05T12:01:27 IST" name="StatusCode" finished-at="2023-09-05T12:01:27 IST" duration-ms="256" status="PASS">
+        </test-method> <!-- getSearchByEntity -->
+        <test-method is-config="true" signature="StatusCode()[pri:0, instance:com.ripplestreet.FilterApis.SearchControllerFiltersGetApi@6b695b06]" started-at="2023-09-06T11:18:05 IST" name="StatusCode" finished-at="2023-09-06T11:18:05 IST" duration-ms="191" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StatusCode -->
-      </class> <!-- com.ripplestreet.AllPostApis.SegmentDataControllerPostApi -->
+      </class> <!-- com.ripplestreet.FilterApis.SearchControllerFiltersGetApi -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

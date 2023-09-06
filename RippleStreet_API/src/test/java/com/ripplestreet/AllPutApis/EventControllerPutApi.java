@@ -92,7 +92,7 @@ public class EventControllerPutApi extends genricUtilities {
 
 	@Test
 	public void BookmarkOrRemoveBookmark() throws IOException {
-		Testcase = 422;
+		Testcase = 430;
 		File file = new File(devApiPath);
 		FileInputStream fis = new FileInputStream(file);
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);

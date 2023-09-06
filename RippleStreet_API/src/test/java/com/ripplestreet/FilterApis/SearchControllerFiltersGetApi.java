@@ -1,11 +1,8 @@
 package com.ripplestreet.FilterApis;
 
 import java.io.IOException;
-
 import org.testng.annotations.Test;
-
 import com.ripplestreet.genricUtilities.genricUtilities;
-
 import io.restassured.RestAssured;
 
 public class SearchControllerFiltersGetApi extends genricUtilities {

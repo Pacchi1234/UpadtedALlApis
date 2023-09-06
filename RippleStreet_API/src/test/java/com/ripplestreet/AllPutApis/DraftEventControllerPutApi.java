@@ -29,8 +29,7 @@ public class DraftEventControllerPutApi extends genricUtilities {
 		System.out.println(PutBody);
 
 		response = RestAssured.given().contentType(ContentType.JSON).body(PutBody).when()
-				.put("/event-campaign-manager/v1/campaign/"+campaignId+"/event/"+eventId);
-		
+				.put("/event-campaign-manager/v1/campaign/"+campaignId+"/event/"+eventId);	
 	}
 
 }
