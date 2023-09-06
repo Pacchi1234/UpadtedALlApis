@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Prashanthchigarer\AppData\Local\Temp\testng-eclipse--37580884\testng-customsuite.xml</span>
+                    <span>C:\Users\Prashanthchigarer\AppData\Local\Temp\testng-eclipse--1163867386\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.ripplestreet.AllGetApis.AudienceSearchControllerGetApi" class="method navigator-link" hash-for-method="searchableFields">searchableFields</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.ripplestreet.FilterApis.SearchControllerFiltersGetApi" class="method navigator-link" hash-for-method="getSearchByEntity">getSearchByEntity</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -121,14 +121,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.ripplestreet.AllGetApis.AudienceSearchControllerGetApi</span>
+              <span class="class-name">com.ripplestreet.FilterApis.SearchControllerFiltersGetApi</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="searchableFields">
-                  </a> <!-- searchableFields -->
-                  <span class="method-name">searchableFields</span>
+                  <a name="getSearchByEntity">
+                  </a> <!-- getSearchByEntity -->
+                  <span class="method-name">getSearchByEntity</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -136,7 +136,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Prashanthchigarer\AppData\Local\Temp\testng-eclipse--37580884\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Prashanthchigarer\AppData\Local\Temp\testng-eclipse--1163867386\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -145,11 +145,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.ripplestreet.AllGetApis.AudienceSearchControllerGetApi&quot;&gt;
+      &lt;class name=&quot;com.ripplestreet.FilterApis.SearchControllerFiltersGetApi&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;searchableFields&quot;/&gt;
+          &lt;include name=&quot;getSearchByEntity&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.ripplestreet.AllGetApis.AudienceSearchControllerGetApi --&gt;
+      &lt;/class&gt; &lt;!-- com.ripplestreet.FilterApis.SearchControllerFiltersGetApi --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -174,10 +174,10 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">segmentation</span>
+              <span class="test-group-name">common-service</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">searchableFields</span>
+                <span class="method-in-group-name">getSearchByEntity</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -199,14 +199,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'searchableFields')
-data.setCell(0, 2, 'com.ripplestreet.AllGetApis.AudienceSearchControllerGetApi')
-data.setCell(0, 3, 1489);
+data.setCell(0, 1, 'getSearchByEntity')
+data.setCell(0, 2, 'com.ripplestreet.FilterApis.SearchControllerFiltersGetApi')
+data.setCell(0, 3, 15133);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 15 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -232,22 +232,22 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.ripplestreet.AllGetApis.AudienceSearchControllerGetApi</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.ripplestreet.FilterApis.SearchControllerFiltersGetApi</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">authToken</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">BaseURI</span>
-                <span class="method-start">4062 ms</span>
+                <span class="method-start">3922 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">searchableFields</span>
-                <span class="method-start">4064 ms</span>
+                <span class="method-name">getSearchByEntity</span>
+                <span class="method-start">3923 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">StatusCode</span>
-                <span class="method-start">5559 ms</span>
+                <span class="method-start">19062 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

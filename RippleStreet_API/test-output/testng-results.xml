@@ -2,31 +2,31 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-05T17:45:52 IST" name="Default suite" finished-at="2023-09-05T17:45:54 IST" duration-ms="2846">
+  <suite started-at="2023-09-06T11:17:49 IST" name="Default suite" finished-at="2023-09-06T11:18:05 IST" duration-ms="15371">
     <groups>
-      <group name="segmentation">
-        <method signature="AudienceSearchControllerGetApi.searchableFields()[pri:76, instance:com.ripplestreet.AllGetApis.AudienceSearchControllerGetApi@6b695b06]" name="searchableFields" class="com.ripplestreet.AllGetApis.AudienceSearchControllerGetApi"/>
-      </group> <!-- segmentation -->
+      <group name="common-service">
+        <method signature="SearchControllerFiltersGetApi.getSearchByEntity()[pri:0, instance:com.ripplestreet.FilterApis.SearchControllerFiltersGetApi@6b695b06]" name="getSearchByEntity" class="com.ripplestreet.FilterApis.SearchControllerFiltersGetApi"/>
+      </group> <!-- common-service -->
     </groups>
-    <test started-at="2023-09-05T17:45:52 IST" name="Default test" finished-at="2023-09-05T17:45:54 IST" duration-ms="2846">
-      <class name="com.ripplestreet.AllGetApis.AudienceSearchControllerGetApi">
-        <test-method is-config="true" signature="authToken()[pri:0, instance:com.ripplestreet.AllGetApis.AudienceSearchControllerGetApi@6b695b06]" started-at="2023-09-05T17:45:48 IST" name="authToken" finished-at="2023-09-05T17:45:52 IST" duration-ms="4027" status="PASS">
+    <test started-at="2023-09-06T11:17:49 IST" name="Default test" finished-at="2023-09-06T11:18:05 IST" duration-ms="15371">
+      <class name="com.ripplestreet.FilterApis.SearchControllerFiltersGetApi">
+        <test-method is-config="true" signature="authToken()[pri:0, instance:com.ripplestreet.FilterApis.SearchControllerFiltersGetApi@6b695b06]" started-at="2023-09-06T11:17:45 IST" name="authToken" finished-at="2023-09-06T11:17:49 IST" duration-ms="3888" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- authToken -->
-        <test-method is-config="true" signature="BaseURI()[pri:0, instance:com.ripplestreet.AllGetApis.AudienceSearchControllerGetApi@6b695b06]" started-at="2023-09-05T17:45:52 IST" name="BaseURI" finished-at="2023-09-05T17:45:52 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="BaseURI()[pri:0, instance:com.ripplestreet.FilterApis.SearchControllerFiltersGetApi@6b695b06]" started-at="2023-09-06T11:17:49 IST" name="BaseURI" finished-at="2023-09-06T11:17:49 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BaseURI -->
-        <test-method signature="searchableFields()[pri:76, instance:com.ripplestreet.AllGetApis.AudienceSearchControllerGetApi@6b695b06]" started-at="2023-09-05T17:45:52 IST" name="searchableFields" finished-at="2023-09-05T17:45:53 IST" duration-ms="1489" status="PASS">
+        <test-method signature="getSearchByEntity()[pri:0, instance:com.ripplestreet.FilterApis.SearchControllerFiltersGetApi@6b695b06]" started-at="2023-09-06T11:17:49 IST" name="getSearchByEntity" finished-at="2023-09-06T11:18:05 IST" duration-ms="15133" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchableFields -->
-        <test-method is-config="true" signature="StatusCode()[pri:0, instance:com.ripplestreet.AllGetApis.AudienceSearchControllerGetApi@6b695b06]" started-at="2023-09-05T17:45:53 IST" name="StatusCode" finished-at="2023-09-05T17:45:54 IST" duration-ms="1310" status="PASS">
+        </test-method> <!-- getSearchByEntity -->
+        <test-method is-config="true" signature="StatusCode()[pri:0, instance:com.ripplestreet.FilterApis.SearchControllerFiltersGetApi@6b695b06]" started-at="2023-09-06T11:18:05 IST" name="StatusCode" finished-at="2023-09-06T11:18:05 IST" duration-ms="191" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StatusCode -->
-      </class> <!-- com.ripplestreet.AllGetApis.AudienceSearchControllerGetApi -->
+      </class> <!-- com.ripplestreet.FilterApis.SearchControllerFiltersGetApi -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
