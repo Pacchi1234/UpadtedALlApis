@@ -2,31 +2,31 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-06T14:27:36 IST" name="Default suite" finished-at="2023-09-06T14:27:38 IST" duration-ms="2644">
+  <suite started-at="2023-09-06T15:13:16 IST" name="Default suite" finished-at="2023-09-06T15:13:18 IST" duration-ms="2442">
     <groups>
-      <group name="event-campaign-manager">
-        <method signature="LegalControllerGetApi.getLegalDesclaimer()[pri:170, instance:com.ripplestreet.AllGetApis.LegalControllerGetApi@6b695b06]" name="getLegalDesclaimer" class="com.ripplestreet.AllGetApis.LegalControllerGetApi"/>
-      </group> <!-- event-campaign-manager -->
+      <group name="reward-service">
+        <method signature="RewardPreferencesControllerGetApi.getRewardPreferences()[pri:122, instance:com.ripplestreet.AllGetApis.RewardPreferencesControllerGetApi@66982506]" name="getRewardPreferences" class="com.ripplestreet.AllGetApis.RewardPreferencesControllerGetApi"/>
+      </group> <!-- reward-service -->
     </groups>
-    <test started-at="2023-09-06T14:27:36 IST" name="Default test" finished-at="2023-09-06T14:27:38 IST" duration-ms="2644">
-      <class name="com.ripplestreet.AllGetApis.LegalControllerGetApi">
-        <test-method is-config="true" signature="authToken()[pri:0, instance:com.ripplestreet.AllGetApis.LegalControllerGetApi@6b695b06]" started-at="2023-09-06T14:27:32 IST" name="authToken" finished-at="2023-09-06T14:27:36 IST" duration-ms="3772" status="PASS">
+    <test started-at="2023-09-06T15:13:16 IST" name="Default test" finished-at="2023-09-06T15:13:18 IST" duration-ms="2442">
+      <class name="com.ripplestreet.AllGetApis.RewardPreferencesControllerGetApi">
+        <test-method is-config="true" signature="authToken()[pri:0, instance:com.ripplestreet.AllGetApis.RewardPreferencesControllerGetApi@66982506]" started-at="2023-09-06T15:13:13 IST" name="authToken" finished-at="2023-09-06T15:13:16 IST" duration-ms="2973" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- authToken -->
-        <test-method is-config="true" signature="BaseURI()[pri:0, instance:com.ripplestreet.AllGetApis.LegalControllerGetApi@6b695b06]" started-at="2023-09-06T14:27:36 IST" name="BaseURI" finished-at="2023-09-06T14:27:36 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="BaseURI()[pri:0, instance:com.ripplestreet.AllGetApis.RewardPreferencesControllerGetApi@66982506]" started-at="2023-09-06T15:13:16 IST" name="BaseURI" finished-at="2023-09-06T15:13:16 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BaseURI -->
-        <test-method signature="getLegalDesclaimer()[pri:170, instance:com.ripplestreet.AllGetApis.LegalControllerGetApi@6b695b06]" started-at="2023-09-06T14:27:36 IST" name="getLegalDesclaimer" finished-at="2023-09-06T14:27:37 IST" duration-ms="1259" status="PASS">
+        <test-method signature="getRewardPreferences()[pri:122, instance:com.ripplestreet.AllGetApis.RewardPreferencesControllerGetApi@66982506]" started-at="2023-09-06T15:13:16 IST" name="getRewardPreferences" finished-at="2023-09-06T15:13:17 IST" duration-ms="1209" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getLegalDesclaimer -->
-        <test-method is-config="true" signature="StatusCode()[pri:0, instance:com.ripplestreet.AllGetApis.LegalControllerGetApi@6b695b06]" started-at="2023-09-06T14:27:37 IST" name="StatusCode" finished-at="2023-09-06T14:27:38 IST" duration-ms="1339" status="PASS">
+        </test-method> <!-- getRewardPreferences -->
+        <test-method is-config="true" signature="StatusCode()[pri:0, instance:com.ripplestreet.AllGetApis.RewardPreferencesControllerGetApi@66982506]" started-at="2023-09-06T15:13:17 IST" name="StatusCode" finished-at="2023-09-06T15:13:18 IST" duration-ms="1190" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StatusCode -->
-      </class> <!-- com.ripplestreet.AllGetApis.LegalControllerGetApi -->
+      </class> <!-- com.ripplestreet.AllGetApis.RewardPreferencesControllerGetApi -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
