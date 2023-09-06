@@ -193,12 +193,10 @@ public class genricUtilities {
 			e.printStackTrace();
 		}
 	}
-
 	@BeforeMethod
 	public void BaseURI() throws InterruptedException {
 		RestAssured.baseURI = baseURI;
 	}
-
 	@SuppressWarnings("unlikely-arg-type")
 	@AfterMethod
 	public static void StatusCode() throws IOException, NumberFormatException {
@@ -233,8 +231,7 @@ public class genricUtilities {
 					}
 				} else if (cell.getCellType() == CellType.NUMERIC) {
 					double ExpectedOutput = (double) cell.getNumericCellValue();
-					double Actual_output = hashcode;
-
+				double Actual_output = hashcode;
 					if (ExpectedOutput == Actual_output) {
 						System.err.println("TestCase" + " " + Testcase + " " + "has been passed");
 
