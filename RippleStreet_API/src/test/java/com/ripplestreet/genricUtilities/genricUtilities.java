@@ -322,8 +322,6 @@ public class genricUtilities {
 							XSSFCell cell3 = row1.getCell(6);
 							cell3.setCellValue("Fail");
 							workbook.write(fio);
-							fio.close();
-							fis.close();
 							workbook.close();
 						}
 					}

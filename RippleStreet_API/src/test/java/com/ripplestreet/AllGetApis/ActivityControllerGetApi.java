@@ -8,8 +8,7 @@ public class ActivityControllerGetApi extends genricUtilities {
 	@Test(priority=68,groups = "activity-hub")
 	public void getListOfActivities() {
 		response = RestAssured.get("/activity-hub/v1/activity/list");
-		Testcase = 68;
-		
+		Testcase = 68;	
 	}
 
 	@Test(priority=69,groups = "activity-hub")

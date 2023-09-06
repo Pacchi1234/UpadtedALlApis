@@ -50,6 +50,7 @@ public class RewardItemControllerPutApi  extends genricUtilities{
 		response = RestAssured.given().header("Authorization", AccessToken).contentType(ContentType.JSON).body(PutBody).when()
 				.put("/reward-service/v1/reward/"+rewardId+"/item/"+rewardItemId+"/skuAliases");
 		
+		
 	}
 
 }
