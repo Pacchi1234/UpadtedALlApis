@@ -11,9 +11,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
-
 import javax.imageio.ImageIO;
-
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -267,12 +265,12 @@ public class genricUtilities {
 				System.out.println("Cannot invoke more than 32767 Charecters in the Cell");
 			} else {
 				try {
+					
 					FileInputStream fis = new FileInputStream(file);
 					XSSFWorkbook workbook = new XSSFWorkbook(fis);
 					XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName);
 					XSSFRow row = sheet.getRow(Testcase);
 					XSSFCell cell = row.getCell(2);
-					fis.close();
 					System.out.println("Actual output is" + ActualOutput);
 					System.out.println("Expected Output is " + cell);
 					FileOutputStream fio = new FileOutputStream(file);
@@ -281,21 +279,25 @@ public class genricUtilities {
 					cell1.setCellValue(ActualOutput);
 					XSSFCell cell2 = row1.getCell(5);
 					cell2.setCellValue(statuscode);
-					if (cell.getCellType() == CellType.STRING) {
+					//fis.close();
+					
+					if (cell1.getCellType() == CellType.STRING) {
 						String ExpectedOutput = cell.getStringCellValue();
 						if (ExpectedOutput.equals(ActualOutput)) {
 							System.err.println("TestCase" + " " + Testcase + " " + "has been passed");
 							XSSFCell cell3 = row1.getCell(6);
 							cell3.setCellValue("Pass");
 							workbook.write(fio);
+							workbook.close();
 						} else {
 							System.err.println(
 									"TestCase" + " " + Testcase + " " + "Expected and actual output is Mismatching");
 							XSSFCell cell3 = row1.getCell(6);
 							cell3.setCellValue("Fail");
 							workbook.write(fio);
+							workbook.close();
 						}
-					} else if (cell.getCellType() == CellType.NUMERIC) {
+					} else if (cell1.getCellType() == CellType.NUMERIC) {
 						int ExpectedOutput = (int) cell.getNumericCellValue();
 						int Actual_output = Integer.parseInt(ActualOutput);
 						if (ExpectedOutput == Actual_output) {
@@ -308,31 +310,28 @@ public class genricUtilities {
 									"TestCase" + " " + Testcase + " " + "Expected and actual output is Mismatching");
 							XSSFCell cell3 = row1.getCell(6);
 							cell3.setCellValue("Fail");
-							workbook.write(fio);
+							workbook.close();
 						}
-					} else if (cell.getCellType() == CellType.BOOLEAN) {
+					} else if (cell1.getCellType() == CellType.BOOLEAN) {
 						Boolean ExpectedOutput = cell.getBooleanCellValue();
 						if (ExpectedOutput.equals(ActualOutput)) {
 							System.err.println("TestCase" + " " + Testcase + " " + "has been passed");
 							XSSFCell cell3 = row1.getCell(6);
 							cell3.setCellValue("Pass");
 							workbook.write(fio);
+							workbook.close();
 						} else {
 							System.err.println(
 									"TestCase" + " " + Testcase + " " + "Expected and actual output is Mismatching");
 							XSSFCell cell3 = row1.getCell(6);
 							cell3.setCellValue("Fail");
-							workbook.write(fio);
-							workbook.close();
+					     	workbook.close();
 						}
 					}
+
 				} catch (Exception e) {
 					e.printStackTrace();
-				} finally {
-
-					// fis.close();
-					// fio.close();
-				}
+				} 
 			}
 		}
 	}
