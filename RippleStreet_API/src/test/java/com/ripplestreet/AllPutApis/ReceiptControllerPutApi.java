@@ -52,5 +52,24 @@ public class ReceiptControllerPutApi extends genricUtilities {
 				.put("/common-service/v1/event/"+eventId+"/receipt/"+receiptId+"/data");
 
 	}
+	@Test(groups="common-service")
+	public void SetReceiptActionasREJECTED() throws IOException {
+		Testcase = 431;
+		File file = new File(devApiPath);
+		FileInputStream fis = new FileInputStream(file);
+		@SuppressWarnings("resource")
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+
+		XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName);
+		XSSFRow row2 = sheet.getRow(Testcase);
+		XSSFCell cell2 = row2.getCell(4);
+		PutBody = cell2.getStringCellValue();
+		System.out.println(PutBody);
+
+		response = RestAssured.given().contentType(ContentType.JSON).body(PutBody).when()
+				.put("/common-service/v1/event/"+eventId+"/receipt/"+receiptId+"/reject");
+
+		
+	}
 
 }

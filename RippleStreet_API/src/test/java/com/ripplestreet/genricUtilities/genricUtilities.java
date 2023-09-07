@@ -11,7 +11,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
+
 import javax.imageio.ImageIO;
+
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -207,7 +209,6 @@ public class genricUtilities {
 			ByteArrayInputStream byteArray = new ByteArrayInputStream(byteimage);
 			BufferedImage image = ImageIO.read(byteArray);
 			Double hashcode = (double) image.hashCode();
-
 			System.out.println("Actual Output is" + hashcode);
 			File file = new File(devApiPath);
 			FileInputStream fis = new FileInputStream(file);
@@ -271,11 +272,11 @@ public class genricUtilities {
 					XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName);
 					XSSFRow row = sheet.getRow(Testcase);
 					XSSFCell cell = row.getCell(2);
+					fis.close();
 					System.out.println("Actual output is" + ActualOutput);
 					System.out.println("Expected Output is " + cell);
 					FileOutputStream fio = new FileOutputStream(file);
-					XSSFSheet sheet1 = workbook.getSheet(ExcelSheetPageName);
-					XSSFRow row1 = sheet1.getRow(Testcase);
+					XSSFRow row1 = sheet.getRow(Testcase);
 					XSSFCell cell1 = row1.getCell(3);
 					cell1.setCellValue(ActualOutput);
 					XSSFCell cell2 = row1.getCell(5);
@@ -327,6 +328,10 @@ public class genricUtilities {
 					}
 				} catch (Exception e) {
 					e.printStackTrace();
+				} finally {
+
+					// fis.close();
+					// fio.close();
 				}
 			}
 		}

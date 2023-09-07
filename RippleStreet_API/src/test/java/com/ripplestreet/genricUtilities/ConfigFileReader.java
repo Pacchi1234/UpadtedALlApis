@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class ConfigFileReader {
 	private Properties properties;
-	private final String propertyFilePath = "C:\\Users\\Prashanthchigarer\\Documents\\Workspace\\RippleStreet_API\\RippleStreet_API\\src\\test\\resources\\config\\Config.properties";
+	private final String propertyFilePath = "C:\\Users\\Prashanthchigarer\\Desktop\\git\\ripplestreet-automation-testing\\RippleStreet_API\\src\\test\\resources\\config\\Config.properties";
 	private static ConfigFileReader configFileReader = new ConfigFileReader();
 
 	private ConfigFileReader() {

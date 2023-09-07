@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ripplestreet.AllPutApis.RewardItemControllerPutApi">
+      <class name="com.ripplestreet.AllPutApis.ReceiptControllerPutApi">
         <methods>
           <include name="authToken"/>
-          <include name="UpdateRewardIteams"/>
+          <include name="UpdateAreceiptRecord"/>
           <include name="BaseURI"/>
           <include name="StatusCode"/>
         </methods>
-      </class> <!-- com.ripplestreet.AllPutApis.RewardItemControllerPutApi -->
+      </class> <!-- com.ripplestreet.AllPutApis.ReceiptControllerPutApi -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
