@@ -68,7 +68,6 @@ public class EventControllerGetApi extends genricUtilities  {
 	public void getEventDetailBySlug() {
 		response = RestAssured.given().when().get("/event/events/getEventDetailBySlug/" + slug);
 		Testcase = 9;
-
 	}
 
 	@Test(priority = 10, groups = "event")
@@ -76,7 +75,6 @@ public class EventControllerGetApi extends genricUtilities  {
 		response = RestAssured.given().when().param("eventId", eventId).param("productId", productId)
 				.get("/event/events/getProductDetailEventIdAndProductId");
 		Testcase = 10;
-
 	}
 
 	@Test(priority = 11, groups = "event")
@@ -84,7 +82,6 @@ public class EventControllerGetApi extends genricUtilities  {
 		response = RestAssured.given().when().get("/event/events/packAndApplicationCountByEventId/" + eventId);
 		System.out.println();
 		Testcase = 11;
-
 	}
 
 	@Test(priority = 12, groups = "event")

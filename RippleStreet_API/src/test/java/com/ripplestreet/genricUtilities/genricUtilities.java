@@ -179,6 +179,7 @@ public class genricUtilities {
 	public List<String> entityName = Arrays.asList("CAMPAIGN", "SPONSOR", "DISCUSSION", "EXTERNAL_REVIEW",
 			"REWARD_PREFERENCE", "SEGMENT", "RECEIPT", "AUDIENCE", "PARTY");
 	public String AccessToken = null;
+	public static File file = new File(devApiPath);
 
 	@BeforeSuite
 	public void authToken() {
@@ -208,7 +209,6 @@ public class genricUtilities {
 			BufferedImage image = ImageIO.read(byteArray);
 			Double hashcode = (double) image.hashCode();
 			System.out.println("Actual Output is" + hashcode);
-			File file = new File(devApiPath);
 			FileInputStream fis = new FileInputStream(file);
 			XSSFWorkbook workbook = new XSSFWorkbook(fis);
 			XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName);
@@ -265,7 +265,7 @@ public class genricUtilities {
 				System.out.println("Cannot invoke more than 32767 Charecters in the Cell");
 			} else {
 				try {
-					
+
 					FileInputStream fis = new FileInputStream(file);
 					XSSFWorkbook workbook = new XSSFWorkbook(fis);
 					XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName);
@@ -279,8 +279,8 @@ public class genricUtilities {
 					cell1.setCellValue(ActualOutput);
 					XSSFCell cell2 = row1.getCell(5);
 					cell2.setCellValue(statuscode);
-					//fis.close();
-					
+					// fis.close();
+
 					if (cell1.getCellType() == CellType.STRING) {
 						String ExpectedOutput = cell.getStringCellValue();
 						if (ExpectedOutput.equals(ActualOutput)) {
@@ -325,13 +325,13 @@ public class genricUtilities {
 									"TestCase" + " " + Testcase + " " + "Expected and actual output is Mismatching");
 							XSSFCell cell3 = row1.getCell(6);
 							cell3.setCellValue("Fail");
-					     	workbook.close();
+							workbook.close();
 						}
 					}
 
 				} catch (Exception e) {
 					e.printStackTrace();
-				} 
+				}
 			}
 		}
 	}

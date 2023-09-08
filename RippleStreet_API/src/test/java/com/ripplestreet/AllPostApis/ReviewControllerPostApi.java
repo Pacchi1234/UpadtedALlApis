@@ -68,6 +68,41 @@ public class ReviewControllerPostApi extends postApiutilities {
 				.post("/activityugcreview/review/createExternalReview");
 
 	}
+	@Test
+	public void getExternalReviewList() throws IOException {
+		Testcase = 56;
+		File file = new File(postApipath);
+		FileInputStream fis = new FileInputStream(file);
+		@SuppressWarnings("resource")
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+
+		XSSFSheet sheet = workbook.getSheet("postApi");
+		XSSFRow row2 = sheet.getRow(Testcase);
+		XSSFCell cell2 = row2.getCell(4);
+		PutBody = cell2.getStringCellValue();
+		System.out.println(PutBody);
+		response = RestAssured.given().header("Authorization",AccessToken).contentType(ContentType.JSON).body(PutBody).when()
+				.post("/activityugcreview/review/external/filter");
+		
+	}
+	@Test
+	public void getReviewListByFiltersForExport() throws IOException {
+		Testcase = 57;
+		File file = new File(postApipath);
+		FileInputStream fis = new FileInputStream(file);
+		@SuppressWarnings("resource")
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+
+		XSSFSheet sheet = workbook.getSheet("postApi");
+		XSSFRow row2 = sheet.getRow(Testcase);
+		XSSFCell cell2 = row2.getCell(4);
+		PutBody = cell2.getStringCellValue();
+		System.out.println(PutBody);
+		response = RestAssured.given().header("Authorization",AccessToken).contentType(ContentType.JSON).body(PutBody).when()
+				.post("/activityugcreview/review/export/getReviewListByFilters");
+		
+		
+	}
 	
 	
 }
