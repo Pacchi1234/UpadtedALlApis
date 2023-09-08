@@ -19,7 +19,7 @@ public class ReviewControllerPutApi extends genricUtilities {
 
 	@Test(priority = 195, groups = "activityugcreview")
 	public void updateExternalReview() throws IOException {
-		 RestAssured.baseURI = baseURI;
+		RestAssured.baseURI = baseURI;
 		Testcase = 195;
 		File file = new File(devApiPath);
 		FileInputStream fis = new FileInputStream(file);
@@ -32,7 +32,23 @@ public class ReviewControllerPutApi extends genricUtilities {
 		System.out.println(PutBody);
 		response = RestAssured.given().contentType(ContentType.JSON).body(PutBody).when()
 				.put("/activityugcreview/review/updateExternalReview");
-
 	}
 
+	@Test
+	public void enableOrDisableReview() throws IOException {
+		Testcase = 433;
+		File file = new File(devApiPath);
+		FileInputStream fis = new FileInputStream(file);
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+
+		XSSFSheet sheet = workbook.getSheet(ExcelSheetPageName);
+		XSSFRow row2 = sheet.getRow(Testcase);
+		XSSFCell cell2 = row2.getCell(4);
+		PutBody = cell2.getStringCellValue();
+		System.out.println(PutBody);
+		response = RestAssured.given().contentType(ContentType.JSON).body(PutBody).when()
+				.put("/activityugcreview/review/moderateorfeaturereviews?feedbackReason=" + feedbackReason
+						+ "&moderationReason=" + moderationReason);
+
+	}
 }

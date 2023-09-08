@@ -82,7 +82,7 @@ public class genricUtilities {
 	public String templateType = ConfigFileReader.getInstance().gettemplateType();
 	public String templateTypeEnum = ConfigFileReader.getInstance().gettemplateTypeEnum();
 	public String transactionlType = ConfigFileReader.getInstance().gettransactionType();
-	public String fileName = ConfigFileReader.getInstance().gettransactionType();
+	public String fileName = ConfigFileReader.getInstance().getFileName();
 	public String transactionTemplateId = ConfigFileReader.getInstance().gettransactionTemplateId();
 	public String matrixNotificationId = ConfigFileReader.getInstance().getmatrixNotificationId();
 	public String agencyId = ConfigFileReader.getInstance().getagencyId();
@@ -147,6 +147,11 @@ public class genricUtilities {
 	public static String gameName = ConfigFileReader.getInstance().getgameName();
 	public static String reviwtaskId = ConfigFileReader.getInstance().getreviwTaskId();
 	public static String goalCount = ConfigFileReader.getInstance().getgoalCount();
+	public static String ImageRecoginitionActivityId = ConfigFileReader.getInstance().getImageRecoginitionActivityId();
+	public static String ImageRecoginitionActivityGroupId = ConfigFileReader.getInstance()
+			.getImageRecoginitionActivityGroupId();
+	public static String feedbackReason = ConfigFileReader.getInstance().getfeedbackReason();
+	public static String moderationReason = ConfigFileReader.getInstance().getmoderationReason();
 
 	public String PutBody = null;
 	public static Response response;

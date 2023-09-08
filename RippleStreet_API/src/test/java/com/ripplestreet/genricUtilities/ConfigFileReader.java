@@ -1001,5 +1001,37 @@ public class ConfigFileReader {
 			throw new RuntimeException("ExcelSheetPageName in ot mentiioned in configuration.properties file");
 		}
 	}
+	public String getImageRecoginitionActivityGroupId() {
+		String ImageRecoginitionActivityGroupId = properties.getProperty("ImageRecoginitionActivityGroupId");
+		if (ImageRecoginitionActivityGroupId != null) {
+			return ImageRecoginitionActivityGroupId;
+		} else {
+			throw new RuntimeException("ImageRecoginitionActivityGroupId in ot mentiioned in configuration.properties file");
+		}
+	}
+	public String getImageRecoginitionActivityId() {
+		String ImageRecoginitionActivityId = properties.getProperty("ImageRecoginitionActivityId");
+		if (ImageRecoginitionActivityId != null) {
+			return ImageRecoginitionActivityId;
+		} else {
+			throw new RuntimeException("ImageRecoginitionActivityId in ot mentiioned in configuration.properties file");
+		}
+	}
+	public String getfeedbackReason() {
+		String feedbackReason = properties.getProperty("feedbackReason");
+		if (feedbackReason != null) {
+			return feedbackReason;
+		} else {
+			throw new RuntimeException("feedbackReason in ot mentiioned in configuration.properties file");
+		}
+	}
+	public String getmoderationReason() {
+		String moderationReason = properties.getProperty("moderationReason");
+		if (moderationReason != null) {
+			return moderationReason;
+		} else {
+			throw new RuntimeException("moderationReason in ot mentiioned in configuration.properties file");
+		}
+	}
 	
 }
